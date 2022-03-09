@@ -1,0 +1,15 @@
+.InputArea {
+  @apply w-full
+        flex
+        justify-center;
+}
+
+.TaskInput {
+  @apply p-2
+        w-96
+        mx-3
+        bg-transparent
+        border-b-2 
+        border-black
+        focus:outline-none;
+}
