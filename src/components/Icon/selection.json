@@ -1,0 +1,124 @@
+{
+    "IcoMoonType": "selection",
+    "icons": [
+      {
+        "icon": {
+          "paths": [
+            "M864 0c88.364 0 160 71.634 160 160 0 36.020-11.91 69.258-32 96l-64 64-224-224 64-64c26.742-20.090 59.978-32 96-32zM64 736l-64 288 288-64 592-592-224-224-592 592zM715.578 363.578l-448 448-55.156-55.156 448-448 55.156 55.156z"
+          ],
+          "tags": ["pencil", "write", "edit"],
+          "defaultCode": 59653,
+          "grid": 16,
+          "attrs": []
+        },
+        "attrs": [],
+        "properties": {
+          "ligatures": "pencil, write",
+          "name": "pencil",
+          "order": 4,
+          "id": 6,
+          "prevSize": 32,
+          "code": 59653
+        },
+        "setIdx": 0,
+        "setId": 1,
+        "iconIdx": 5
+      },
+      {
+        "icon": {
+          "paths": [
+            "M128 320v640c0 35.2 28.8 64 64 64h576c35.2 0 64-28.8 64-64v-640h-704zM320 896h-64v-448h64v448zM448 896h-64v-448h64v448zM576 896h-64v-448h64v448zM704 896h-64v-448h64v448z",
+            "M848 128h-208v-80c0-26.4-21.6-48-48-48h-224c-26.4 0-48 21.6-48 48v80h-208c-26.4 0-48 21.6-48 48v80h832v-80c0-26.4-21.6-48-48-48zM576 128h-192v-63.198h192v63.198z"
+          ],
+          "tags": ["bin", "trashcan", "remove", "delete", "recycle", "dispose"],
+          "defaultCode": 59820,
+          "grid": 16,
+          "attrs": []
+        },
+        "attrs": [],
+        "properties": {
+          "ligatures": "bin, trashcan",
+          "name": "bin",
+          "order": 3,
+          "id": 173,
+          "prevSize": 32,
+          "code": 59820
+        },
+        "setIdx": 0,
+        "setId": 1,
+        "iconIdx": 172
+      },
+      {
+        "icon": {
+          "paths": [
+            "M992 384h-352v-352c0-17.672-14.328-32-32-32h-192c-17.672 0-32 14.328-32 32v352h-352c-17.672 0-32 14.328-32 32v192c0 17.672 14.328 32 32 32h352v352c0 17.672 14.328 32 32 32h192c17.672 0 32-14.328 32-32v-352h352c17.672 0 32-14.328 32-32v-192c0-17.672-14.328-32-32-32z"
+          ],
+          "tags": ["plus", "add", "sum"],
+          "defaultCode": 59914,
+          "grid": 16,
+          "attrs": []
+        },
+        "attrs": [],
+        "properties": {
+          "ligatures": "plus, add",
+          "name": "plus",
+          "order": 2,
+          "id": 267,
+          "prevSize": 32,
+          "code": 59914
+        },
+        "setIdx": 0,
+        "setId": 1,
+        "iconIdx": 266
+      },
+      {
+        "icon": {
+          "paths": [
+            "M896 0h-768c-70.4 0-128 57.6-128 128v768c0 70.4 57.6 128 128 128h768c70.4 0 128-57.6 128-128v-768c0-70.4-57.6-128-128-128zM448 794.51l-237.254-237.256 90.51-90.508 146.744 146.744 306.746-306.746 90.508 90.51-397.254 397.256z"
+          ],
+          "tags": ["checkbox-checked", "checkbox", "tick", "checked", "selected"],
+          "defaultCode": 59986,
+          "grid": 16,
+          "attrs": []
+        },
+        "attrs": [],
+        "properties": {
+          "ligatures": "checkbox-checked, checkbox",
+          "name": "checkbox-checked",
+          "order": 6,
+          "id": 339,
+          "prevSize": 32,
+          "code": 59986
+        },
+        "setIdx": 0,
+        "setId": 1,
+        "iconIdx": 338
+      }
+    ],
+    "height": 1024,
+    "metadata": { "name": "icomoon" },
+    "preferences": {
+      "showGlyphs": true,
+      "showQuickUse": true,
+      "showQuickUse2": true,
+      "showSVGs": true,
+      "fontPref": {
+        "prefix": "icon-",
+        "metadata": { "fontFamily": "icomoon" },
+        "metrics": { "emSize": 1024, "baseline": 6.25, "whitespace": 50 },
+        "embed": false
+      },
+      "imagePref": {
+        "prefix": "icon-",
+        "png": true,
+        "useClassSelector": true,
+        "color": 0,
+        "bgColor": 16777215,
+        "classSelector": ".icon"
+      },
+      "historySize": 50,
+      "showCodes": true,
+      "gridSize": 16
+    }
+  }
+  
