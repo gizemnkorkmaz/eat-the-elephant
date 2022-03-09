@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+  html {
+    font-family: "Oswald", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  html {
+    @apply bg-emerald-50 text-neutral-800;
+  }
+}
