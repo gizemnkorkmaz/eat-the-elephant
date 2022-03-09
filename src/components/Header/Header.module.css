@@ -1,3 +1,4 @@
 .Header {
-  @apply text-3xl;
+  @apply text-3xl
+  m-10;
 }
