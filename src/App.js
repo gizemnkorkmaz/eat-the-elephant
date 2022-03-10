@@ -6,7 +6,7 @@ import TaskInput from "./components/TaskInput/TaskInput";
 import Tasks from "./components/Tasks/Tasks";
 
 function App() {
-  const [task, setTask] = useState("");
+  const [task, setTask] = useState({ name: "" });
   const [tasks, setTasks] = useState([]);
 
   return (
@@ -21,7 +21,7 @@ function App() {
         />
       </div>
       <div className="TaskListArea">
-        {tasks.length > 0 && <Tasks tasks={tasks} />}
+        {tasks.length > 0 && <Tasks tasks={tasks} setTasks={setTasks} />}
       </div>
     </div>
   );
