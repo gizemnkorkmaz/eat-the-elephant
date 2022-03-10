@@ -10,18 +10,8 @@
         text-center;
 }
 
-.TaskItem {
-  @apply p-2 
-        list-none
-        cursor-pointer;
-}
-
 .TasksHeader {
   @apply text-xl
         font-bold
         pb-3;
-}
-
-.Icon {
-  @apply m-1 mr-3 mb-1;
 }
