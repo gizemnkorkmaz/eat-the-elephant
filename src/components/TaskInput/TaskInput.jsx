@@ -3,11 +3,13 @@ import styles from "./TaskInput.module.css";
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 
+import { nanoid } from "nanoid";
+
 const TaskInput = ({ task, setTask, tasks, setTasks }) => {
   const addTask = (task) => {
     if (task) {
-      setTasks([...tasks, task]);
-      setTask("");
+      setTasks([...tasks, { name: task.name, isDone: false, id: nanoid() }]);
+      setTask({ name: "" });
     }
   };
 
@@ -23,8 +25,8 @@ const TaskInput = ({ task, setTask, tasks, setTasks }) => {
         type="text"
         className={styles.TaskInput}
         placeholder="Enter your task"
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
+        value={task.name}
+        onChange={(e) => setTask({ name: e.target.value })}
         onKeyDown={handleKeyDown}
       />
       <Button onClick={() => addTask(task)}>
