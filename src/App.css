@@ -1,3 +1,5 @@
 .App {
-  @apply h-screen m-10;
+  @apply h-screen
+        max-w-7xl 
+        m-20;
 }
