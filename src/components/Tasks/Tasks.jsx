@@ -1,27 +1,20 @@
-import { useState } from "react";
-
 import styles from "./Tasks.module.css";
-import Icon from "../Icon/Icon";
+import Task from "../Task/Task";
 
-const Tasks = ({ tasks }) => {
-  const [isTaskDone, setIsTaskDone] = useState(false);
+const Tasks = ({ tasks, setTasks }) => {
+  const toggleIsDone = (id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, isDone: !task.isDone } : task
+      )
+    );
+  };
 
   return (
     <div className={styles.Tasks}>
       <h1 className={styles.TasksHeader}>Today</h1>
       {tasks.map((task) => (
-        <li
-          key={task}
-          className={styles.TaskItem}
-          onClick={() => setIsTaskDone(!isTaskDone)}
-        >
-          <Icon
-            icon={isTaskDone ? "checkbox-checked" : "radio-unchecked"}
-            size={15}
-            className={styles.Icon}
-          />
-          {task}
-        </li>
+        <Task key={task.id} task={task} onClick={() => toggleIsDone(task.id)} />
       ))}
     </div>
   );
