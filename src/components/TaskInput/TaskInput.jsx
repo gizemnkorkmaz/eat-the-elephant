@@ -1,14 +1,17 @@
+import { useState } from "react";
+import { nanoid } from "nanoid";
+
 import styles from "./TaskInput.module.css";
 
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 
-import { nanoid } from "nanoid";
+const TaskInput = ({ tasks, setTasks }) => {
+  const [task, setTask] = useState({ name: "" });
 
-const TaskInput = ({ task, setTask, tasks, setTasks }) => {
   const addTask = (task) => {
     if (task) {
-      setTasks([...tasks, { name: task.name, isDone: false, id: nanoid() }]);
+      setTasks([...tasks, { id: nanoid(), name: task.name, isDone: false }]);
       setTask({ name: "" });
     }
   };
