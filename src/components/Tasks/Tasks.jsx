@@ -16,19 +16,44 @@ const Tasks = ({ tasks, setTasks }) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const editTask = (id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, editTask: !task.editTask } : task
+      )
+    );
+  };
+
+  const handleEdit = (e, id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, name: e.target.value } : task
+      )
+    );
+  };
+
   return (
     <div className={styles.Tasks}>
       <h1 className={styles.TasksHeader}>Today</h1>
       {tasks.map((task) => (
-        <Task key={task.id} task={task}>
-          <div onClick={() => toggleIsDone(task.id)}>
+        <Task key={task.id}>
+          <div>
             <Icon
               icon={task.isDone ? "checkbox-checked" : "checkbox-unchecked"}
               size={20}
               className={styles.Icon}
+              onClick={() => toggleIsDone(task.id)}
             />
             <span className={task.isDone ? styles.TaskDone : ""}>
-              {task.name}
+              {task.editTask ? (
+                <input
+                  type="text"
+                  className={styles.EditInput}
+                  onChange={(e) => handleEdit(e, task.id)}
+                />
+              ) : (
+                task.name
+              )}
             </span>
           </div>
           <div>
@@ -37,6 +62,12 @@ const Tasks = ({ tasks, setTasks }) => {
               size={20}
               className={styles.Icon}
               onClick={() => deleteTask(task.id)}
+            />
+            <Icon
+              icon={task.editTask ? "checkbox-checked" : "pencil"}
+              size={18}
+              className={styles.Icon}
+              onClick={() => editTask(task.id)}
             />
           </div>
         </Task>
