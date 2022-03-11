@@ -1,5 +1,4 @@
 .TaskItem {
   @apply flex justify-around
-        mb-5
-        cursor-pointer;
+        mb-5;
 }
