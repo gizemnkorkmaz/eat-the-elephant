@@ -97,25 +97,25 @@
     {
       "icon": {
         "paths": [
-          "M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM512 896c-212.078 0-384-171.922-384-384s171.922-384 384-384c212.078 0 384 171.922 384 384s-171.922 384-384 384z"
+          "M896 0h-768c-70.4 0-128 57.6-128 128v768c0 70.4 57.6 128 128 128h768c70.4 0 128-57.6 128-128v-768c0-70.4-57.6-128-128-128zM896 896h-768v-768h768v768z"
         ],
-        "tags": ["radio-unchecked", "radio-button", "circle"],
-        "defaultCode": 59990,
+        "tags": ["checkbox-unchecked", "checkbox", "unchecked", "square"],
+        "defaultCode": 59987,
         "grid": 16,
         "attrs": []
       },
       "attrs": [],
       "properties": {
-        "ligatures": "radio-unchecked, radio-button3",
-        "name": "radio-unchecked",
-        "order": 7,
-        "id": 343,
+        "ligatures": "checkbox-unchecked, checkbox2",
+        "name": "checkbox-unchecked",
+        "order": 8,
+        "id": 340,
         "prevSize": 32,
-        "code": 59990
+        "code": 59987
       },
       "setIdx": 0,
       "setId": 1,
-      "iconIdx": 342
+      "iconIdx": 339
     }
   ],
   "height": 1024,
