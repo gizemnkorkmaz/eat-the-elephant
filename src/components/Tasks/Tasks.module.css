@@ -1,17 +1,25 @@
 .Tasks {
-  @apply h-3/4
-        w-2/3 max-w-7xl 
+  @apply w-96
+        flex flex-col
+        max-w-7xl 
         bg-white
-        flex flex-col justify-around content-center
+        text-lg
         shadow-lg
         rounded-xl
-        m-auto
-        px-40 p-10
-        text-center;
+        py-10 px-5;
 }
 
 .TasksHeader {
-  @apply text-xl
+  @apply text-center
+        text-2xl
         font-bold
-        pb-3;
+        pb-5;
+}
+
+.Icon {
+  @apply mr-3;
+}
+
+.TaskDone {
+  @apply line-through;
 }
