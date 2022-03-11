@@ -1,5 +1,10 @@
-.App {
-  @apply h-screen
-        max-w-7xl 
-        m-20;
+.InputArea {
+  @apply my-20;
+}
+
+.TaskListArea {
+  @apply flex flex-wrap justify-center place-content-center
+  max-w-4xl	
+  gap-2
+  m-auto;
 }

@@ -3,13 +3,14 @@
 
 @layer base {
   html {
-    font-family: "Oswald", sans-serif;
     scroll-behavior: smooth;
   }
 }
 
 @layer components {
   html {
-    @apply bg-emerald-50 text-neutral-800;
+    @apply bg-zinc-100
+    font-mono
+    text-neutral-600;
   }
 }
