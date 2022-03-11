@@ -56,7 +56,6 @@ const Tasks = ({ tasks, setTasks }) => {
               </div>
             )}
           </span>
-
           <div>
             <Icon
               icon="bin"
