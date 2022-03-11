@@ -17,7 +17,8 @@
 }
 
 .Icon {
-  @apply mr-3;
+  @apply mr-3
+  cursor-pointer;
 }
 
 .TaskDone {
