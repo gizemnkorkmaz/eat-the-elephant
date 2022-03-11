@@ -37,25 +37,26 @@ const Tasks = ({ tasks, setTasks }) => {
       <h1 className={styles.TasksHeader}>Today</h1>
       {tasks.map((task) => (
         <Task key={task.id}>
-          <div>
-            <Icon
-              icon={task.isDone ? "checkbox-checked" : "checkbox-unchecked"}
-              size={20}
-              className={styles.Icon}
-              onClick={() => toggleIsDone(task.id)}
-            />
-            <span className={task.isDone ? styles.TaskDone : ""}>
-              {task.editTask ? (
-                <input
-                  type="text"
-                  className={styles.EditInput}
-                  onChange={(e) => handleEdit(e, task.id)}
+          <span className={task.isDone ? styles.TaskDone : ""}>
+            {task.editTask ? (
+              <input
+                type="text"
+                className={styles.EditInput}
+                onChange={(e) => handleEdit(e, task.id)}
+              />
+            ) : (
+              <div>
+                <Icon
+                  icon={task.isDone ? "checkbox-checked" : "checkbox-unchecked"}
+                  size={20}
+                  className={styles.Icon}
+                  onClick={() => toggleIsDone(task.id)}
                 />
-              ) : (
-                task.name
-              )}
-            </span>
-          </div>
+                {task.name}
+              </div>
+            )}
+          </span>
+
           <div>
             <Icon
               icon="bin"
