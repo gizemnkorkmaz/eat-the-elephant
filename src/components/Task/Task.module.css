@@ -1,9 +1,5 @@
 .TaskItem {
-  @apply p-2 
-        list-none
+  @apply flex justify-around
+        mb-5
         cursor-pointer;
-}
-
-.Icon {
-  @apply m-1 mr-3 mb-1;
 }
