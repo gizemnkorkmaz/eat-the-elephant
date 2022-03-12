@@ -16,7 +16,7 @@ const Task = ({ task, toggleIsDone, deleteTask, editTask, handleEdit }) => (
       <>
         <Icon
           icon={task.isDone ? "checkbox-checked" : "checkbox-unchecked"}
-          size={20}
+          size={25}
           className={styles.Icon}
           onClick={() => toggleIsDone(task.id)}
         />
@@ -29,7 +29,7 @@ const Task = ({ task, toggleIsDone, deleteTask, editTask, handleEdit }) => (
         </p>
         <Icon
           icon="bin"
-          size={20}
+          size={25}
           className={styles.Icon}
           onClick={() => deleteTask(task.id)}
         />
@@ -37,7 +37,7 @@ const Task = ({ task, toggleIsDone, deleteTask, editTask, handleEdit }) => (
     )}
     <Icon
       icon={task.editTask ? "checkbox-checked" : "pencil"}
-      size={18}
+      size={22}
       className={styles.Icon}
       onClick={() => editTask(task.id)}
     />
