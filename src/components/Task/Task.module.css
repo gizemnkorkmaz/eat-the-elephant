@@ -1,12 +1,14 @@
 .TaskItem {
-  @apply m-auto
-        py-5
-        flex
-        justify-start;
+  @apply py-2 px-5 m-1
+        border-2
+        border-neutral-200
+        rounded
+        text-center
+        flex content-center;
 }
 
 .Task {
-  @apply mx-10;
+  @apply mx-auto;
 }
 
 .TaskDone {
@@ -14,7 +16,8 @@
 }
 
 .Icon {
-  @apply cursor-pointer m-1;
+  @apply cursor-pointer 
+        m-1;
 }
 
 .EditInput {
@@ -22,6 +25,8 @@
   bg-neutral-100
   border-b-2
   border-black
+  text-center
+  w-full
   rounded
   focus:outline-none;
 }
