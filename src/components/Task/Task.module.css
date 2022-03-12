@@ -1,5 +1,8 @@
 .TaskItem {
-  @apply py-5 flex justify-start;
+  @apply m-auto
+        py-5
+        flex
+        justify-start;
 }
 
 .Task {
