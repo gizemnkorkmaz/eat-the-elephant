@@ -42,6 +42,7 @@ const Tasks = ({ tasks, setTasks }) => {
               <input
                 type="text"
                 className={styles.EditInput}
+                value={task.name}
                 onChange={(e) => handleEdit(e, task.id)}
               />
             ) : (
