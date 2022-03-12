@@ -1,4 +1,24 @@
 .TaskItem {
-  @apply flex justify-around
-        mb-5;
+  @apply py-5 flex justify-start;
+}
+
+.Task {
+  @apply mx-10;
+}
+
+.TaskDone {
+  @apply line-through;
+}
+
+.Icon {
+  @apply cursor-pointer m-1;
+}
+
+.EditInput {
+  @apply mx-3
+  bg-neutral-100
+  border-b-2
+  border-black
+  rounded
+  focus:outline-none;
 }
