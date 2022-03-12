@@ -1,9 +1,9 @@
 .Tasks {
-  @apply w-96
+  @apply w-9/12
+        bg-white
         flex flex-col
         max-w-7xl 
-        bg-white
-        text-lg
+        text-xl
         shadow-lg
         rounded-xl
         py-10 px-5;
@@ -11,7 +11,7 @@
 
 .TasksHeader {
   @apply text-center
-        text-2xl
+        text-3xl
         font-bold
         pb-5;
 }
