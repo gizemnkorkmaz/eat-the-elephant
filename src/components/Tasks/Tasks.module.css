@@ -15,21 +15,3 @@
         font-bold
         pb-5;
 }
-
-.Icon {
-  @apply mr-3
-  cursor-pointer;
-}
-
-.TaskDone {
-  @apply line-through;
-}
-
-.EditInput {
-  @apply mx-3
-  bg-neutral-100
-  border-b-2
-  border-black
-  rounded
-  focus:outline-none;
-}
