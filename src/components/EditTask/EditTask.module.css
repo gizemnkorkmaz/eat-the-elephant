@@ -1,0 +1,20 @@
+.EditArea {
+  @apply flex flex-col
+  mx-auto;
+}
+
+.EditTask {
+  @apply lg:border-[#c4aea3]
+  lg:p-5
+  mb-2;
+}
+
+.Input {
+  @apply lg:p-1
+  lg:m-auto
+  text-center
+  bg-transparent
+  border-b 
+  border-[#4c3c30]
+  focus:outline-none;
+}
