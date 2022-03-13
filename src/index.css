@@ -4,13 +4,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: "Karla", sans-serif;
   }
 }
 
 @layer components {
   html {
-    @apply bg-zinc-100
-    font-mono
-    text-neutral-600;
+    @apply bg-[#f8f8f8]
+    text-[#c4aea3]
+    w-screen;
   }
 }

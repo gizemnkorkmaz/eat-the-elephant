@@ -1,4 +1,4 @@
 .Header {
   @apply text-3xl
-  m-10;
+  lg:m-10 px-20;
 }

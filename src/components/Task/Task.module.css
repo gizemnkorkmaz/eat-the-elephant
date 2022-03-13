@@ -1,32 +1,16 @@
 .TaskItem {
-  @apply py-2 px-5 m-1
-        border-2
-        border-neutral-200
+  @apply py-2 px-5 m-1 
+        border-b border-[#999b84]
         rounded
         text-center
-        flex content-center;
+        flex justify-between content-center;
 }
 
 .Task {
-  @apply mx-auto;
+  @apply mx-auto
+  text-[#4c3c30];
 }
 
 .TaskDone {
   @apply line-through;
-}
-
-.Icon {
-  @apply cursor-pointer 
-        m-1;
-}
-
-.EditInput {
-  @apply mx-3
-  bg-neutral-100
-  border-b-2
-  border-black
-  text-center
-  w-full
-  rounded
-  focus:outline-none;
 }

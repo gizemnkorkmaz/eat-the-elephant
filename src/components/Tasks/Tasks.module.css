@@ -1,17 +1,14 @@
 .Tasks {
-  @apply w-9/12
-        bg-white
-        flex flex-col
-        max-w-7xl 
-        text-xl
+  @apply bg-[#f7f5e8]
+        text-[#4c3c30]
+        flex flex-col justify-center
+        w-3/4 mx-auto my-5 p-5  
+        lg:text-xl
         shadow-lg
-        rounded-xl
-        py-10 px-5;
+        rounded-xl;
 }
 
 .TasksHeader {
-  @apply text-center
-        text-3xl
-        font-bold
+  @apply text-sm font-bold italic
         pb-5;
 }

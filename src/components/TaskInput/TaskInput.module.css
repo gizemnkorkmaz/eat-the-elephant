@@ -1,15 +1,14 @@
 .InputArea {
   @apply w-full
-        flex
-        justify-center;
+        flex justify-center;
 }
 
 .TaskInput {
-  @apply p-2
-        w-96
-        mx-3
+  @apply px-2 m-auto
+        lg:w-96
+        text-[#4c3c30]
         bg-transparent
-        border-b-2 
-        border-black
+        placeholder:text-[#4c3c30]
+        border-b-2 border-[#4c3c30]
         focus:outline-none;
 }
