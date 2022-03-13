@@ -1,0 +1,5 @@
+.Icon {
+  @apply cursor-pointer 
+            m-1
+            text-[#4c3c30];
+}
