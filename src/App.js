@@ -11,11 +11,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="InputArea">
-        <TaskInput tasks={tasks} setTasks={setTasks} />
-      </div>
-      <div className="TaskListArea">
-        {tasks.length > 0 && <Tasks tasks={tasks} setTasks={setTasks} />}
+      <div className="TaskBoard">
+        <section className="TaskMenu">My Lists</section>
+        <section className="TaskListArea">
+          <TaskInput tasks={tasks} setTasks={setTasks} />
+          {tasks.length > 0 && <Tasks tasks={tasks} setTasks={setTasks} />}
+        </section>
       </div>
     </div>
   );
