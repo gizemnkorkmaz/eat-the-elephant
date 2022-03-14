@@ -1,3 +1,7 @@
 .Button {
-  @apply bg-transparent;
+  @apply bg-[#c4aea3]
+  px-2 lg:px-5 py-1
+  mx-1
+  text-sm text-[#4c3c30]
+  rounded-xl;
 }

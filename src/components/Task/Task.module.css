@@ -1,9 +1,19 @@
-.TaskItem {
-  @apply p-2 
-        list-none
-        cursor-pointer;
+.TaskWrapper {
+  @apply py-2 lg:px-5 m-1 
+        border-b border-[#999b84]
+        flex justify-between content-center
+        rounded;
 }
 
-.Icon {
-  @apply m-1 mr-3 mb-1;
+.TaskItem {
+  @apply flex;
+}
+
+.TaskName {
+  @apply text-[#4c3c30]
+  ml-2 lg:mr-20;
+}
+
+.TaskDone {
+  @apply line-through;
 }
