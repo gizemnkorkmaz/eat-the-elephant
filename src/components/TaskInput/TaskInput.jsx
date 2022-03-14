@@ -2,6 +2,7 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 
 import styles from "./TaskInput.module.css";
+
 import Icon from "../Icon/Icon";
 import Button from "../Button/Button";
 
@@ -34,9 +35,7 @@ const TaskInput = ({ tasks, setTasks }) => {
         />
         <Icon icon="calendar" size={20} />
       </div>
-      <div>
-        <Button onClick={() => addTask(task)}>Add Task</Button>
-      </div>
+      <Button onClick={() => addTask(task)}>Add Task</Button>
     </div>
   );
 };
