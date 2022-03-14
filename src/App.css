@@ -1,5 +1,5 @@
 .App {
-  @apply w-full h-screen
+  @apply w-full h-screen max-w-7xl m-auto
   py-10;
 }
 
@@ -17,6 +17,7 @@
   shadow
   p-10 
   text-[#4c3c30] text-center
+  h-min
   lg:h-full
   lg:w-1/5;
 }
@@ -26,7 +27,8 @@
   flex flex-col
   rounded
   shadow
-  p-10
-  h-full
+  lg:p-10 p-5
+  h-min
+  min-h-full
   lg:w-3/5;
 }

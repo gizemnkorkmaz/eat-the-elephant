@@ -1,6 +1,7 @@
 .EditArea {
   @apply flex flex-col
-  mx-auto;
+  mx-auto
+  p-5;
 }
 
 .EditTask {
@@ -17,4 +18,8 @@
   border-b 
   border-[#4c3c30]
   focus:outline-none;
+}
+
+.Buttons {
+  @apply flex justify-center;
 }

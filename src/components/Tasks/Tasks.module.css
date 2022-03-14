@@ -2,7 +2,7 @@
   @apply bg-[#f7f5e8]
         text-[#4c3c30]
         flex flex-col justify-center
-        w-3/4 mx-auto my-5 p-5  
+        min-w-full mx-auto my-5 p-5  
         lg:text-xl
         shadow-lg
         rounded-xl;
