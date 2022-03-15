@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 
 import "./App.css";
 import Header from "./components/Header/Header";
 import TaskInput from "./components/TaskInput/TaskInput";
 import Tasks from "./components/Tasks/Tasks";
+
+export const TasksContext = createContext();
+export const EditTaskIdContext = createContext();
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -15,15 +18,14 @@ function App() {
       <div className="TaskBoard">
         <section className="TaskMenu">My Lists</section>
         <section className="TaskListArea">
-          <TaskInput tasks={tasks} setTasks={setTasks} />
-          {tasks.length > 0 && (
-            <Tasks
-              tasks={tasks}
-              setTasks={setTasks}
-              editTaskId={editTaskId}
-              setEditTaskId={setEditTaskId}
-            />
-          )}
+          <TasksContext.Provider value={[tasks, setTasks]}>
+            <TaskInput />
+            {tasks.length > 0 && (
+              <EditTaskIdContext.Provider value={[editTaskId, setEditTaskId]}>
+                <Tasks />
+              </EditTaskIdContext.Provider>
+            )}
+          </TasksContext.Provider>
         </section>
       </div>
     </div>

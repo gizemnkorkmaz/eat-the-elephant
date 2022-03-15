@@ -1,10 +1,15 @@
+import { useContext } from "react";
+import { EditTaskIdContext, TasksContext } from "../../App";
+
 import cx from "classnames";
 import styles from "./Task.module.css";
 
 import Icon from "../Icon/Icon";
 import EditTask from "../EditTask/EditTask";
 
-const Task = ({ task, tasks, setTasks, editTaskId, setEditTaskId }) => {
+const Task = ({ task }) => {
+  const [tasks, setTasks] = useContext(TasksContext);
+  const [editTaskId, setEditTaskId] = useContext(EditTaskIdContext);
   const currentTaskId = task.id;
 
   const toggleIsDone = () => {
@@ -31,13 +36,7 @@ const Task = ({ task, tasks, setTasks, editTaskId, setEditTaskId }) => {
   return (
     <>
       {editTaskId === task.id ? (
-        <EditTask
-          task={task}
-          tasks={tasks}
-          setTasks={setTasks}
-          editTaskId={editTaskId}
-          setEditTaskId={setEditTaskId}
-        />
+        <EditTask task={task} />
       ) : (
         <div className={styles.TaskWrapper}>
           <div className={styles.TaskItem}>
