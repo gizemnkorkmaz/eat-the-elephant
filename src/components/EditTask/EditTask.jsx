@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { EditTaskIdContext, TasksContext } from "../../App";
+import { TasksContext } from "../../context/tasksContext";
 
 import styles from "./EditTask.module.css";
 
@@ -8,8 +8,8 @@ import Icon from "../Icon/Icon";
 
 const EditTask = ({ task }) => {
   const [editedTask, setEditedTask] = useState(task);
-  const [tasks, setTasks] = useContext(TasksContext);
-  const [editTaskId, setEditTaskId] = useContext(EditTaskIdContext);
+  const { tasks, setTasks, editTaskId, setEditTaskId } =
+    useContext(TasksContext);
 
   const handleEdit = (e) => {
     setEditedTask({ ...task, name: e.target.value });

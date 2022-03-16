@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { EditTaskIdContext, TasksContext } from "../../App";
+import { TasksContext } from "../../context/tasksContext";
 
 import cx from "classnames";
 import styles from "./Task.module.css";
@@ -8,8 +8,8 @@ import Icon from "../Icon/Icon";
 import EditTask from "../EditTask/EditTask";
 
 const Task = ({ task }) => {
-  const [tasks, setTasks] = useContext(TasksContext);
-  const [editTaskId, setEditTaskId] = useContext(EditTaskIdContext);
+  const { tasks, setTasks, editTaskId, setEditTaskId } =
+    useContext(TasksContext);
   const currentTaskId = task.id;
 
   const toggleIsDone = () => {
