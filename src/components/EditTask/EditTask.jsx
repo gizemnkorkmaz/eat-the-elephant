@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TasksContext } from "../../context/tasksContext";
 
 import styles from "./EditTask.module.css";
+
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 
-const EditTask = ({ task, tasks, setTasks, editTaskId, setEditTaskId }) => {
+const EditTask = ({ task }) => {
   const [editedTask, setEditedTask] = useState(task);
+  const { tasks, setTasks, editTaskId, setEditTaskId } =
+    useContext(TasksContext);
 
   const handleEdit = (e) => {
     setEditedTask({ ...task, name: e.target.value });

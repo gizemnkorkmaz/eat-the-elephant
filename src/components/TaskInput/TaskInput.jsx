@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TasksContext } from "../../context/tasksContext";
 import { nanoid } from "nanoid";
 
 import styles from "./TaskInput.module.css";
@@ -6,8 +7,9 @@ import styles from "./TaskInput.module.css";
 import Icon from "../Icon/Icon";
 import Button from "../Button/Button";
 
-const TaskInput = ({ tasks, setTasks }) => {
+const TaskInput = () => {
   const [task, setTask] = useState({ name: "" });
+  const { tasks, setTasks } = useContext(TasksContext);
 
   const addTask = (task) => {
     if (task.name.length) {
