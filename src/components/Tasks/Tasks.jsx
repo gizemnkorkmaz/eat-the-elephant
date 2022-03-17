@@ -8,7 +8,6 @@ import Task from "../Task/Task";
 const Tasks = () => {
   const { tasks } = useContext(TasksContext);
 
-  localStorage.setItem("tasks", JSON.stringify(tasks));
   return (
     <div className={styles.Tasks}>
       <h1 className={styles.TasksHeader}>Today</h1>
