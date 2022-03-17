@@ -3,7 +3,9 @@ import { useState, createContext } from "react";
 const TasksContext = createContext();
 
 const TasksProvider = ({ children }) => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
   const [editTaskId, setEditTaskId] = useState(null);
 
   return (
