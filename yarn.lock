@@ -5709,6 +5709,11 @@ lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.7.
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
+lookie@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/lookie/-/lookie-0.6.0.tgz#09f1b8694c2e4eaeb413078fee6118112fa545ea"
+  integrity sha512-mWnuOcUM+I8lcclO8uptYXnwUAEvvpszfoOLelBYHr7V3pGcXlNKKEavuJ4iIYAW+33iDM6gePJPiFF+2hQVAQ==
+
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
