@@ -17,7 +17,7 @@ const Datepicker = () => {
         onChange={(e) => setTaskDate(e)}
         className={styles.Calendar}
         minDate={new Date()}
-        dateFormat="MMMM d"
+        dateFormat="d MMMM"
       />
       <Icon icon="calendar" size={18} className={styles.CalendarIcon} />
     </label>
