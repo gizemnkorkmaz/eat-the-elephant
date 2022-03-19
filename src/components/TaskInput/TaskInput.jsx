@@ -8,8 +8,7 @@ import Button from "../Button/Button";
 
 const TaskInput = () => {
   const [task, setTask] = useState({ name: "" });
-  const { tasks, setTasks } = useContext(TasksContext);
-  const { taskDate, setTaskDate } = useContext(TasksContext);
+  const { tasks, setTasks, taskDate, setTaskDate } = useContext(TasksContext);
 
   const addTask = (task) => {
     if (task.name.length) {
