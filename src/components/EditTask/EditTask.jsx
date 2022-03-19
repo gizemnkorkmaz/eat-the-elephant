@@ -8,7 +8,7 @@ import Datepicker from "../DatePicker/DatePicker";
 
 const EditTask = ({ task }) => {
   const [editedTask, setEditedTask] = useState(task);
-  const { tasks, setTasks, editTaskId, setEditTaskId } =
+  const { tasks, setTasks, editTaskId, setEditTaskId, taskDate, setTaskDate } =
     useContext(TasksContext);
 
   const handleEdit = (e) => {
@@ -16,12 +16,16 @@ const EditTask = ({ task }) => {
   };
 
   const saveEdit = () => {
+    const newTask = { ...editedTask, date: taskDate };
+
     setEditTaskId(null);
-    setTasks(tasks.map((task) => (task.id === editTaskId ? editedTask : task)));
+    setTasks(tasks.map((task) => (task.id === editTaskId ? newTask : task)));
+    setTaskDate(new Date());
   };
 
   const cancelEdit = () => {
     setEditTaskId(null);
+    setTaskDate(new Date());
   };
 
   return (
