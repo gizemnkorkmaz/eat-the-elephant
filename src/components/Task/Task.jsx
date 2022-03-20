@@ -10,7 +10,7 @@ import EditTask from "../EditTask/EditTask";
 import dayjs from "dayjs";
 
 const Task = ({ task }) => {
-  const { tasks, setTasks, editTaskId, setEditTaskId, setTaskDate } =
+  const { tasks, setTasks, editTaskId, setEditTaskId } =
     useContext(TasksContext);
   const currentTaskId = task.id;
   const dueDate = dayjs(task.date).format("D MMM");
@@ -25,7 +25,6 @@ const Task = ({ task }) => {
 
   const activateEdit = () => {
     setEditTaskId(task.id);
-    setTaskDate(task.date);
   };
 
   const deleteTask = () => {
