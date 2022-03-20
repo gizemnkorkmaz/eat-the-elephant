@@ -2,7 +2,6 @@ import "./App.css";
 
 import Header from "./components/Header/Header";
 import TaskInput from "./components/TaskInput/TaskInput";
-import Datepicker from "./components/DatePicker/DatePicker";
 import Tasks from "./components/Tasks/Tasks";
 
 import { TasksProvider } from "./context/tasksContext";
@@ -15,7 +14,6 @@ const App = () => (
       <section className="TaskListArea">
         <TasksProvider>
           <TaskInput />
-          <Datepicker />
           <Tasks />
         </TasksProvider>
       </section>
