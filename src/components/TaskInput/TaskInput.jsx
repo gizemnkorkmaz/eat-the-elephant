@@ -32,7 +32,7 @@ const TaskInput = () => {
     }
   };
 
-  const addDate = (date, e) => {
+  const selectDate = (date, e) => {
     e.preventDefault();
     setTask({ ...task, date: date.toString() });
   };
@@ -52,7 +52,7 @@ const TaskInput = () => {
         </div>
         <Button onClick={addTask}>Add Task</Button>
       </div>
-      <Datepicker selected={task.date} onChange={addDate} />
+      <Datepicker selected={task.date} onChange={selectDate} />
     </>
   );
 };
