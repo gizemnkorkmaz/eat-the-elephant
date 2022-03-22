@@ -11,7 +11,7 @@ const TaskInput = () => {
   const [task, setTask] = useState({ name: "" });
   const { tasks, setTasks } = useContext(TasksContext);
 
-  const addTask = (task) => {
+  const addTask = () => {
     if (task.name.length) {
       setTasks([
         ...tasks,
@@ -28,7 +28,7 @@ const TaskInput = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      addTask(task);
+      addTask();
     }
   };
 
@@ -49,7 +49,7 @@ const TaskInput = () => {
             onKeyDown={handleKeyDown}
           />
         </div>
-        <Button onClick={() => addTask(task)}>Add Task</Button>
+        <Button onClick={addTask}>Add Task</Button>
       </div>
       <Datepicker selected={task.date} onChange={addDate} />
     </>
