@@ -7,10 +7,13 @@ import styles from "./Task.module.css";
 import Icon from "../Icon/Icon";
 import EditTask from "../EditTask/EditTask";
 
+import dayjs from "dayjs";
+
 const Task = ({ task }) => {
   const { tasks, setTasks, editTaskId, setEditTaskId } =
     useContext(TasksContext);
   const currentTaskId = task.id;
+  const dueDate = dayjs(task.date).format("D MMM");
 
   const toggleIsDone = () => {
     setTasks(
@@ -51,6 +54,7 @@ const Task = ({ task }) => {
               })}
             >
               {task.name}
+              <span className={styles.TaskDue}>{dueDate}</span>
             </p>
           </div>
           <div className={styles.Buttons}>

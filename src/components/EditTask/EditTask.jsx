@@ -4,7 +4,7 @@ import { TasksContext } from "../../context/tasksContext";
 import styles from "./EditTask.module.css";
 
 import Button from "../Button/Button";
-import Icon from "../Icon/Icon";
+import Datepicker from "../DatePicker/DatePicker";
 
 const EditTask = ({ task }) => {
   const [editedTask, setEditedTask] = useState(task);
@@ -24,6 +24,10 @@ const EditTask = ({ task }) => {
     setEditTaskId(null);
   };
 
+  const changeDate = (date) => {
+    setEditedTask({ ...editedTask, date: date.toString() });
+  };
+
   return (
     <div className={styles.EditArea}>
       <div className={styles.EditTask}>
@@ -33,7 +37,7 @@ const EditTask = ({ task }) => {
           className={styles.Input}
           onChange={handleEdit}
         />
-        <Icon icon="calendar" size={20} />
+        <Datepicker selected={editedTask.date} onChange={changeDate} />
       </div>
       <div className={styles.Buttons}>
         <Button onClick={saveEdit}>Save</Button>

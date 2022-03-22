@@ -17,3 +17,9 @@
 .TaskDone {
   @apply line-through;
 }
+
+.TaskDue {
+  @apply pl-2 pb-0 mb-0
+  text-xs
+  text-[#c4aea3];
+}

@@ -4,41 +4,55 @@ import { nanoid } from "nanoid";
 
 import styles from "./TaskInput.module.css";
 
-import Icon from "../Icon/Icon";
 import Button from "../Button/Button";
+import Datepicker from "../DatePicker/DatePicker";
 
 const TaskInput = () => {
   const [task, setTask] = useState({ name: "" });
   const { tasks, setTasks } = useContext(TasksContext);
 
-  const addTask = (task) => {
+  const addTask = () => {
     if (task.name.length) {
-      setTasks([...tasks, { id: nanoid(), name: task.name, isDone: false }]);
+      setTasks([
+        ...tasks,
+        {
+          id: nanoid(),
+          name: task.name,
+          date: task.date,
+          isDone: false,
+        },
+      ]);
       setTask({ name: "" });
     }
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      addTask(task);
+      addTask();
     }
   };
 
+  const addDate = (date) => {
+    setTask({ ...task, date: date.toString() });
+  };
+
   return (
-    <div className={styles.InputArea}>
-      <div>
-        <input
-          type="text"
-          className={styles.TaskInput}
-          placeholder="Enter your task"
-          value={task.name}
-          onChange={(e) => setTask({ name: e.target.value })}
-          onKeyDown={handleKeyDown}
-        />
-        <Icon icon="calendar" size={20} />
+    <>
+      <div className={styles.InputArea}>
+        <div>
+          <input
+            type="text"
+            className={styles.TaskInput}
+            placeholder="Enter your task"
+            value={task.name}
+            onChange={(e) => setTask({ ...task, name: e.target.value })}
+            onKeyDown={handleKeyDown}
+          />
+        </div>
+        <Button onClick={addTask}>Add Task</Button>
       </div>
-      <Button onClick={() => addTask(task)}>Add Task</Button>
-    </div>
+      <Datepicker selected={task.date} onChange={addDate} />
+    </>
   );
 };
 export default TaskInput;
