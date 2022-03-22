@@ -24,7 +24,8 @@ const EditTask = ({ task }) => {
     setEditTaskId(null);
   };
 
-  const changeDate = (date) => {
+  const changeDate = (date, e) => {
+    e.preventDefault();
     setEditedTask({ ...editedTask, date: date.toString() });
   };
 

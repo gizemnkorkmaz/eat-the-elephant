@@ -32,7 +32,8 @@ const TaskInput = () => {
     }
   };
 
-  const addDate = (date) => {
+  const addDate = (date, e) => {
+    e.preventDefault();
     setTask({ ...task, date: date.toString() });
   };
 
