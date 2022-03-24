@@ -17,6 +17,7 @@ const sortByDate = (selectedList, tasks) => {
   } else if (selectedList === "Next 7 Days") {
     const startWeek = dayjs().add(1, "day");
     const endWeek = dayjs().add(7, "day");
+
     return tasks.filter((task) =>
       dayjs(task.date).isBetween(startWeek, endWeek)
     );
