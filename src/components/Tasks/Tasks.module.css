@@ -10,5 +10,6 @@
 
 .TasksHeader {
   @apply text-sm font-bold italic
+        text-[#b4573d]
         pb-5;
 }
