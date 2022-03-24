@@ -6,19 +6,19 @@ import { TasksProvider } from "./context/tasksContext";
 import Header from "./components/Header/Header";
 import TaskInput from "./components/TaskInput/TaskInput";
 import TaskMenu from "./components/TaskMenu/TaskMenu";
-import Tasks from "./components/Tasks/Tasks";
+import TaskInbox from "./components/TaskInbox/TaskInbox";
 
 const App = () => {
-  const [selectedList, setSelectedList] = useState("Today");
+  const [selectedList, setSelectedList] = useState("Inbox");
+  const taskLists = {
+    inbox: "Inbox",
+    today: "Today",
+    tomorrow: "Tomorrow",
+    nextSevenDays: "Next 7 Days",
+    upcoming: "Upcoming",
+  };
 
   const selectTaskList = (selectedList) => {
-    const taskLists = {
-      today: "Today",
-      tomorrow: "Tomorrow",
-      nextSevenDays: "Next 7 Days",
-      allTasks: "All Tasks",
-    };
-
     setSelectedList(taskLists[selectedList]);
   };
 
@@ -35,7 +35,7 @@ const App = () => {
         <section className="TaskListArea">
           <TasksProvider>
             <TaskInput />
-            <Tasks selectedList={selectedList} />
+            <TaskInbox taskLists={taskLists} selectedList={selectedList} />
           </TasksProvider>
         </section>
       </div>
