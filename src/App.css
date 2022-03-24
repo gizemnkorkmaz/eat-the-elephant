@@ -4,7 +4,7 @@
 }
 
 .TaskBoard {
-  @apply flex md:justify-center lg:flex-row flex-col 
+  @apply flex lg:justify-center lg:flex-row flex-col 
 	p-5 
   rounded
   h-5/6
