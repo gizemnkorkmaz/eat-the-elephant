@@ -5,10 +5,11 @@ import Icon from "../Icon/Icon";
 
 const TaskMenu = ({ selectTaskList, selectedList }) => {
   const taskLists = [
-    { value: "today", label: "Today", icon: "star-empty" },
+    { value: "inbox", label: "Inbox", icon: "drawer" },
+    { value: "today", label: "Today", icon: "rocket" },
     { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
-    { value: "nextSevenDays", label: "Next 7 Days", icon: "hour-glass" },
-    { value: "allTasks", label: "All Tasks", icon: "rocket" },
+    { value: "nextSevenDays", label: "Next 7 Days", icon: "star" },
+    { value: "upcoming", label: "Upcoming", icon: "hour-glass" },
   ];
 
   return (
@@ -21,7 +22,7 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
           key={value}
           onClick={() => selectTaskList(value)}
         >
-          <Icon icon={icon} size={15} />
+          <Icon icon={icon} size={16} className={styles.Icon} />
           {label}
         </div>
       ))}
