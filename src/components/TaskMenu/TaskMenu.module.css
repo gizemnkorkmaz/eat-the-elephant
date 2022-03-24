@@ -8,11 +8,18 @@
     cursor-pointer
     text-[#7c8474]
     xl:text-base
-    text-sm
+    lg:text-sm
+    text-xs
     hover:text-[#b4573d];
 }
 
 .Active {
   @apply text-[#b4573d]
   font-bold;
+}
+
+.Icon {
+  @apply cursor-pointer 
+          lg:m-1
+          text-[#4c3c30];
 }
