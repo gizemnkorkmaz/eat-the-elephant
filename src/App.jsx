@@ -6,7 +6,7 @@ import { TasksProvider } from "./context/tasksContext";
 import Header from "./components/Header/Header";
 import TaskInput from "./components/TaskInput/TaskInput";
 import TaskMenu from "./components/TaskMenu/TaskMenu";
-import TaskInbox from "./components/TaskInbox/TaskInbox";
+import TaskList from "./components/TaskList/TaskList";
 
 const App = () => {
   const [selectedList, setSelectedList] = useState("Inbox");
@@ -35,7 +35,7 @@ const App = () => {
         <section className="TaskListArea">
           <TasksProvider>
             <TaskInput />
-            <TaskInbox taskLists={taskLists} selectedList={selectedList} />
+            <TaskList taskLists={taskLists} selectedList={selectedList} />
           </TasksProvider>
         </section>
       </div>
