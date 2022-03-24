@@ -11,12 +11,14 @@ const Tasks = ({ selectedList }) => {
   const selectedTaskList = sortByDate(selectedList, tasks);
 
   return (
-    <div className={styles.Tasks}>
-      <h1 className={styles.TasksHeader}>{selectedList}</h1>
-      {selectedTaskList.map((task) => (
-        <Task key={task.id} task={task} />
-      ))}
-    </div>
+    selectedTaskList.length > 0 && (
+      <div className={styles.Tasks}>
+        <h1 className={styles.TasksHeader}>{selectedList}</h1>
+        {selectedTaskList.map((task) => (
+          <Task key={task.id} task={task} />
+        ))}
+      </div>
+    )
   );
 };
 export default Tasks;
