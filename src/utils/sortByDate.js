@@ -10,18 +10,14 @@ dayjs.extend(isBetween);
 dayjs.extend(isSameOrAfter);
 
 const sortByDate = (selectedList, tasks) => {
-  const today = new Date();
-  const nextWeek = new Date(
-    today.getFullYear(),
-    today.getMonth(),
-    today.getDate() + 7
-  );
+  const today = dayjs();
+  const nextWeek = today.add(7, "day");
 
   if (selectedList === "Today") {
     return tasks.filter((task) => dayjs(task.date).isToday());
   } else if (selectedList === "Tomorrow") {
     return tasks.filter((task) => dayjs(task.date).isTomorrow());
-  } else if (selectedList === "This Week") {
+  } else if (selectedList === "Next 7 Days") {
     return tasks.filter((task) => dayjs(task.date).isBetween(today, nextWeek));
   } else {
     return tasks.sort((prevTask, currTask) =>
