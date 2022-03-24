@@ -15,13 +15,14 @@ const sortByDate = (selectedList, tasks) => {
   } else if (selectedList === "Tomorrow") {
     return tasks.filter((task) => dayjs(task.date).isTomorrow());
   } else if (selectedList === "Next 7 Days") {
-    const today = dayjs();
-    const nextWeek = today.add(7, "day");
-
-    return tasks.filter((task) => dayjs(task.date).isBetween(today, nextWeek));
+    const startWeek = dayjs().add(1, "day");
+    const endWeek = dayjs().add(7, "day");
+    return tasks.filter((task) =>
+      dayjs(task.date).isBetween(startWeek, endWeek)
+    );
   } else {
-    return tasks.sort((prevTask, currTask) =>
-      dayjs(prevTask.date).isSameOrAfter(dayjs(currTask.date)) ? 1 : -1
+    return tasks.filter((task) =>
+      dayjs(task.date).isSameOrAfter(dayjs().add(7, "day"))
     );
   }
 };
