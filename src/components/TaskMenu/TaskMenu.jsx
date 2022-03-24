@@ -7,7 +7,7 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
   const taskLists = [
     { value: "today", label: "Today", icon: "star-empty" },
     { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
-    { value: "thisWeek", label: "This Week", icon: "hour-glass" },
+    { value: "nextSevenDays", label: "Next 7 Days", icon: "hour-glass" },
     { value: "allTasks", label: "All Tasks", icon: "rocket" },
   ];
 

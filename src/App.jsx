@@ -15,7 +15,7 @@ const App = () => {
     const taskLists = {
       today: "Today",
       tomorrow: "Tomorrow",
-      thisWeek: "This Week",
+      nextSevenDays: "Next 7 Days",
       allTasks: "All Tasks",
     };
 
