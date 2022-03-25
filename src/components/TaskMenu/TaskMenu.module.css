@@ -1,0 +1,25 @@
+.TaskMenu {
+  @apply flex lg:flex-col justify-around lg:gap-4;
+}
+
+.TaskList {
+  @apply flex gap-1 flex-wrap justify-center lg:justify-start
+    lg:my-3
+    cursor-pointer
+    text-[#7c8474]
+    xl:text-base
+    lg:text-sm
+    text-xs
+    hover:text-[#b4573d];
+}
+
+.Active {
+  @apply text-[#b4573d]
+  font-bold;
+}
+
+.Icon {
+  @apply cursor-pointer 
+          lg:m-1
+          text-[#4c3c30];
+}
