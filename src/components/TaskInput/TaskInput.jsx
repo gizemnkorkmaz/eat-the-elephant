@@ -12,7 +12,7 @@ const TaskInput = () => {
   const { tasks, setTasks } = useContext(TasksContext);
 
   const addTask = () => {
-    if (task.name.length) {
+    if (task.name.trim().length) {
       setTasks([
         ...tasks,
         {
