@@ -11,6 +11,7 @@ import TaskList from "./components/TaskList/TaskList";
 const App = () => {
   const [selectedList, setSelectedList] = useState("Inbox");
   const taskLists = {
+    overdue: "Overdue",
     inbox: "Inbox",
     today: "Today",
     tomorrow: "Tomorrow",
