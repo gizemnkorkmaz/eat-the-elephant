@@ -8,9 +8,9 @@ import Button from "../Button/Button";
 import Datepicker from "../DatePicker/DatePicker";
 
 const TaskInput = () => {
-  const [task, setTask] = useState({ name: "" });
+  const [task, setTask] = useState({ name: "", date: new Date() });
   const { tasks, setTasks } = useContext(TasksContext);
-
+  console.log(tasks);
   const addTask = () => {
     if (task.name.trim().length) {
       setTasks([
