@@ -6,6 +6,7 @@ import Icon from "../Icon/Icon";
 const TaskMenu = ({ selectTaskList, selectedList }) => {
   const taskLists = [
     { value: "inbox", label: "Inbox", icon: "drawer" },
+    { value: "overdue", label: "Overdue", icon: "history" },
     { value: "today", label: "Today", icon: "rocket" },
     { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
     { value: "nextSevenDays", label: "Next 7 Days", icon: "star" },
