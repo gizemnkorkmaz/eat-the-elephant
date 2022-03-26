@@ -48,6 +48,7 @@ const TaskInput = () => {
             value={task.name}
             onChange={(e) => setTask({ ...task, name: e.target.value })}
             onKeyDown={handleKeyDown}
+            autoFocus
           />
         </div>
         <Button onClick={addTask}>Add Task</Button>
