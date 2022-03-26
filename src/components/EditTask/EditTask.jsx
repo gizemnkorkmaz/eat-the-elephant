@@ -29,6 +29,12 @@ const EditTask = ({ task }) => {
     setEditedTask({ ...editedTask, date: date.toString() });
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      saveEdit();
+    }
+  };
+
   return (
     <div className={styles.EditArea}>
       <div className={styles.EditTask}>
@@ -37,6 +43,8 @@ const EditTask = ({ task }) => {
           value={editedTask.name}
           className={styles.Input}
           onChange={handleEdit}
+          onKeyDown={handleKeyDown}
+          autoFocus
         />
         <Datepicker selected={editedTask.date} onChange={changeDate} />
       </div>
