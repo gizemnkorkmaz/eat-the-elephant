@@ -28,8 +28,11 @@ const sortByDate = (selectedList, tasks) => {
       dayjs(task.date).isSameOrAfter(dayjs().add(7, "day"))
     );
   } else {
-    return tasks.filter((task) =>
-      dayjs(task.date).isSameOrBefore(dayjs().subtract(1, "day"))
+    console.log(tasks);
+    return tasks.filter(
+      (task) =>
+        dayjs(task.date).isSameOrBefore(dayjs().subtract(1, "day")) &&
+        !task.isDone
     );
   }
 };
