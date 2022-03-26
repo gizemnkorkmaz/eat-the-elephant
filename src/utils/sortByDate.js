@@ -2,13 +2,13 @@ import dayjs from "dayjs";
 import isToday from "dayjs/plugin/isToday";
 import isTomorrow from "dayjs/plugin/isTomorrow";
 import isBetween from "dayjs/plugin/isBetween";
-import isBefore from "dayjs/plugin/isSameOrBefore";
+import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
 import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
 
 dayjs.extend(isToday);
 dayjs.extend(isTomorrow);
 dayjs.extend(isBetween);
-dayjs.extend(isBefore);
+dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
 
 const sortByDate = (selectedList, tasks) => {
