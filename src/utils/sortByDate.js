@@ -27,12 +27,14 @@ const sortByDate = (selectedList, tasks) => {
     return tasks.filter((task) =>
       dayjs(task.date).isSameOrAfter(dayjs().add(7, "day"))
     );
-  } else {
+  } else if (selectedList === "Overdue") {
     return tasks.filter(
       (task) =>
         dayjs(task.date).isSameOrBefore(dayjs().subtract(1, "day")) &&
         !task.isDone
     );
+  } else {
+    return tasks;
   }
 };
 
