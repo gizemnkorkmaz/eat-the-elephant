@@ -1,9 +1,15 @@
 import styles from "./TaskMenu.module.css";
 import cx from "classnames";
 
+import { useContext } from "react";
+import { TasksContext } from "../../context/tasksContext";
+import sortByDate from "../../utils/sortByDate";
+
 import Icon from "../Icon/Icon";
 
 const TaskMenu = ({ selectTaskList, selectedList }) => {
+  const { tasks } = useContext(TasksContext);
+
   const taskLists = [
     { value: "inbox", label: "Inbox", icon: "drawer" },
     { value: "overdue", label: "Overdue", icon: "history" },
@@ -24,7 +30,7 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
           onClick={() => selectTaskList(value)}
         >
           <Icon icon={icon} size={16} className={styles.Icon} />
-          {label}
+          {label} ({sortByDate(label, tasks).length})
         </div>
       ))}
     </div>
