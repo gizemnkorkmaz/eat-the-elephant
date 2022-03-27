@@ -23,7 +23,7 @@ const TaskInput = () => {
           isDone: false,
         },
       ]);
-      setTask({ name: "" });
+      setTask({ name: "", date: new Date() });
     }
   };
 
