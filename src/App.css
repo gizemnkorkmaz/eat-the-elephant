@@ -17,7 +17,8 @@
   @apply bg-[#e8e4e1]
   rounded
   shadow
-  p-10 
+  px-2 py-5
+  lg:p-10 
   text-[#4c3c30] text-center
   lg:min-h-screen
   lg:w-1/5;

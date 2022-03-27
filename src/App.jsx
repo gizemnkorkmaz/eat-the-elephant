@@ -27,18 +27,18 @@ const App = () => {
     <div className="App">
       <Header />
       <div className="TaskBoard">
-        <section className="TaskMenu">
-          <TaskMenu
-            selectTaskList={selectTaskList}
-            selectedList={selectedList}
-          />
-        </section>
-        <section className="TaskListArea">
-          <TasksProvider>
+        <TasksProvider>
+          <section className="TaskMenu">
+            <TaskMenu
+              selectTaskList={selectTaskList}
+              selectedList={selectedList}
+            />
+          </section>
+          <section className="TaskListArea">
             <TaskInput />
             <TaskList taskLists={taskLists} selectedList={selectedList} />
-          </TasksProvider>
-        </section>
+          </section>
+        </TasksProvider>
       </div>
     </div>
   );

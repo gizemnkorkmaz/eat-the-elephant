@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { TasksContext } from "../../context/tasksContext";
 import { nanoid } from "nanoid";
 
@@ -8,8 +8,9 @@ import Button from "../Button/Button";
 import Datepicker from "../DatePicker/DatePicker";
 
 const TaskInput = () => {
-  const [task, setTask] = useState({ name: "" });
+  const [task, setTask] = useState({ name: "", date: new Date() });
   const { tasks, setTasks } = useContext(TasksContext);
+  const inputRef = useRef();
 
   const addTask = () => {
     if (task.name.trim().length) {
@@ -22,7 +23,7 @@ const TaskInput = () => {
           isDone: false,
         },
       ]);
-      setTask({ name: "" });
+      setTask({ name: "", date: new Date() });
     }
   };
 
@@ -35,6 +36,7 @@ const TaskInput = () => {
   const selectDate = (date, e) => {
     e.preventDefault();
     setTask({ ...task, date: date.toString() });
+    inputRef.current.focus();
   };
 
   return (
@@ -48,6 +50,7 @@ const TaskInput = () => {
             value={task.name}
             onChange={(e) => setTask({ ...task, name: e.target.value })}
             onKeyDown={handleKeyDown}
+            ref={inputRef}
             autoFocus
           />
         </div>

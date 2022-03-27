@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { TasksContext } from "../../context/tasksContext";
 
 import styles from "./EditTask.module.css";
@@ -10,6 +10,7 @@ const EditTask = ({ task }) => {
   const [editedTask, setEditedTask] = useState(task);
   const { tasks, setTasks, editTaskId, setEditTaskId } =
     useContext(TasksContext);
+  const inputRef = useRef(null);
 
   const handleEdit = (e) => {
     setEditedTask({ ...task, name: e.target.value });
@@ -27,6 +28,7 @@ const EditTask = ({ task }) => {
   const changeDate = (date, e) => {
     e.preventDefault();
     setEditedTask({ ...editedTask, date: date.toString() });
+    inputRef.current.focus();
   };
 
   const handleKeyDown = (e) => {
@@ -44,6 +46,7 @@ const EditTask = ({ task }) => {
           className={styles.Input}
           onChange={handleEdit}
           onKeyDown={handleKeyDown}
+          ref={inputRef}
           autoFocus
         />
         <Datepicker selected={editedTask.date} onChange={changeDate} />
