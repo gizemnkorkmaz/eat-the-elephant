@@ -2,14 +2,10 @@ import dayjs from "dayjs";
 import isToday from "dayjs/plugin/isToday";
 import isTomorrow from "dayjs/plugin/isTomorrow";
 import isBetween from "dayjs/plugin/isBetween";
-import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
-import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
 
 dayjs.extend(isToday);
 dayjs.extend(isTomorrow);
 dayjs.extend(isBetween);
-dayjs.extend(isSameOrBefore);
-dayjs.extend(isSameOrAfter);
 
 const sortByDate = (selectedList, tasks) => {
   if (selectedList === "Today") {
@@ -25,13 +21,11 @@ const sortByDate = (selectedList, tasks) => {
     );
   } else if (selectedList === "Upcoming") {
     return tasks.filter((task) =>
-      dayjs(task.date).isSameOrAfter(dayjs().add(7, "day"))
+      dayjs(task.date).isAfter(dayjs().add(7, "day"))
     );
   } else if (selectedList === "Overdue") {
     return tasks.filter(
-      (task) =>
-        dayjs(task.date).isSameOrBefore(dayjs().subtract(1, "day")) &&
-        !task.isDone
+      (task) => dayjs(task.date).isBefore(dayjs(), "day") && !task.isDone
     );
   } else {
     return tasks;
