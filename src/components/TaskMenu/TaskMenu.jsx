@@ -21,18 +21,22 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
 
   return (
     <div className={styles.TaskMenu}>
-      {taskLists.map(({ value, label, icon }) => (
-        <div
-          className={cx(styles.TaskList, {
-            [styles.Active]: selectedList === label,
-          })}
-          key={value}
-          onClick={() => selectTaskList(value)}
-        >
-          <Icon icon={icon} size={16} className={styles.Icon} />
-          {label} ({sortByDate(label, tasks).length})
-        </div>
-      ))}
+      {taskLists.map(({ value, label, icon }) =>
+        sortByDate(label, tasks).length || label === "Inbox" ? (
+          <div
+            className={cx(styles.TaskList, {
+              [styles.Active]: selectedList === label,
+            })}
+            key={value}
+            onClick={() => selectTaskList(value)}
+          >
+            <Icon icon={icon} size={16} className={styles.Icon} />
+            {label} ({sortByDate(label, tasks).length})
+          </div>
+        ) : (
+          ""
+        )
+      )}
     </div>
   );
 };
