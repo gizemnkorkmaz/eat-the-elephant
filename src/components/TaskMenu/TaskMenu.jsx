@@ -33,9 +33,7 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
             <Icon icon={icon} size={16} className={styles.Icon} />
             {label} ({sortByDate(label, tasks).length})
           </div>
-        ) : (
-          ""
-        )
+        ) : null
       )}
     </div>
   );
