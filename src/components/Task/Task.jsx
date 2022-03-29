@@ -14,6 +14,7 @@ const Task = ({ task }) => {
     useContext(TasksContext);
   const currentTaskId = task.id;
   const dueDate = dayjs(task.date).format("D MMM");
+  const isOverdue = new Date().getDay() > new Date(task.date).getDay();
 
   const toggleIsDone = () => {
     setTasks(
@@ -54,7 +55,13 @@ const Task = ({ task }) => {
               })}
             >
               {task.name}
-              <span className={styles.TaskDue}>{dueDate}</span>
+              <span
+                className={cx(styles.TaskDue, {
+                  [styles.OverdueTask]: isOverdue,
+                })}
+              >
+                {dueDate}
+              </span>
             </p>
           </div>
           <div className={styles.Buttons}>

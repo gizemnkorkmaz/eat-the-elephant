@@ -23,3 +23,7 @@
   text-xs
   text-[#c4aea3];
 }
+
+.OverdueTask {
+  @apply text-[#ff2800];
+}
