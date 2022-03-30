@@ -14,7 +14,7 @@ const Task = ({ task }) => {
     useContext(TasksContext);
   const currentTaskId = task.id;
   const dueDate = dayjs(task.date).format("D MMM");
-  const isOverdue = new Date().getDay() > new Date(task.date).getDay();
+  const isOverdue = dayjs().isAfter(dayjs(task.date).add(1, "day"));
 
   const toggleIsDone = () => {
     setTasks(
