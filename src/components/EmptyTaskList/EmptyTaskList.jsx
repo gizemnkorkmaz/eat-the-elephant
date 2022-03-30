@@ -8,7 +8,7 @@ const EmptyTaskList = () => {
   return (
     tasks.length === 0 && (
       <div className={styles.EmptyTaskWrapper}>
-        <h2>No task listed. </h2>
+        <h2>No task listed.</h2>
         <p className={styles.EmptyTaskMessage}>
           Add some or enjoy the rest of your day!
         </p>
