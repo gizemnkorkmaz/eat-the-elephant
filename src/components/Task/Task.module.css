@@ -27,3 +27,11 @@
 .OverdueTask {
   @apply text-[#ff2800];
 }
+
+.Buttons {
+  display: none;
+}
+
+.TaskWrapper:hover .Buttons {
+  display: block;
+}
