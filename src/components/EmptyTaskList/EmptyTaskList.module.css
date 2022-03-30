@@ -1,0 +1,14 @@
+.EmptyTaskWrapper {
+  @apply text-[#704523]
+  italic
+  text-lg
+  text-center
+  py-10;
+}
+
+.EmptyTaskMessage {
+  @apply text-[#9e826b]
+  text-sm
+  p-5
+  italic;
+}
