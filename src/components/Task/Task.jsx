@@ -49,12 +49,14 @@ const Task = ({ task }) => {
               size={20}
               onClick={toggleIsDone}
             />
-            <p
-              className={cx(styles.TaskName, {
-                [styles.TaskDone]: task.isDone,
-              })}
-            >
-              {task.name}
+            <p className={styles.TaskName}>
+              <span
+                className={cx({
+                  [styles.TaskDone]: task.isDone,
+                })}
+              >
+                {task.name}
+              </span>
               <span
                 className={cx(styles.TaskDue, {
                   [styles.OverdueTask]: isOverdue,
@@ -65,8 +67,8 @@ const Task = ({ task }) => {
             </p>
           </div>
           <div className={styles.Buttons}>
-            <Icon icon="pencil" size={20} onClick={activateEdit} />
-            <Icon icon="bin" size={20} onClick={deleteTask} />
+            <Icon icon="pencil" size={18} onClick={activateEdit} />
+            <Icon icon="bin" size={18} onClick={deleteTask} />
           </div>
         </div>
       )}
