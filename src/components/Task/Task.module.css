@@ -25,7 +25,7 @@
 }
 
 .OverdueTask {
-  @apply text-[#c23b22];
+  @apply text-[#d0342c];
 }
 
 .Buttons {
