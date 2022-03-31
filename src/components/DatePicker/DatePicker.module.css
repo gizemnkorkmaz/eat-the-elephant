@@ -18,7 +18,7 @@
 .Calendar {
   @apply text-center 
   my-1
-  w-20
+  w-14
   cursor-pointer
   float-right
   bg-transparent

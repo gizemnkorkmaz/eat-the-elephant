@@ -17,8 +17,12 @@ const EditTask = ({ task }) => {
   };
 
   const saveEdit = () => {
-    setEditTaskId(null);
-    setTasks(tasks.map((task) => (task.id === editTaskId ? editedTask : task)));
+    if (editedTask.name.trim().length) {
+      setEditTaskId(null);
+      setTasks(
+        tasks.map((task) => (task.id === editTaskId ? editedTask : task))
+      );
+    }
   };
 
   const cancelEdit = () => {

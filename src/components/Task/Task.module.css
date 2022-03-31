@@ -10,7 +10,7 @@
 }
 
 .TaskName {
-  @apply text-[#4c3c30]
+  @apply text-[#4c3c30] text-base
   ml-2 lg:mr-20;
 }
 
@@ -22,4 +22,17 @@
   @apply pl-2 pb-0 mb-0
   text-xs
   text-[#c4aea3];
+}
+
+.OverdueTask {
+  @apply text-[#d0342c];
+}
+
+.Buttons {
+  @apply flex;
+  visibility: hidden;
+}
+
+.TaskWrapper:hover .Buttons {
+  visibility: visible;
 }

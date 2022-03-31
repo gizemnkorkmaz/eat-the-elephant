@@ -23,3 +23,11 @@
           lg:m-1
           text-[#4c3c30];
 }
+
+.TaskLength {
+  @apply p-px;
+}
+
+.Overdue {
+  @apply text-[#d0342c];
+}

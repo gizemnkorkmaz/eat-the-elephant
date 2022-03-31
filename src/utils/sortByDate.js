@@ -28,7 +28,7 @@ const sortByDate = (selectedList, tasks) => {
       (task) => dayjs(task.date).isBefore(dayjs(), "day") && !task.isDone
     );
   } else {
-    return tasks;
+    return tasks.filter((task) => !task.isDone);
   }
 };
 

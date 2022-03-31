@@ -14,6 +14,7 @@ const Task = ({ task }) => {
     useContext(TasksContext);
   const currentTaskId = task.id;
   const dueDate = dayjs(task.date).format("D MMM");
+  const isOverdue = dayjs().isAfter(dayjs(task.date).add(1, "day"));
 
   const toggleIsDone = () => {
     setTasks(
@@ -45,21 +46,29 @@ const Task = ({ task }) => {
           <div className={styles.TaskItem}>
             <Icon
               icon={task.isDone ? "checkbox-checked" : "checkbox-unchecked"}
-              size={20}
+              size={17}
               onClick={toggleIsDone}
             />
-            <p
-              className={cx(styles.TaskName, {
-                [styles.TaskDone]: task.isDone,
-              })}
-            >
-              {task.name}
-              <span className={styles.TaskDue}>{dueDate}</span>
+            <p className={styles.TaskName}>
+              <span
+                className={cx({
+                  [styles.TaskDone]: task.isDone,
+                })}
+              >
+                {task.name}
+              </span>
+              <span
+                className={cx(styles.TaskDue, {
+                  [styles.OverdueTask]: isOverdue,
+                })}
+              >
+                {dueDate}
+              </span>
             </p>
           </div>
           <div className={styles.Buttons}>
-            <Icon icon="pencil" size={20} onClick={activateEdit} />
-            <Icon icon="bin" size={20} onClick={deleteTask} />
+            <Icon icon="pencil" size={18} onClick={activateEdit} />
+            <Icon icon="bin" size={18} onClick={deleteTask} />
           </div>
         </div>
       )}
