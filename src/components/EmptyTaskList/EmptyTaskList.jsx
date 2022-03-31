@@ -2,16 +2,29 @@ import styles from "./EmptyTaskList.module.css";
 
 import { useContext } from "react";
 import { TasksContext } from "../../context/tasksContext";
+import Button from "../Button/Button";
 
 const EmptyTaskList = () => {
-  const { tasks } = useContext(TasksContext);
+  const { tasks, setTasks } = useContext(TasksContext);
+  const incompleteTasks = tasks.filter((task) => !task.isDone);
+
+  const clearAll = () => {
+    const isConfirm = window.confirm(
+      "Are you sure you want to clear all tasks?"
+    );
+    if (isConfirm) {
+      setTasks([]);
+    }
+  };
   return (
-    tasks.length === 0 && (
+    incompleteTasks.length === 0 && (
       <div className={styles.EmptyTaskWrapper}>
-        <h2>No task listed.</h2>
         <p className={styles.EmptyTaskMessage}>
-          Add some or enjoy the rest of your day!
+          Looks like everything's organized in the right place.
         </p>
+        {tasks.length > 0 && (
+          <Button onClick={clearAll}>Clear completed tasks</Button>
+        )}
       </div>
     )
   );
