@@ -23,3 +23,12 @@
           lg:m-1
           text-[#4c3c30];
 }
+
+.TaskLength {
+  @apply rounded-full
+  bg-[#cbcbc7];
+}
+
+.Overdue {
+  @apply text-[#c23b22];
+}
