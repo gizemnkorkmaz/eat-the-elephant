@@ -31,7 +31,14 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
             onClick={() => selectTaskList(value)}
           >
             <Icon icon={icon} size={16} className={styles.Icon} />
-            {label} ({sortByDate(label, tasks).length})
+            {label}
+            <span
+              className={cx({
+                [styles.Overdue]: label === "Overdue",
+              })}
+            >
+              ({sortByDate(label, tasks).length})
+            </span>
           </div>
         ) : null
       )}
