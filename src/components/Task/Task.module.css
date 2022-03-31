@@ -10,7 +10,7 @@
 }
 
 .TaskName {
-  @apply text-[#4c3c30]
+  @apply text-[#4c3c30] text-base
   ml-2 lg:mr-20;
 }
 
@@ -29,9 +29,10 @@
 }
 
 .Buttons {
-  display: none;
+  @apply flex;
+  visibility: hidden;
 }
 
 .TaskWrapper:hover .Buttons {
-  display: block;
+  visibility: visible;
 }
