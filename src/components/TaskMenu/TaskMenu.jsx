@@ -37,7 +37,7 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
                 [styles.Overdue]: label === "Overdue",
               })}
             >
-              ({sortByDate(label, tasks).length})
+              ({sortByDate(label, tasks).filter((task) => !task.isDone).length})
             </span>
           </div>
         ) : null
