@@ -33,7 +33,7 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
             <Icon icon={icon} size={16} className={styles.Icon} />
             {label}
             <span
-              className={cx({
+              className={cx(styles.TaskLength, {
                 [styles.Overdue]: label === "Overdue",
               })}
             >
