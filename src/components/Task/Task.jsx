@@ -46,7 +46,7 @@ const Task = ({ task }) => {
           <div className={styles.TaskItem}>
             <Icon
               icon={task.isDone ? "checkbox-checked" : "checkbox-unchecked"}
-              size={20}
+              size={17}
               onClick={toggleIsDone}
             />
             <p className={styles.TaskName}>
