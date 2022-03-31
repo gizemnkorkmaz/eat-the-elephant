@@ -19,6 +19,7 @@ const EmptyTaskList = () => {
   return (
     incompleteTasks.length === 0 && (
       <div className={styles.EmptyTaskWrapper}>
+        {tasks.length === 0 && <h2>No task listed.</h2>}
         <p className={styles.EmptyTaskMessage}>
           Looks like everything's organized in the right place.
         </p>
