@@ -1,8 +1,9 @@
 .TaskMenu {
   @apply flex
-  lg:flex-col justify-start lg:justify-around
+  lg:flex-col justify-around lg:justify-around
   lg:py-10
   mx-2
+  lg:fixed
   text-[#4d8581];
 }
 
