@@ -10,8 +10,8 @@
 
 @layer components {
   html {
-    @apply bg-[#f8f8f8]
-    text-[#c4aea3]
-    w-screen;
+    @apply bg-[#e7e8ed]
+    w-screen
+    h-screen;
   }
 }

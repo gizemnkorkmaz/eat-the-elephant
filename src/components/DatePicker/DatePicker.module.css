@@ -2,17 +2,19 @@
   @apply flex justify-end
   max-w-xs
   mx-auto
-  w-28
-  lg:w-48
-  md:w-28
+  w-40
+  md:w-96
+  py-1
   text-sm
-  text-[#c4aea3];
+  text-[#212121]
+  hover:text-[#4d8581];
 }
 
 .CalendarIcon {
   @apply my-1
   cursor-pointer
-  text-[#4c3c30];
+  min-w-fit
+  text-[#212121];
 }
 
 .Calendar {

@@ -1,8 +1,8 @@
 .TaskWrapper {
   @apply py-2 lg:px-5 m-1 
-        border-b border-[#999b84]
-        flex justify-between content-center
-        rounded;
+  border-b border-[#4d8581]
+  flex justify-between content-center
+  rounded;
 }
 
 .TaskItem {
@@ -10,7 +10,8 @@
 }
 
 .TaskName {
-  @apply text-[#4c3c30] text-base
+  @apply text-[#3a5874] text-lg
+  flex items-end
   ml-2 lg:mr-20;
 }
 
@@ -19,9 +20,9 @@
 }
 
 .TaskDue {
-  @apply pl-2 pb-0 mb-0
+  @apply pl-2 pb-px mb-0
   text-xs
-  text-[#c4aea3];
+  text-[#4d8581];
 }
 
 .OverdueTask {

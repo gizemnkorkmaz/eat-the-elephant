@@ -1,9 +1,9 @@
 .Button {
-  @apply bg-[#c4bdac]
+  @apply bg-[#dcdcdc]
   px-2 lg:px-5 py-1
   mx-1
   text-xs 
-  shadow
-  text-[#4c3c30]
+  shadow-md
+  text-[#006d77]
   rounded-xl;
 }
