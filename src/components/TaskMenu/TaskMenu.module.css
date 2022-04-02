@@ -1,15 +1,13 @@
 .TaskMenu {
   @apply flex
-  lg:flex-col
-  justify-around
-  lg:gap-4
+  lg:flex-col justify-start lg:justify-around
   lg:py-10
+  mx-2
   text-[#4d8581];
 }
 
 .TaskList {
-  @apply flex gap-1 flex-wrap justify-center items-center
-  lg:justify-start
+  @apply flex gap-1 flex-wrap items-center 
   lg:my-3
   rounded
   cursor-pointer

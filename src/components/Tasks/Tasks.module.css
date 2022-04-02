@@ -1,14 +1,14 @@
 .Tasks {
   @apply bg-[#edecf2]
         flex flex-col justify-center
-        min-w-full mx-auto my-5 p-5  
-        lg:text-xl
+        min-w-fit my-5 p-5  
         shadow-lg
         rounded-xl;
 }
 
 .TasksHeader {
-  @apply text-sm font-bold italic
+  @apply text-sm
+  italic
   text-[#e29578]
   pb-5;
 }

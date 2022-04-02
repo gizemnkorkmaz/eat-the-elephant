@@ -1,11 +1,11 @@
 .CalendarWrapper {
-  @apply flex justify-end
+  @apply flex
   max-w-xs
   mx-auto
-  w-40
+  w-32
   md:w-96
   py-1
-  text-sm
+  text-xs
   text-[#212121]
   hover:text-[#4d8581];
 }
@@ -13,14 +13,13 @@
 .CalendarIcon {
   @apply my-1
   cursor-pointer
-  min-w-fit
   text-[#212121];
 }
 
 .Calendar {
   @apply text-center 
   my-1
-  w-14
+  w-12
   cursor-pointer
   float-right
   bg-transparent

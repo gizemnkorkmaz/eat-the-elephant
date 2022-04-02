@@ -7,7 +7,8 @@
 .TaskInput {
   @apply px-2 m-auto
         md:w-96
-        text-base
+        text-sm
+        lg:text-base
         text-[#212121]
         bg-transparent
         placeholder:text-[#aaaaaa]
