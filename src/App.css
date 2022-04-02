@@ -1,7 +1,6 @@
-ß.App {
+.App {
   @apply w-screen 
-  h-screen
-  overflow-x-hidden;
+  h-screen;
 }
 
 .TaskBoard {
