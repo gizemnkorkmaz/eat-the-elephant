@@ -2,6 +2,7 @@ import styles from "./EmptyTaskList.module.css";
 
 import { useContext } from "react";
 import { TasksContext } from "../../context/tasksContext";
+
 import Button from "../Button/Button";
 
 const EmptyTaskList = () => {
@@ -17,14 +18,19 @@ const EmptyTaskList = () => {
     }
   };
   return (
-    incompleteTasks.length === 0 && (
+    !incompleteTasks.length && (
       <div className={styles.EmptyTaskWrapper}>
-        {tasks.length === 0 && <h2>No task listed.</h2>}
-        <p className={styles.EmptyTaskMessage}>
-          Looks like everything's organized in the right place.
-        </p>
-        {tasks.length > 0 && (
-          <Button onClick={clearAll}>Clear completed tasks</Button>
+        {tasks.length === 0 ? (
+          <h2>No task listed.</h2>
+        ) : (
+          incompleteTasks.length === 0 && (
+            <div>
+              <p className={styles.EmptyTaskMessage}>
+                Looks like everything's organized in the right place!
+              </p>
+              <Button onClick={clearAll}>Clear All</Button>
+            </div>
+          )
         )}
       </div>
     )
