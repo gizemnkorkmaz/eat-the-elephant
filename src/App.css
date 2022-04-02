@@ -1,34 +1,27 @@
-.App {
-  @apply w-full 
-  h-screen 
-  max-w-7xl
-  m-auto
-  py-10;
+ß.App {
+  @apply w-screen 
+  h-screen
+  overflow-x-hidden;
 }
 
 .TaskBoard {
-  @apply flex lg:justify-center lg:flex-row flex-col 
-	p-5 
-  rounded
-  gap-5;
+  @apply flex lg:flex-row flex-col;
 }
 
 .TaskMenu {
-  @apply bg-[#e8e4e1]
-  rounded
+  @apply bg-[#edecf2]
+  py-5 lg:px-5
+  text-center
   shadow
-  px-2 py-5
-  lg:p-10 
-  text-[#4c3c30] text-center
   lg:min-h-screen
   lg:w-1/5;
 }
 
 .TaskListArea {
-  @apply bg-[#e1e1d6]
-  flex flex-col
-  rounded
-  shadow
+  @apply bg-[#e7e8ed]
+  flex flex-col 
+  lg:m-auto
+  mx-5
   lg:p-10 p-5
   min-h-screen
   lg:w-3/5;
