@@ -1,6 +1,6 @@
 .TaskMenu {
   @apply flex
-  lg:flex-col justify-around lg:justify-around
+  lg:flex-col justify-around
   lg:py-10
   mx-2
   lg:fixed
@@ -24,14 +24,15 @@
 .Active {
   @apply text-[#e29578]
   border-l border-[#4d8581]
-  bg-[#e7e8ed];
+  bg-[#e7e8ed]
+  pr-20;
 }
 
 .Icon {
   @apply cursor-pointer 
   lg:m-2
-  min-w-fit
   px-1
+  min-w-fit
   text-[#212121];
 }
 
