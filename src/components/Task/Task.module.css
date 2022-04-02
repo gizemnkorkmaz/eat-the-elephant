@@ -6,7 +6,7 @@
 }
 
 .TaskItem {
-  @apply flex;
+  @apply flex items-center;
 }
 
 .TaskName {
