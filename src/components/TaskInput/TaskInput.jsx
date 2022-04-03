@@ -54,9 +54,14 @@ const TaskInput = () => {
             autoFocus
           />
         </div>
-        <Icon icon="plus" size={18} onClick={addTask} />
+        <Datepicker selected={task.date} onChange={selectDate} />
+        <Icon
+          icon="plus"
+          size={20}
+          className={styles.AddButton}
+          onClick={addTask}
+        />
       </div>
-      <Datepicker selected={task.date} onChange={selectDate} />
     </>
   );
 };
