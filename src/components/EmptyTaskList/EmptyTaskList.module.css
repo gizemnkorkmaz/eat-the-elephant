@@ -2,13 +2,12 @@
   @apply italic
   text-[#006d77]
   text-xs
-  py-10
+  py-5 m-10
   md:text-xl
   text-center
   bg-[#edecf2]
   flex justify-center
-  shadow-lg
-  rounded-xl;
+  shadow-lg;
 }
 
 .EmptyTaskMessage {

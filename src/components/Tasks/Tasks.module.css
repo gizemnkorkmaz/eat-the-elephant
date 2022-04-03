@@ -2,13 +2,12 @@
   @apply bg-[#edecf2]
         flex flex-col 
         my-5 p-5  
-        shadow-lg
-        rounded-xl;
+        shadow-lg;
 }
 
 .TasksHeader {
   @apply text-sm
   italic
-  text-[#e29578]
+  text-[#cc5500]
   pb-5;
 }

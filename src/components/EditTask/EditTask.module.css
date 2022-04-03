@@ -1,12 +1,7 @@
 .EditArea {
   @apply flex flex-col
   mx-auto
-  p-5;
-}
-
-.EditTask {
-  @apply lg:p-5
-  mb-2;
+  p-2;
 }
 
 .Input {

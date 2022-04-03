@@ -1,8 +1,8 @@
 .TaskWrapper {
-  @apply py-2 lg:px-5 m-1 
-  border-b border-[#4d8581]
-  flex justify-between content-center
-  rounded;
+  @apply py-2 
+  border-b border-[#d4d4d4]
+  last:border-b-0
+  flex justify-between items-center;
 }
 
 .TaskItem {
@@ -13,7 +13,7 @@
   @apply text-[#3a5874]
   text-sm
   lg:text-lg
-  flex items-end
+  flex items-center
   ml-2 lg:mr-20;
 }
 
@@ -23,7 +23,7 @@
 
 .TaskDue {
   @apply whitespace-nowrap
-  pl-2 pb-px mb-0
+  pl-2 pt-[3px] mb-0
   text-xs
   text-[#4d8581];
 }
@@ -39,4 +39,9 @@
 
 .TaskWrapper:hover .Buttons {
   visibility: visible;
+}
+
+.DeleteButton {
+  @apply text-[#b8100a]
+  cursor-pointer;
 }
