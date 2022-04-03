@@ -57,14 +57,14 @@ const Task = ({ task }) => {
               >
                 {task.name}
               </span>
-              <span
-                className={cx(styles.TaskDue, {
-                  [styles.OverdueTask]: isOverdue,
-                })}
-              >
-                {dueDate}
-              </span>
             </div>
+          </div>
+          <div
+            className={cx(styles.TaskDue, {
+              [styles.OverdueTask]: isOverdue,
+            })}
+          >
+            {dueDate}
           </div>
           <div className={styles.Buttons}>
             <Icon icon="pencil" size={18} onClick={activateEdit} />
