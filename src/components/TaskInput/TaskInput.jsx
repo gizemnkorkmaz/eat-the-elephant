@@ -42,22 +42,20 @@ const TaskInput = () => {
   return (
     <>
       <div className={styles.InputArea}>
-        <div>
-          <input
-            type="text"
-            className={styles.TaskInput}
-            placeholder="Enter your task"
-            value={task.name}
-            onChange={(e) => setTask({ ...task, name: e.target.value })}
-            onKeyDown={handleKeyDown}
-            ref={inputRef}
-            autoFocus
-          />
-        </div>
+        <input
+          type="text"
+          className={styles.TaskInput}
+          placeholder="Enter your task"
+          value={task.name}
+          onChange={(e) => setTask({ ...task, name: e.target.value })}
+          onKeyDown={handleKeyDown}
+          ref={inputRef}
+          autoFocus
+        />
         <Datepicker selected={task.date} onChange={selectDate} />
         <Icon
           icon="plus"
-          size={20}
+          size={18}
           className={styles.AddButton}
           onClick={addTask}
         />
