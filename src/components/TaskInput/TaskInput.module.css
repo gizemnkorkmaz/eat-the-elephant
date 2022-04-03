@@ -1,21 +1,24 @@
 .InputArea {
-  @apply w-full
-  pt-10
-  flex
-  justify-center
-  items-center;
+  @apply py-5
+  w-full
+  flex items-center
+  bg-[#edecf2]
+  flex justify-center
+  shadow-lg;
 }
 
 .TaskInput {
-  @apply px-2 m-auto
-        md:w-96
-        text-sm
-        lg:text-base
-        text-[#212121]
-        bg-transparent
-        placeholder:text-[#aaaaaa]
-        border-b border-[#4d8581]
-        focus:outline-none;
+  @apply text-sm
+  flex
+  px-1
+  md:w-3/4
+  w-2/4
+  lg:text-base
+  text-[#212121]  
+  bg-transparent
+  placeholder:text-[#aaaaaa]
+  border-b border-[#d4d4d4]
+  focus:outline-none;
 }
 
 .AddButton {
