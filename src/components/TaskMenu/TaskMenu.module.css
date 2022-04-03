@@ -11,9 +11,10 @@
   @apply flex gap-1 flex-wrap items-center 
   lg:my-1
   cursor-pointer
-  lg:text-base
+  lg:text-sm
   py-1 px-2
   text-xs
+  opacity-80
   border-l 
   hover:text-[#cc5500]
   hover:border-[#4d8581];
@@ -23,6 +24,7 @@
   @apply text-[#cc5500]
   border-l border-[#4d8581]
   bg-[#e7e8ed]
+  opacity-95
   lg:pr-20;
 }
 
