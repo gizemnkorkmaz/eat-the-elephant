@@ -1,8 +1,7 @@
 .TaskWrapper {
-  @apply py-2 lg:px-5 m-1 
-  border-b border-[#4d8581]
-  flex justify-between
-  rounded;
+  @apply py-2 lg:px-5
+  border-b border-[#d4d4d4]
+  flex justify-between;
 }
 
 .TaskItem {
@@ -39,4 +38,9 @@
 
 .TaskWrapper:hover .Buttons {
   visibility: visible;
+}
+
+.DeleteButton {
+  @apply text-[#b8100a]
+  cursor-pointer;
 }
