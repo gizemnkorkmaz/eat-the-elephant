@@ -68,7 +68,12 @@ const Task = ({ task }) => {
           </div>
           <div className={styles.Buttons}>
             <Icon icon="pencil" size={18} onClick={activateEdit} />
-            <Icon icon="bin" size={18} onClick={deleteTask} />
+            <Icon
+              icon="bin"
+              size={18}
+              className={styles.DeleteButton}
+              onClick={deleteTask}
+            />
           </div>
         </div>
       )}
