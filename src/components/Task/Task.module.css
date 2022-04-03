@@ -1,8 +1,8 @@
 .TaskWrapper {
-  @apply py-2 lg:px-5
+  @apply py-2 
   border-b border-[#d4d4d4]
   last:border-b-0
-  flex justify-between;
+  flex justify-between items-center;
 }
 
 .TaskItem {
