@@ -219,7 +219,7 @@
         "tags": ["bin", "trashcan", "remove", "delete", "recycle", "dispose"],
         "defaultCode": 59820,
         "grid": 16,
-        "attrs": []
+        "attrs": [{ "fill": "rgb(184, 15, 10)" }]
       },
       "attrs": [],
       "properties": {
