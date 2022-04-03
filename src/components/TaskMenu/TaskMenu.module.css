@@ -9,20 +9,18 @@
 
 .TaskList {
   @apply flex gap-1 flex-wrap items-center 
-  lg:my-3
-  rounded
+  lg:my-1
   cursor-pointer
   lg:text-base
   py-1 px-2
   text-xs
   border-l 
-  hover:text-[#e29578]
-  hover:bg-[#e7e8ed]
+  hover:text-[#cc5500]
   hover:border-[#4d8581];
 }
 
 .Active {
-  @apply text-[#e29578]
+  @apply text-[#cc5500]
   border-l border-[#4d8581]
   bg-[#e7e8ed]
   lg:pr-20;

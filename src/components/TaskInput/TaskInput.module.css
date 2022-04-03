@@ -1,7 +1,9 @@
 .InputArea {
   @apply w-full
   pt-10
-  flex justify-center;
+  flex
+  justify-center
+  items-center;
 }
 
 .TaskInput {
@@ -14,4 +16,11 @@
         placeholder:text-[#aaaaaa]
         border-b border-[#4d8581]
         focus:outline-none;
+}
+
+.AddButton {
+  @apply text-[#616161]
+  hover:text-[#cc5500]
+  mb-1
+  cursor-pointer;
 }
