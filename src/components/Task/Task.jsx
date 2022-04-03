@@ -49,7 +49,7 @@ const Task = ({ task }) => {
               size={17}
               onClick={toggleIsDone}
             />
-            <p className={styles.TaskName}>
+            <div className={styles.TaskName}>
               <span
                 className={cx({
                   [styles.TaskDone]: task.isDone,
@@ -64,7 +64,7 @@ const Task = ({ task }) => {
               >
                 {dueDate}
               </span>
-            </p>
+            </div>
           </div>
           <div className={styles.Buttons}>
             <Icon icon="pencil" size={18} onClick={activateEdit} />
