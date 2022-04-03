@@ -1,6 +1,5 @@
 .App {
-  @apply w-screen 
-  h-screen;
+  @apply max-w-7xl;
 }
 
 .TaskBoard {
