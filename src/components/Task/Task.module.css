@@ -11,8 +11,7 @@
 
 .TaskName {
   @apply text-[#3a5874]
-  text-sm
-  lg:text-lg
+  text-base
   flex items-center
   ml-2 lg:mr-20;
 }
@@ -22,26 +21,32 @@
 }
 
 .TaskDue {
+  display: block;
   @apply whitespace-nowrap
   pl-2 pt-[3px] mb-0
   text-xs
   text-[#4d8581];
 }
 
+.Buttons {
+  @apply flex flex-nowrap;
+  display: none;
+}
+
 .OverdueTask {
   @apply text-[#d0342c];
 }
 
-.Buttons {
-  @apply flex gap-2 flex-nowrap;
-  visibility: hidden;
+.DeleteButton {
+  @apply text-[#b8100a]
+  cursor-pointer
+  ml-2;
+}
+
+.TaskWrapper:hover .TaskDue {
+  display: none;
 }
 
 .TaskWrapper:hover .Buttons {
-  visibility: visible;
-}
-
-.DeleteButton {
-  @apply text-[#b8100a]
-  cursor-pointer;
+  display: block;
 }
