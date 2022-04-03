@@ -1,6 +1,7 @@
 .EditArea {
   @apply flex flex-col
-  mx-auto;
+  mx-auto
+  p-2;
 }
 
 .Input {
