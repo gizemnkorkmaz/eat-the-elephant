@@ -5,18 +5,19 @@
 }
 
 .EditTask {
-  @apply lg:border-[#c4aea3]
-  lg:p-5
+  @apply lg:p-5
   mb-2;
 }
 
 .Input {
   @apply lg:p-1
   lg:m-auto
-  text-center
+  px-3
+  md:w-80
   bg-transparent
   border-b 
-  border-[#4c3c30]
+  border-[#006d77]
+  text-[#006d77]
   focus:outline-none;
 }
 

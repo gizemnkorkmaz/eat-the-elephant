@@ -3,9 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import { TasksProvider } from "./context/tasksContext";
 
-import Header from "./components/Header/Header";
 import TaskInput from "./components/TaskInput/TaskInput";
-import EmptyTaskList from "./components/EmptyTaskList/EmptyTaskList";
 import TaskMenu from "./components/TaskMenu/TaskMenu";
 import TaskList from "./components/TaskList/TaskList";
 
@@ -26,7 +24,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
       <div className="TaskBoard">
         <TasksProvider>
           <section className="TaskMenu">
@@ -37,7 +34,6 @@ const App = () => {
           </section>
           <section className="TaskListArea">
             <TaskInput />
-            <EmptyTaskList />
             <TaskList taskLists={taskLists} selectedList={selectedList} />
           </section>
         </TasksProvider>

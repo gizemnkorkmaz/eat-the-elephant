@@ -18,7 +18,7 @@ const TasksProvider = ({ children }) => {
         tasks,
         setTasks,
         editTaskId,
-        setEditTaskId
+        setEditTaskId,
       }}
     >
       {children}

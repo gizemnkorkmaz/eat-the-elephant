@@ -4,8 +4,8 @@ import { nanoid } from "nanoid";
 
 import styles from "./TaskInput.module.css";
 
-import Button from "../Button/Button";
 import Datepicker from "../DatePicker/DatePicker";
+import Icon from "../Icon/Icon";
 
 const TaskInput = () => {
   const [task, setTask] = useState({ name: "", date: new Date() });
@@ -54,7 +54,7 @@ const TaskInput = () => {
             autoFocus
           />
         </div>
-        <Button onClick={addTask}>Add Task</Button>
+        <Icon icon="plus" size={18} onClick={addTask} />
       </div>
       <Datepicker selected={task.date} onChange={selectDate} />
     </>

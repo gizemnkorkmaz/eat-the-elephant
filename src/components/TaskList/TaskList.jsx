@@ -1,4 +1,5 @@
 import Tasks from "../Tasks/Tasks";
+import EmptyTaskList from "../EmptyTaskList/EmptyTaskList";
 
 const TaskList = ({ taskLists, selectedList }) => {
   const allTaskLists = Object.values(taskLists).filter(
@@ -6,9 +7,12 @@ const TaskList = ({ taskLists, selectedList }) => {
   );
 
   return selectedList === "Inbox" ? (
-    allTaskLists.map((listItem) => (
-      <Tasks key={listItem} selectedList={listItem} />
-    ))
+    <>
+      <EmptyTaskList />
+      {allTaskLists.map((listItem) => (
+        <Tasks key={listItem} selectedList={listItem} />
+      ))}
+    </>
   ) : (
     <Tasks selectedList={selectedList} />
   );
