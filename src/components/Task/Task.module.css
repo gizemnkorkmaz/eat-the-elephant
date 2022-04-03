@@ -10,7 +10,9 @@
 }
 
 .TaskName {
-  @apply text-[#3a5874] text-lg
+  @apply text-[#3a5874]
+  text-sm
+  lg:text-lg
   flex items-end
   ml-2 lg:mr-20;
 }
@@ -20,7 +22,8 @@
 }
 
 .TaskDue {
-  @apply pl-2 pb-px mb-0
+  @apply whitespace-nowrap
+  pl-2 pb-px mb-0
   text-xs
   text-[#4d8581];
 }
@@ -30,7 +33,7 @@
 }
 
 .Buttons {
-  @apply flex;
+  @apply flex gap-2 flex-nowrap;
   visibility: hidden;
 }
 

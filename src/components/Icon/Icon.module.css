@@ -1,6 +1,4 @@
 .Icon {
-  @apply cursor-pointer 
-            m-1
-            min-w-fit
-            text-[#616161];
+  @apply cursor-pointer
+  text-[#616161];
 }
