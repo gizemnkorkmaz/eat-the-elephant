@@ -3,7 +3,7 @@ import cx from "classnames";
 
 import { useContext } from "react";
 import { TasksContext } from "../../context/tasksContext";
-import sortByDate from "../../utils/sortByDate";
+import sortTasks from "../../utils/sortTasks";
 
 import Icon from "../Icon/Icon";
 
@@ -13,6 +13,7 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
   const taskLists = [
     { value: "inbox", label: "Inbox", icon: "drawer" },
     { value: "overdue", label: "Overdue", icon: "history" },
+    { value: "important", label: "Important", icon: "flag" },
     { value: "today", label: "Today", icon: "rocket" },
     { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
     { value: "nextSevenDays", label: "Next 7 Days", icon: "star" },
@@ -22,7 +23,7 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
   return (
     <div className={styles.TaskMenu}>
       {taskLists.map(({ value, label, icon }) =>
-        sortByDate(label, tasks).length || label === "Inbox" ? (
+        sortTasks(label, tasks).length || label === "Inbox" ? (
           <div
             className={cx(styles.TaskList, {
               [styles.Active]: selectedList === label,
@@ -35,9 +36,10 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
             <span
               className={cx(styles.TaskLength, {
                 [styles.Overdue]: label === "Overdue",
+                [styles.Important]: label === "Important",
               })}
             >
-              ({sortByDate(label, tasks).filter((task) => !task.isDone).length})
+              ({sortTasks(label, tasks).filter((task) => !task.isDone).length})
             </span>
           </div>
         ) : null
