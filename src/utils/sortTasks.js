@@ -7,7 +7,7 @@ dayjs.extend(isToday);
 dayjs.extend(isTomorrow);
 dayjs.extend(isBetween);
 
-const sortByDate = (selectedList, tasks) => {
+const sortTasks = (selectedList, tasks) => {
   const sortedTasks = tasks.sort((a, b) => new Date(a.date) - new Date(b.date));
 
   if (selectedList === "Today") {
@@ -29,9 +29,11 @@ const sortByDate = (selectedList, tasks) => {
     return sortedTasks.filter(
       (task) => dayjs(task.date).isBefore(dayjs(), "day") && !task.isDone
     );
+  } else if (selectedList === "Important") {
+    return sortedTasks.filter((task) => task.isImportant);
   } else {
     return sortedTasks.filter((task) => !task.isDone);
   }
 };
 
-export default sortByDate;
+export default sortTasks;
