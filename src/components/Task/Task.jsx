@@ -28,6 +28,16 @@ const Task = ({ task }) => {
     setEditTaskId(task.id);
   };
 
+  const markAsImportant = () => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === currentTaskId
+          ? { ...task, isImportant: !task.isImportant }
+          : task
+      )
+    );
+  };
+
   const deleteTask = () => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this task?"
@@ -46,6 +56,9 @@ const Task = ({ task }) => {
           <div className={styles.TaskItem}>
             <Icon
               icon={task.isDone ? "checkbox-checked" : "checkbox-unchecked"}
+              className={cx(styles.Checkbox, {
+                [styles.CheckboxEmphasis]: task.isImportant && !task.isDone,
+              })}
               size={17}
               onClick={toggleIsDone}
             />
@@ -67,6 +80,14 @@ const Task = ({ task }) => {
             {dueDate}
           </div>
           <div className={styles.Buttons}>
+            <Icon
+              icon="flag"
+              size={15}
+              className={cx(styles.ImportantTaskEmpty, {
+                [styles.ImportantTask]: task.isImportant,
+              })}
+              onClick={markAsImportant}
+            />
             <Icon icon="pencil" size={18} onClick={activateEdit} />
             <Icon
               icon="bin"
