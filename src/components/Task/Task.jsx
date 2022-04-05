@@ -28,7 +28,7 @@ const Task = ({ task }) => {
     setEditTaskId(task.id);
   };
 
-  const markAsImportant = () => {
+  const toggleTaskImportance = () => {
     setTasks(
       tasks.map((task) =>
         task.id === currentTaskId
@@ -86,7 +86,7 @@ const Task = ({ task }) => {
               className={cx(styles.ImportantTaskEmpty, {
                 [styles.ImportantTask]: task.isImportant,
               })}
-              onClick={markAsImportant}
+              onClick={toggleTaskImportance}
             />
             <Icon icon="pencil" size={18} onClick={activateEdit} />
             <Icon
