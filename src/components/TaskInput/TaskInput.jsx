@@ -21,6 +21,7 @@ const TaskInput = () => {
           name: task.name,
           date: task.date,
           isDone: false,
+          isImportant: false,
         },
       ]);
       setTask({ name: "", date: new Date() });

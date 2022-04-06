@@ -33,14 +33,26 @@
   display: none;
 }
 
-.OverdueTask {
-  @apply text-[#d0342c];
-}
-
 .DeleteButton {
   @apply text-[#b8100a]
   cursor-pointer
   ml-2;
+}
+
+.ImportantTaskEmpty {
+  @apply mr-2
+  cursor-pointer
+  text-[#616161];
+}
+
+.Checkbox {
+  @apply cursor-pointer text-[#616161];
+}
+
+.CheckboxEmphasis,
+.ImportantTask,
+.OverdueTask {
+  @apply text-[#d0342c];
 }
 
 .TaskWrapper:hover .TaskDue {

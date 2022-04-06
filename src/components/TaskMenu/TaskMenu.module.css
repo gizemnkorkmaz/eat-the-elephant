@@ -30,7 +30,7 @@
 
 .Icon {
   @apply cursor-pointer
-  m-1 
+  m-1
   text-[#212121];
 }
 
@@ -38,6 +38,7 @@
   @apply p-px;
 }
 
-.Overdue {
+.Overdue,
+.Important {
   @apply text-[#d0342c];
 }

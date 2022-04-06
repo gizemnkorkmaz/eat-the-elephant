@@ -2,13 +2,13 @@ import styles from "./Tasks.module.css";
 
 import { useContext } from "react";
 import { TasksContext } from "../../context/tasksContext";
-import sortByDate from "../../utils/sortByDate";
+import sortTasks from "../../utils/sortTasks";
 
 import Task from "../Task/Task";
 
 const Tasks = ({ selectedList }) => {
   const { tasks } = useContext(TasksContext);
-  const selectedTaskList = sortByDate(selectedList, tasks);
+  const selectedTaskList = sortTasks(selectedList, tasks);
 
   return (
     selectedTaskList.length > 0 && (
