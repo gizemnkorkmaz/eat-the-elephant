@@ -11,7 +11,7 @@ const sortTasks = (selectedList, tasks) => {
   const tasksByDate = tasks.sort((a, b) => new Date(a.date) - new Date(b.date));
 
   if (selectedList === "Today") {
-    return tasks.filter((task) => dayjs(task.date).isToday());
+    return tasks.filter((task) => task.date && dayjs(task.date).isToday());
   } else if (selectedList === "Tomorrow") {
     return tasks.filter((task) => dayjs(task.date).isTomorrow());
   } else if (selectedList === "Next 7 Days") {
@@ -31,8 +31,10 @@ const sortTasks = (selectedList, tasks) => {
     );
   } else if (selectedList === "Important") {
     return tasksByDate.filter((task) => task.isImportant);
+  } else if (!selectedList) {
+    return tasksByDate.filter((task) => !task.date);
   } else {
-    return tasksByDate.filter((task) => !task.isDone);
+    return tasks;
   }
 };
 
