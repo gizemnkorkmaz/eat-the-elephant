@@ -1,7 +1,7 @@
 .EmptyTaskWrapper {
   @apply italic
   text-[#006d77]
-  text-xs
+  text-sm
   p-5 m-10
   md:text-xl
   text-center
@@ -13,7 +13,7 @@
 .EmptyTaskMessage {
   @apply text-[#006d77]
   md:text-base
-  text-xs
+  text-sm
   py-5
   italic;
 }
