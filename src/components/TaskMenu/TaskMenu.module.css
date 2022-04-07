@@ -17,7 +17,7 @@
   opacity-80
   border-l 
   hover:text-[#cc5500]
-  hover:border-[#4d8581];
+  lg:hover:border-[#4d8581];
 }
 
 .Active {
