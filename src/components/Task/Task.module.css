@@ -24,7 +24,7 @@
 .TaskDue {
   @apply whitespace-nowrap
   visible
-  pl-2 pt-[3px] mb-0
+  pl-2 mb-0
   text-xs
   text-[#4d8581];
 }
