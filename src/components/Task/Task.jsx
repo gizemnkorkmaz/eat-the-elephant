@@ -78,7 +78,7 @@ const Task = ({ task }) => {
                 [styles.OverdueTask]: isOverdue,
               })}
             >
-              {dueDate}
+              {task.date ? dueDate : ""}
             </div>
             <div className={styles.Buttons}>
               <Icon
