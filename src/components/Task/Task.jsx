@@ -72,29 +72,31 @@ const Task = ({ task }) => {
               </span>
             </div>
           </div>
-          <div
-            className={cx(styles.TaskDue, {
-              [styles.OverdueTask]: isOverdue,
-            })}
-          >
-            {dueDate}
-          </div>
-          <div className={styles.Buttons}>
-            <Icon
-              icon="flag"
-              size={15}
-              className={cx(styles.ImportantTaskEmpty, {
-                [styles.ImportantTask]: task.isImportant,
+          <div className={styles.TaskActions}>
+            <div
+              className={cx(styles.TaskDue, {
+                [styles.OverdueTask]: isOverdue,
               })}
-              onClick={toggleTaskImportance}
-            />
-            <Icon icon="pencil" size={18} onClick={activateEdit} />
-            <Icon
-              icon="bin"
-              size={18}
-              className={styles.DeleteButton}
-              onClick={deleteTask}
-            />
+            >
+              {dueDate}
+            </div>
+            <div className={styles.Buttons}>
+              <Icon
+                icon="flag"
+                size={13}
+                className={cx(styles.ImportantTaskEmpty, {
+                  [styles.ImportantTask]: task.isImportant,
+                })}
+                onClick={toggleTaskImportance}
+              />
+              <Icon icon="pencil" size={15} onClick={activateEdit} />
+              <Icon
+                icon="bin"
+                size={15}
+                className={styles.DeleteButton}
+                onClick={deleteTask}
+              />
+            </div>
           </div>
         </div>
       )}
