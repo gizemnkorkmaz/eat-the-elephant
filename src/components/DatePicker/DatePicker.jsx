@@ -6,14 +6,14 @@ import Icon from "../Icon/Icon";
 
 const Datepicker = ({ selected, onChange }) => (
   <label className={styles.CalendarWrapper}>
+    <Icon icon="calendar" size={16} className={styles.CalendarIcon} />
     <DatePicker
-      selected={selected ? new Date(selected) : new Date()}
+      selected={selected ? new Date(selected) : null}
       onChange={onChange}
       className={styles.Calendar}
       minDate={new Date()}
       dateFormat="d MMM"
     />
-    <Icon icon="calendar" size={18} className={styles.CalendarIcon} />
   </label>
 );
 
