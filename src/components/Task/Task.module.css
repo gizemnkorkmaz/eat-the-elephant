@@ -2,7 +2,8 @@
   @apply py-2 
   border-b border-[#d4d4d4]
   last:border-b-0
-  flex justify-between items-center;
+  flex justify-between items-center
+  overflow-hidden;
 }
 
 .TaskItem {
@@ -21,16 +22,15 @@
 }
 
 .TaskDue {
-  display: block;
   @apply whitespace-nowrap
+  visible
   pl-2 pt-[3px] mb-0
   text-xs
   text-[#4d8581];
 }
 
-.Buttons {
-  @apply flex flex-nowrap;
-  display: none;
+.TaskActions {
+  @apply flex items-center;
 }
 
 .DeleteButton {
@@ -45,6 +45,17 @@
   text-[#616161];
 }
 
+.Buttons {
+  @apply flex flex-nowrap
+  ml-[10px]
+  mr-[-65px];
+  transition: 0.6s;
+}
+
+.TaskWrapper:hover .Buttons {
+  @apply mr-0;
+}
+
 .Checkbox {
   @apply cursor-pointer text-[#616161];
 }
@@ -53,12 +64,4 @@
 .ImportantTask,
 .OverdueTask {
   @apply text-[#d0342c];
-}
-
-.TaskWrapper:hover .TaskDue {
-  display: none;
-}
-
-.TaskWrapper:hover .Buttons {
-  display: block;
 }
