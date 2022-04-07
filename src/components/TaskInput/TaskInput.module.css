@@ -1,6 +1,5 @@
 .InputArea {
-  @apply py-5
-  w-full
+  @apply w-full
   flex items-center
   bg-[#edecf2]
   flex justify-center
@@ -24,6 +23,5 @@
 .AddButton {
   @apply text-[#616161]
   hover:text-[#cc5500]
-  mb-1
   cursor-pointer;
 }
