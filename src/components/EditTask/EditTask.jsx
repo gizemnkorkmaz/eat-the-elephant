@@ -53,7 +53,9 @@ const EditTask = ({ task }) => {
           ref={inputRef}
           autoFocus
         />
-        <Datepicker selected={editedTask.date} onChange={changeDate} />
+        <div className={styles.Datepicker}>
+          <Datepicker selected={editedTask.date} onChange={changeDate} />
+        </div>
       </div>
       <div className={styles.Buttons}>
         <Button onClick={saveEdit}>Save</Button>
