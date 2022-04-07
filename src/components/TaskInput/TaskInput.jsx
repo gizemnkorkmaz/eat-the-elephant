@@ -8,7 +8,7 @@ import Datepicker from "../DatePicker/DatePicker";
 import Icon from "../Icon/Icon";
 
 const TaskInput = () => {
-  const [task, setTask] = useState({ name: "", date: new Date() });
+  const [task, setTask] = useState({ name: "" });
   const { tasks, setTasks } = useContext(TasksContext);
   const inputRef = useRef();
 
@@ -24,7 +24,7 @@ const TaskInput = () => {
           isImportant: false,
         },
       ]);
-      setTask({ name: "", date: new Date() });
+      setTask({ name: "" });
     }
   };
 
@@ -56,7 +56,7 @@ const TaskInput = () => {
         <Datepicker selected={task.date} onChange={selectDate} />
         <Icon
           icon="plus"
-          size={18}
+          size={20}
           className={styles.AddButton}
           onClick={addTask}
         />
