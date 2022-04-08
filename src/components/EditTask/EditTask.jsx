@@ -58,6 +58,7 @@ const EditTask = ({ task }) => {
             task={editedTask}
             setTask={setEditedTask}
             onChange={changeDate}
+            inputRef={inputRef}
           />
         </div>
       </div>

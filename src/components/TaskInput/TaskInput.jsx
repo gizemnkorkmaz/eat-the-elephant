@@ -53,7 +53,12 @@ const TaskInput = () => {
           ref={inputRef}
           autoFocus
         />
-        <Datepicker onChange={selectDate} task={task} setTask={setTask} />
+        <Datepicker
+          onChange={selectDate}
+          task={task}
+          setTask={setTask}
+          inputRef={inputRef}
+        />
         <Icon
           icon="plus"
           size={20}
