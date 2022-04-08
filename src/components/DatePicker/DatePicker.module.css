@@ -22,3 +22,11 @@
   bg-transparent
   focus:outline-none;
 }
+
+.ClearDate {
+  @apply cursor-pointer
+  text-center
+  py-2
+  text-[#b8100a]
+  hover:text-[#cc5500];
+}
