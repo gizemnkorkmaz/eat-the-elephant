@@ -1,17 +1,16 @@
 .CalendarWrapper {
-  @apply flex
+  @apply flex flex-col 
   max-w-xs
-  mr-[20px]
   py-1
   text-xs
-  text-[#676767]
+  text-[#4d8581]
   hover:text-[#cc5500];
 }
 
 .CalendarIcon {
-  @apply my-1
+  @apply ml-5 mt-8
   cursor-pointer
-  text-[#212121];
+  text-[#616161];
 }
 
 .Calendar {
@@ -22,4 +21,12 @@
   float-right
   bg-transparent
   focus:outline-none;
+}
+
+.ClearDate {
+  @apply cursor-pointer
+  text-center
+  py-2
+  text-[#b8100a]
+  hover:text-[#cc5500];
 }

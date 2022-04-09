@@ -11,11 +11,19 @@
   md:w-80
   bg-transparent
   border-b 
-  border-[#006d77]
-  text-[#006d77]
+  border-[#d4d4d4]
+  text-[#3a5874]
   focus:outline-none;
 }
 
 .Buttons {
   @apply flex justify-center;
+}
+
+.EditTask {
+  @apply flex items-center;
+}
+
+.Datepicker {
+  @apply mr-1;
 }

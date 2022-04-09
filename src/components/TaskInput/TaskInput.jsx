@@ -8,7 +8,8 @@ import Datepicker from "../DatePicker/DatePicker";
 import Icon from "../Icon/Icon";
 
 const TaskInput = () => {
-  const [task, setTask] = useState({ name: "", date: new Date() });
+  const [task, setTask] = useState({ name: "" });
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const { tasks, setTasks } = useContext(TasksContext);
   const inputRef = useRef();
 
@@ -24,7 +25,7 @@ const TaskInput = () => {
           isImportant: false,
         },
       ]);
-      setTask({ name: "", date: new Date() });
+      setTask({ name: "" });
     }
   };
 
@@ -37,6 +38,8 @@ const TaskInput = () => {
   const selectDate = (date, e) => {
     e.preventDefault();
     setTask({ ...task, date: date.toString() });
+
+    setIsCalendarOpen(false);
     inputRef.current.focus();
   };
 
@@ -53,10 +56,17 @@ const TaskInput = () => {
           ref={inputRef}
           autoFocus
         />
-        <Datepicker selected={task.date} onChange={selectDate} />
+        <Datepicker
+          onChange={selectDate}
+          task={task}
+          setTask={setTask}
+          inputRef={inputRef}
+          isOpen={isCalendarOpen}
+          setIsOpen={setIsCalendarOpen}
+        />
         <Icon
           icon="plus"
-          size={18}
+          size={20}
           className={styles.AddButton}
           onClick={addTask}
         />

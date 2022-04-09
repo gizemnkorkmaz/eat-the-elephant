@@ -8,6 +8,7 @@ import Datepicker from "../DatePicker/DatePicker";
 
 const EditTask = ({ task }) => {
   const [editedTask, setEditedTask] = useState(task);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const { tasks, setTasks, editTaskId, setEditTaskId } =
     useContext(TasksContext);
   const inputRef = useRef(null);
@@ -32,6 +33,8 @@ const EditTask = ({ task }) => {
   const changeDate = (date, e) => {
     e.preventDefault();
     setEditedTask({ ...editedTask, date: date.toString() });
+
+    setIsCalendarOpen(false);
     inputRef.current.focus();
   };
 
@@ -53,7 +56,16 @@ const EditTask = ({ task }) => {
           ref={inputRef}
           autoFocus
         />
-        <Datepicker selected={editedTask.date} onChange={changeDate} />
+        <div className={styles.Datepicker}>
+          <Datepicker
+            task={editedTask}
+            setTask={setEditedTask}
+            onChange={changeDate}
+            inputRef={inputRef}
+            isOpen={isCalendarOpen}
+            setIsOpen={setIsCalendarOpen}
+          />
+        </div>
       </div>
       <div className={styles.Buttons}>
         <Button onClick={saveEdit}>Save</Button>
