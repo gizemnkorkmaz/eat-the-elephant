@@ -1,5 +1,5 @@
 .TaskMenu {
-  @apply flex
+  @apply flex justify-around flex-wrap
   lg:flex-col 
   lg:py-10
   min-h-fit
@@ -22,7 +22,7 @@
 
 .Active {
   @apply text-[#cc5500]
-  border-l border-[#4d8581]
+  border-l lg:border-[#4d8581]
   bg-[#e7e8ed]
   opacity-95
   lg:pr-20;

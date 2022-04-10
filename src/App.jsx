@@ -5,10 +5,12 @@ import { TasksProvider } from "./context/tasksContext";
 
 import TaskInput from "./components/TaskInput/TaskInput";
 import TaskMenu from "./components/TaskMenu/TaskMenu";
-import TaskList from "./components/TaskList/TaskList";
+import TaskBoard from "./components/TaskBoard/TaskBoard";
 
 const App = () => {
   const [selectedList, setSelectedList] = useState("Inbox");
+  const [searchedTask, setSearchedTask] = useState("");
+
   const taskLists = {
     noDate: "",
     inbox: "Inbox",
@@ -32,11 +34,17 @@ const App = () => {
             <TaskMenu
               selectTaskList={selectTaskList}
               selectedList={selectedList}
+              setSelectedList={setSelectedList}
+              setSearchedTask={setSearchedTask}
             />
           </section>
           <section className="TaskListArea">
             <TaskInput />
-            <TaskList taskLists={taskLists} selectedList={selectedList} />
+            <TaskBoard
+              taskLists={taskLists}
+              selectedList={selectedList}
+              searchedTask={searchedTask}
+            />
           </section>
         </TasksProvider>
       </div>

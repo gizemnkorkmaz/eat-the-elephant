@@ -33,6 +33,7 @@ const Datepicker = ({
         className={styles.Calendar}
         minDate={new Date()}
         dateFormat="d MMM"
+        placeholderText="No due"
         open={isOpen}
       >
         <div className={styles.ClearDate} onClick={clearDate}>

@@ -8,14 +8,15 @@
 }
 
 .CalendarIcon {
-  @apply ml-5 mt-8
+  @apply ml-4 mt-8
   cursor-pointer
-  text-[#616161];
+  text-[#616161]
+  hover:text-[#cc5500];
 }
 
 .Calendar {
   @apply text-center 
-  w-[50px]
+  w-[45px]
   my-1
   cursor-pointer
   float-right

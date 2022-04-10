@@ -1,8 +1,8 @@
 .Tasks {
   @apply bg-[#edecf2]
-        flex flex-col 
-        my-5 p-5  
-        shadow-lg;
+  flex flex-col 
+  my-5 p-5  
+  shadow-lg;
 }
 
 .TasksHeader {
