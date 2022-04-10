@@ -1,0 +1,22 @@
+.Tasks {
+  @apply bg-[#edecf2]
+  flex flex-col 
+  my-5 p-5  
+  shadow-lg;
+}
+
+.TasksHeader {
+  @apply text-sm
+  italic
+  text-[#cc5500]
+  pb-5;
+}
+
+.NoTaskMessage {
+  @apply text-[#006d77]
+  md:text-base
+  text-sm
+  m-auto
+  py-5
+  italic;
+}
