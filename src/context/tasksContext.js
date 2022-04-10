@@ -6,6 +6,7 @@ const TasksContext = createContext();
 const TasksProvider = ({ children }) => {
   const [tasks, _setTasks] = useState(Lookie.get("tasks") || []);
   const [editTaskId, setEditTaskId] = useState(null);
+  const [searchedTask, setSearchedTask] = useState("");
 
   const setTasks = (tasks) => {
     _setTasks(tasks);
@@ -19,6 +20,8 @@ const TasksProvider = ({ children }) => {
         setTasks,
         editTaskId,
         setEditTaskId,
+        searchedTask,
+        setSearchedTask,
       }}
     >
       {children}
