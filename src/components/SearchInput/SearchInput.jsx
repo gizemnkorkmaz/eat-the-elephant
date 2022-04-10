@@ -5,6 +5,7 @@ import { TasksContext } from "../../context/tasksContext";
 
 const SearchInput = ({ setSelectedList }) => {
   const { setSearchedTask } = useContext(TasksContext);
+
   const searchTask = (e) => {
     if (e.target.value.length) {
       setSelectedList("Search");
