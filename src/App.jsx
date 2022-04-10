@@ -9,6 +9,8 @@ import TaskBoard from "./components/TaskBoard/TaskBoard";
 
 const App = () => {
   const [selectedList, setSelectedList] = useState("Inbox");
+  const [searchedTask, setSearchedTask] = useState("");
+
   const taskLists = {
     noDate: "",
     inbox: "Inbox",
@@ -33,11 +35,16 @@ const App = () => {
               selectTaskList={selectTaskList}
               selectedList={selectedList}
               setSelectedList={setSelectedList}
+              setSearchedTask={setSearchedTask}
             />
           </section>
           <section className="TaskListArea">
             <TaskInput />
-            <TaskBoard taskLists={taskLists} selectedList={selectedList} />
+            <TaskBoard
+              taskLists={taskLists}
+              selectedList={selectedList}
+              searchedTask={searchedTask}
+            />
           </section>
         </TasksProvider>
       </div>
