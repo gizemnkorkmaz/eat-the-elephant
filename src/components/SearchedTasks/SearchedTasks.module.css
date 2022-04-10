@@ -5,13 +5,6 @@
   shadow-lg;
 }
 
-.TasksHeader {
-  @apply text-sm
-  italic
-  text-[#cc5500]
-  pb-5;
-}
-
 .NoTaskMessage {
   @apply text-[#006d77]
   md:text-base
