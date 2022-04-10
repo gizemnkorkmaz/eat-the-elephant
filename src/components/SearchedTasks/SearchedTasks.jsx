@@ -5,8 +5,8 @@ import { TasksContext } from "../../context/tasksContext";
 
 import Task from "../Task/Task";
 
-const SearchedTasks = () => {
-  const { tasks, searchedTask } = useContext(TasksContext);
+const SearchedTasks = ({ searchedTask }) => {
+  const { tasks } = useContext(TasksContext);
   const searchResults = tasks.filter((task) =>
     task.name.toLowerCase().includes(searchedTask.toLowerCase())
   );

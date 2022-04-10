@@ -1,11 +1,6 @@
 import styles from "./SearchInput.module.css";
 
-import { useContext } from "react";
-import { TasksContext } from "../../context/tasksContext";
-
-const SearchInput = ({ setSelectedList }) => {
-  const { setSearchedTask } = useContext(TasksContext);
-
+const SearchInput = ({ setSelectedList, setSearchedTask }) => {
   const searchTask = (e) => {
     if (e.target.value.length) {
       setSelectedList("Search");
@@ -14,6 +9,7 @@ const SearchInput = ({ setSelectedList }) => {
     }
     setSearchedTask(e.target.value);
   };
+
   return (
     <input
       type="search"

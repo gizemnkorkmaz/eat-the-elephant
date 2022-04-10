@@ -2,7 +2,7 @@ import Tasks from "../Tasks/Tasks";
 import EmptyTaskList from "../EmptyTaskList/EmptyTaskList";
 import SearchedTasks from "../SearchedTasks/SearchedTasks";
 
-const TaskBoard = ({ taskLists, selectedList }) => {
+const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
   const allTaskLists = Object.values(taskLists).filter(
     (list) => list !== "Inbox" && list !== "Important" && list !== "Search"
   );
@@ -18,7 +18,7 @@ const TaskBoard = ({ taskLists, selectedList }) => {
       </>
     );
   } else if (selectedList === "Search") {
-    currentList = <SearchedTasks />;
+    currentList = <SearchedTasks searchedTask={searchedTask} />;
   } else {
     currentList = <Tasks selectedList={selectedList} />;
   }
