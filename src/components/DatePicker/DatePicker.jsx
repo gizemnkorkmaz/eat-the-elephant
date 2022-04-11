@@ -23,7 +23,7 @@ const Datepicker = ({
     <label className={styles.CalendarWrapper}>
       <Icon
         icon="calendar"
-        size={16}
+        size={21}
         className={styles.CalendarIcon}
         onClick={() => setIsOpen(true)}
       />
@@ -33,7 +33,6 @@ const Datepicker = ({
         className={styles.Calendar}
         minDate={new Date()}
         dateFormat="d MMM"
-        placeholderText="No due"
         open={isOpen}
       >
         <div className={styles.ClearDate} onClick={clearDate}>
