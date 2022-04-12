@@ -3,7 +3,7 @@ import EmptyTaskList from "../EmptyTaskList/EmptyTaskList";
 import SearchedTasks from "../SearchedTasks/SearchedTasks";
 
 const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
-  const allTaskLists = Object.values(taskLists).filter(
+  const taskListsToShow = Object.values(taskLists).filter(
     (list) => list !== "Inbox" && list !== "Important" && list !== "Search"
   );
   let currentList;
@@ -12,7 +12,7 @@ const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
     currentList = (
       <>
         <EmptyTaskList />
-        {allTaskLists.map((listItem) => (
+        {taskListsToShow.map((listItem) => (
           <Tasks key={listItem} selectedList={listItem} />
         ))}
       </>
