@@ -59,6 +59,10 @@
   transition: 0.3s;
 }
 
+.ImportantActive {
+  @apply mr-[-50px];
+}
+
 .TaskWrapper:hover .Buttons {
   @apply mr-0;
 }
