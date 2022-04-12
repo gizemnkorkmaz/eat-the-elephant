@@ -55,11 +55,11 @@ const Task = ({ task }) => {
         <div className={styles.TaskWrapper}>
           <div className={styles.TaskItem}>
             <Icon
-              icon={task.isDone ? "checkbox-checked" : "checkbox-unchecked"}
+              icon={task.isDone ? "check" : "empty-check"}
               className={cx(styles.Checkbox, {
                 [styles.CheckboxEmphasis]: task.isImportant && !task.isDone,
               })}
-              size={17}
+              size={23}
               onClick={toggleIsDone}
             />
             <div className={styles.TaskName}>
@@ -82,17 +82,22 @@ const Task = ({ task }) => {
             </div>
             <div className={styles.Buttons}>
               <Icon
-                icon="flag"
-                size={13}
+                icon="important"
+                size={24}
                 className={cx(styles.ImportantTaskEmpty, {
                   [styles.ImportantTask]: task.isImportant,
                 })}
                 onClick={toggleTaskImportance}
               />
-              <Icon icon="pencil" size={15} onClick={activateEdit} />
               <Icon
-                icon="bin"
-                size={15}
+                icon="edit"
+                size={24}
+                className={styles.EditButton}
+                onClick={activateEdit}
+              />
+              <Icon
+                icon="delete"
+                size={24}
                 className={styles.DeleteButton}
                 onClick={deleteTask}
               />

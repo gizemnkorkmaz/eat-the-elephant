@@ -65,8 +65,8 @@ const TaskInput = () => {
           setIsOpen={setIsCalendarOpen}
         />
         <Icon
-          icon="plus"
-          size={20}
+          icon="add"
+          size={25}
           className={styles.AddButton}
           onClick={addTask}
         />

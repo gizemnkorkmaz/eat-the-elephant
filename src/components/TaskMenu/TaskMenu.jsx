@@ -17,13 +17,13 @@ const TaskMenu = ({
   const { tasks } = useContext(TasksContext);
 
   const taskLists = [
-    { value: "inbox", label: "Inbox", icon: "drawer" },
+    { value: "inbox", label: "Inbox", icon: "inbox" },
     { value: "overdue", label: "Overdue", icon: "history" },
-    { value: "important", label: "Important", icon: "flag" },
-    { value: "today", label: "Today", icon: "rocket" },
+    { value: "important", label: "Important", icon: "important" },
+    { value: "today", label: "Today", icon: "today" },
     { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
     { value: "nextSevenDays", label: "Next 7 Days", icon: "star" },
-    { value: "upcoming", label: "Upcoming", icon: "hour-glass" },
+    { value: "upcoming", label: "Upcoming", icon: "hourglass" },
   ];
 
   return (
@@ -37,7 +37,7 @@ const TaskMenu = ({
             key={value}
             onClick={() => selectTaskList(value)}
           >
-            <Icon icon={icon} size={16} className={styles.Icon} />
+            <Icon icon={icon} size={18} className={styles.Icon} />
             {label}
             <span
               className={cx(styles.TaskLength, {
