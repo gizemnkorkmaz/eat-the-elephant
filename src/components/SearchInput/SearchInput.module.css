@@ -1,7 +1,15 @@
+.SearchWrapper {
+  @apply flex items-center;
+}
+
+.SearchIcon {
+  @apply mr-[-20px];
+}
+
 .SearchInput {
   @apply text-sm
   flex
-  px-1 mx-1
+  pl-5 mx-1
   lg:my-5
   lg:text-base
   text-[#212121]  
