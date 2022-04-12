@@ -18,8 +18,8 @@ const TaskMenu = ({
 
   const taskLists = [
     { value: "inbox", label: "Inbox", icon: "inbox" },
-    { value: "overdue", label: "Overdue", icon: "history" },
     { value: "important", label: "Important", icon: "important" },
+    { value: "overdue", label: "Overdue", icon: "history" },
     { value: "today", label: "Today", icon: "today" },
     { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
     { value: "nextSevenDays", label: "Next 7 Days", icon: "star" },
