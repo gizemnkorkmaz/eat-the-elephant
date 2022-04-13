@@ -8,8 +8,10 @@ const SearchInput = ({ setSelectedList, setSearchedTask }) => {
     setSearchedTask(target.value);
   };
 
-  const activateSearch = () => {
-    setSelectedList("Search");
+  const activateSearch = ({ target }) => {
+    if (target.value) {
+      setSelectedList("Search");
+    }
   };
 
   return (
