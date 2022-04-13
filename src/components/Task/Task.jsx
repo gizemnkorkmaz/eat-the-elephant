@@ -80,7 +80,11 @@ const Task = ({ task }) => {
             >
               {task.date ? dueDate : ""}
             </div>
-            <div className={styles.Buttons}>
+            <div
+              className={cx(styles.Buttons, {
+                [styles.ImportantActive]: task.isImportant,
+              })}
+            >
               <Icon
                 icon="important"
                 size={24}

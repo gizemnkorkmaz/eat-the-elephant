@@ -10,8 +10,12 @@
 .CalendarIcon {
   @apply ml-3 mt-8
   cursor-pointer
-  text-[#616161]
+  text-[#6d6d6d]
   hover:text-[#383938];
+}
+
+.DateSelected {
+  @apply text-[#383938];
 }
 
 .Calendar {

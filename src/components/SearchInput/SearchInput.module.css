@@ -3,18 +3,17 @@
 }
 
 .SearchIcon {
-  @apply mr-[-20px];
+  @apply mr-[-25px];
 }
 
 .SearchInput {
   @apply text-sm
   flex
-  pl-5 mx-1
+  pl-7 mx-1
   lg:my-5
-  lg:text-base
   text-[#212121]  
   bg-transparent
-  placeholder:text-[#aaaaaa]
+  placeholder:text-[#bbbbbb]
   border-b border-[#d4d4d4]
   focus:outline-none;
 }

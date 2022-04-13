@@ -56,7 +56,11 @@
   @apply flex flex-nowrap
   ml-[7px]
   mr-[-75px];
-  transition: 0.6s;
+  transition: 0.3s;
+}
+
+.ImportantActive {
+  @apply mr-[-50px];
 }
 
 .TaskWrapper:hover .Buttons {
