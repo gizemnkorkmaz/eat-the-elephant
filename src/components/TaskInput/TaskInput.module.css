@@ -21,8 +21,9 @@
 }
 
 .AddButton {
-  @apply text-[#383838]
+  @apply text-[#171717]
   hover:text-[#565656]
-  ml-[-5px]
+  ml-[-4px]
+  mt-[2px]
   cursor-pointer;
 }
