@@ -66,7 +66,7 @@ const TaskInput = () => {
         />
         <Icon
           icon="add"
-          size={28}
+          size={22}
           className={styles.AddButton}
           onClick={addTask}
         />
