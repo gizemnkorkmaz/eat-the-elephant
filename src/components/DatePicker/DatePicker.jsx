@@ -1,5 +1,6 @@
 import styles from "./DatePicker.module.css";
 import "react-datepicker/dist/react-datepicker.css";
+import cx from "classnames";
 
 import DatePicker from "react-datepicker";
 import Icon from "../Icon/Icon";
@@ -24,7 +25,9 @@ const Datepicker = ({
       <Icon
         icon="calendar"
         size={25}
-        className={styles.CalendarIcon}
+        className={cx(styles.CalendarIcon, {
+          [styles.DateSelected]: task.date,
+        })}
         onClick={() => setIsOpen(true)}
       />
       <DatePicker
