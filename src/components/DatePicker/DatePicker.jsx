@@ -23,7 +23,7 @@ const Datepicker = ({
     <label className={styles.CalendarWrapper}>
       <Icon
         icon="calendar"
-        size={20}
+        size={25}
         className={styles.CalendarIcon}
         onClick={() => setIsOpen(true)}
       />
