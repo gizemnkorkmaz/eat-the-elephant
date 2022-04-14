@@ -1,0 +1,12 @@
+.HeaderWrapper {
+  @apply flex justify-between
+  py-3 px-9;
+}
+
+.Navigation {
+  @apply flex items-center gap-3;
+}
+
+.Logo {
+  @apply lg:pr-10;
+}
