@@ -16,11 +16,11 @@ const SearchInput = ({ setSelectedList, setSearchedTask }) => {
 
   return (
     <div className={styles.SearchWrapper}>
-      <Icon icon="search" size={19} className={styles.SearchIcon} />
+      <Icon icon="search" size={21} className={styles.SearchIcon} />
       <input
         type="search"
         name="searchTasks"
-        placeholder="search tasks"
+        placeholder="Search"
         className={styles.SearchInput}
         onClick={activateSearch}
         onChange={searchTask}
