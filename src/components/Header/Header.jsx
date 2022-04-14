@@ -9,7 +9,7 @@ const Header = ({
   isMenuHidden,
   setIsMenuHidden,
 }) => {
-  const showMenu = () => {
+  const toggleMenu = () => {
     setIsMenuHidden(!isMenuHidden);
   };
 
@@ -19,7 +19,7 @@ const Header = ({
   return (
     <div className={styles.HeaderWrapper}>
       <nav className={styles.Navigation}>
-        <Icon icon="menu" size={23} onClick={showMenu} />
+        <Icon icon="menu" size={23} onClick={toggleMenu} />
         <Icon icon="home" size={23} onClick={navigateHome} />
         <SearchInput
           setSelectedList={setSelectedList}

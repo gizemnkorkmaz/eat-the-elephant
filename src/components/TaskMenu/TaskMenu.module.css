@@ -8,7 +8,7 @@
 
 .TaskList {
   @apply flex gap-1 flex-wrap items-center 
-  p-1 
+  p-1
   cursor-pointer
   lg:text-sm
   text-xs
