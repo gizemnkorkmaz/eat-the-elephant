@@ -1,4 +1,5 @@
 .Icon {
   @apply cursor-pointer
-  text-[#616161];
+  text-[#383838]
+  hover:text-[#565656];
 }
