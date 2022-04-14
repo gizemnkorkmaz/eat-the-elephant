@@ -8,9 +8,7 @@
 
 .SearchInput {
   @apply text-sm
-  flex
-  pl-7 mx-1
-  lg:my-5
+  pl-7 
   text-[#212121]  
   bg-transparent
   placeholder:text-[#bbbbbb]
