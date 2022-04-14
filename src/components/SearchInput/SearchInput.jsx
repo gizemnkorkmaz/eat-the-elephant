@@ -8,6 +8,12 @@ const SearchInput = ({ setSelectedList, setSearchedTask }) => {
     setSearchedTask(target.value);
   };
 
+  const activateSearch = ({ target }) => {
+    if (target.value) {
+      setSelectedList("Search");
+    }
+  };
+
   return (
     <div className={styles.SearchWrapper}>
       <Icon icon="search" size={19} className={styles.SearchIcon} />
@@ -16,6 +22,7 @@ const SearchInput = ({ setSelectedList, setSearchedTask }) => {
         name="searchTasks"
         placeholder="search tasks"
         className={styles.SearchInput}
+        onClick={activateSearch}
         onChange={searchTask}
       />
     </div>
