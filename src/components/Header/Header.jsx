@@ -27,7 +27,7 @@ const Header = ({
         />
       </nav>
       <div className={styles.Logo}>
-        <Icon icon="elephant" size={25} />
+        <Icon icon="elephant" size={20} />
       </div>
     </div>
   );
