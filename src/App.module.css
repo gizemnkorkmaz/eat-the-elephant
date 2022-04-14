@@ -1,0 +1,31 @@
+.App {
+  @apply m-auto;
+}
+
+.TaskBoard {
+  @apply flex lg:flex-row flex-col;
+}
+
+.TaskMenu {
+  @apply bg-[#edecf2]
+  py-5 lg:px-7
+  text-center
+  shadow-sm
+  lg:min-h-screen
+  lg:w-1/6;
+  transition: 0.3s;
+}
+
+.ToggleTaskBoard {
+  @apply ml-[-250px];
+}
+
+.TaskListArea {
+  @apply bg-[#e7e8ed]
+  flex flex-col 
+  lg:m-auto
+  mx-5
+  lg:p-10 p-5
+  min-h-screen
+  lg:w-4/6;
+}
