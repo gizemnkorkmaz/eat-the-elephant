@@ -1,6 +1,9 @@
 .HeaderWrapper {
   @apply flex justify-between
-  py-3 px-9;
+  sticky
+  top-0 z-[100]
+  py-3 px-9
+  bg-[#e7e8ed];
 }
 
 .Navigation {

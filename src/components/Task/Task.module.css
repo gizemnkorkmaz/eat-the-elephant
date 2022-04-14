@@ -55,8 +55,8 @@
 .Buttons {
   @apply flex flex-nowrap
   ml-[7px]
-  mr-[-75px];
-  transition: 0.3s;
+  mr-[-75px]
+  duration-300;
 }
 
 .ImportantActive {

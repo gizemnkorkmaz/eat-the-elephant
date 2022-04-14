@@ -3,7 +3,7 @@
 }
 
 .TaskBoard {
-  @apply flex lg:flex-row flex-col;
+  @apply flex md:flex-row flex-col;
 }
 
 .TaskMenu {
@@ -11,21 +11,20 @@
   py-5 lg:px-7
   text-center
   shadow-sm
-  lg:min-h-screen
-  lg:w-1/6;
-  transition: 0.3s;
+  md:min-h-screen
+  md:w-1/6
+  duration-300;
 }
 
 .ToggleTaskBoard {
-  @apply ml-[-250px];
+  @apply md:ml-[-250px];
 }
 
 .TaskListArea {
   @apply bg-[#e7e8ed]
   flex flex-col 
-  lg:m-auto
-  mx-5
-  lg:p-10 p-5
+  md:m-auto
+  p-2
   min-h-screen
-  lg:w-4/6;
+  md:w-4/6;
 }
