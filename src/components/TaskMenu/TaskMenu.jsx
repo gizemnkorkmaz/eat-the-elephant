@@ -6,14 +6,8 @@ import { TasksContext } from "../../context/tasksContext";
 import sortTasks from "../../utils/sortTasks";
 
 import Icon from "../Icon/Icon";
-import SearchInput from "../SearchInput/SearchInput";
 
-const TaskMenu = ({
-  setSelectedList,
-  selectTaskList,
-  selectedList,
-  setSearchedTask,
-}) => {
+const TaskMenu = ({ selectTaskList, selectedList }) => {
   const { tasks } = useContext(TasksContext);
 
   const taskLists = [
@@ -50,10 +44,6 @@ const TaskMenu = ({
           </div>
         ) : null
       )}
-      <SearchInput
-        setSelectedList={setSelectedList}
-        setSearchedTask={setSearchedTask}
-      />
     </div>
   );
 };
