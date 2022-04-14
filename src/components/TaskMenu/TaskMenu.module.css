@@ -1,6 +1,6 @@
 .TaskMenu {
-  @apply flex justify-around flex-wrap
-  lg:flex-col 
+  @apply flex justify-around items-center md:items-start
+  flex-col 
   min-h-fit
   lg:fixed
   text-[#4d8581];
@@ -16,19 +16,26 @@
   hover:text-[#cc5500];
 }
 
+.Icon {
+  @apply cursor-pointer
+  md:m-1
+  text-[#212121]
+  hover:text-[#cc5500]
+  md:hover:text-[#212121];
+}
+
 .Active {
   @apply text-[#cc5500]
   bg-[#e7e8ed]
   opacity-95;
 }
 
-.Icon {
-  @apply cursor-pointer
-  m-1
-  text-[#212121];
+.TaskLabel,
+.TaskCount {
+  @apply hidden md:block;
 }
 
-.TaskLength {
+.TaskCount {
   @apply p-px;
 }
 

@@ -7,9 +7,15 @@
 }
 
 .Navigation {
-  @apply flex items-center gap-3;
+  @apply flex items-center;
 }
 
-.Logo {
+.MenuLogo,
+.HomeLogo {
+  @apply hidden md:block
+  mr-3;
+}
+
+.ElephantLogo {
   @apply lg:pr-10;
 }
