@@ -17,5 +17,5 @@
 }
 
 .ElephantLogo {
-  @apply lg:pr-10;
+  @apply lg:pr-20 lg:mr-4;
 }

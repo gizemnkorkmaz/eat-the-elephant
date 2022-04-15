@@ -8,11 +8,11 @@
 
 .TaskMenu {
   @apply bg-[#edecf2]
-  p-5
+  p-5 px-7 
   text-center
   shadow-sm
   min-h-screen
-  w-2/12 md:w-3/12 lg:w-2/12
+  w-1/12 md:w-3/12 lg:w-2/12
   duration-300;
 }
 
@@ -26,5 +26,5 @@
   m-auto
   p-2
   min-h-screen
-  w-9/12 md:w-7/12 lg:w-7/12;
+  w-9/12 md:w-8/12 lg:w-8/12;
 }
