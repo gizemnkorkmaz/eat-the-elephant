@@ -21,12 +21,15 @@
   md:m-1
   text-[#212121]
   hover:text-[#cc5500]
-  md:hover:text-[#212121];
+  md:hover:text-[#212121]
+  w-[25px] py-1 md:py-0
+  md:w-[20px];
 }
 
 .Active {
   @apply text-[#cc5500]
   bg-[#e7e8ed]
+  md:pr-10
   opacity-95;
 }
 

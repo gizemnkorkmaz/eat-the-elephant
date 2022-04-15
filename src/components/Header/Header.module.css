@@ -13,7 +13,7 @@
 .MenuLogo,
 .HomeLogo {
   @apply hidden md:block
-  mr-3;
+  mr-4;
 }
 
 .ElephantLogo {

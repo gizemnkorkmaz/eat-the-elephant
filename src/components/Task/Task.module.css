@@ -69,7 +69,8 @@
 }
 
 .Checkbox {
-  @apply cursor-pointer text-[#616161];
+  @apply cursor-pointer text-[#616161]
+  w-[18px] md:w-[23px];
 }
 
 .CheckboxEmphasis,
