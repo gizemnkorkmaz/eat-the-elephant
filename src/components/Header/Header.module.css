@@ -1,0 +1,21 @@
+.HeaderWrapper {
+  @apply flex justify-between
+  sticky
+  top-0 z-[100]
+  py-3 px-9
+  bg-[#e7e8ed];
+}
+
+.Navigation {
+  @apply flex items-center;
+}
+
+.MenuLogo,
+.HomeLogo {
+  @apply hidden md:block
+  mr-4;
+}
+
+.ElephantLogo {
+  @apply lg:pr-20 lg:mr-4;
+}

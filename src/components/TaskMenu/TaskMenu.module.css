@@ -1,7 +1,6 @@
 .TaskMenu {
-  @apply flex justify-around flex-wrap
-  lg:flex-col 
-  lg:py-10
+  @apply flex justify-around items-center md:items-start
+  flex-col 
   min-h-fit
   lg:fixed
   text-[#4d8581];
@@ -9,32 +8,37 @@
 
 .TaskList {
   @apply flex gap-1 flex-wrap items-center 
-  lg:my-1
+  p-1
   cursor-pointer
   lg:text-sm
-  py-1 px-2
   text-xs
   opacity-80
-  border-l 
-  hover:text-[#cc5500]
-  lg:hover:border-[#4d8581];
-}
-
-.Active {
-  @apply text-[#cc5500]
-  border-l lg:border-[#4d8581]
-  bg-[#e7e8ed]
-  opacity-95
-  lg:pr-20;
+  hover:text-[#cc5500];
 }
 
 .Icon {
   @apply cursor-pointer
-  m-1
-  text-[#212121];
+  md:m-1
+  text-[#212121]
+  hover:text-[#cc5500]
+  md:hover:text-[#212121]
+  w-[25px] py-1 md:py-0
+  md:w-[20px];
 }
 
-.TaskLength {
+.Active {
+  @apply text-[#cc5500]
+  bg-[#e7e8ed]
+  md:pr-10
+  opacity-95;
+}
+
+.TaskLabel,
+.TaskCount {
+  @apply hidden md:block;
+}
+
+.TaskCount {
   @apply p-px;
 }
 

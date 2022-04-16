@@ -59,7 +59,6 @@ const Task = ({ task }) => {
               className={cx(styles.Checkbox, {
                 [styles.CheckboxEmphasis]: task.isImportant && !task.isDone,
               })}
-              size={23}
               onClick={toggleIsDone}
             />
             <div className={styles.TaskName}>

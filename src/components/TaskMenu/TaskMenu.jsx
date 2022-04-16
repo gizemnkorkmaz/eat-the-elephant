@@ -6,14 +6,8 @@ import { TasksContext } from "../../context/tasksContext";
 import sortTasks from "../../utils/sortTasks";
 
 import Icon from "../Icon/Icon";
-import SearchInput from "../SearchInput/SearchInput";
 
-const TaskMenu = ({
-  setSelectedList,
-  selectTaskList,
-  selectedList,
-  setSearchedTask,
-}) => {
+const TaskMenu = ({ selectTaskList, selectedList }) => {
   const { tasks } = useContext(TasksContext);
 
   const taskLists = [
@@ -37,10 +31,10 @@ const TaskMenu = ({
             key={value}
             onClick={() => selectTaskList(value)}
           >
-            <Icon icon={icon} size={18} className={styles.Icon} />
-            {label}
+            <Icon icon={icon} className={styles.Icon} />
+            <span className={styles.TaskLabel}>{label}</span>
             <span
-              className={cx(styles.TaskLength, {
+              className={cx(styles.TaskCount, {
                 [styles.Overdue]: label === "Overdue",
                 [styles.Important]: label === "Important",
               })}
@@ -50,10 +44,6 @@ const TaskMenu = ({
           </div>
         ) : null
       )}
-      <SearchInput
-        setSelectedList={setSelectedList}
-        setSearchedTask={setSearchedTask}
-      />
     </div>
   );
 };

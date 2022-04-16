@@ -12,7 +12,8 @@
 
 .TaskName {
   @apply text-[#3a5874]
-  text-base
+  text-sm
+  md:text-base
   flex items-center
   ml-2 lg:mr-20;
 }
@@ -55,8 +56,8 @@
 .Buttons {
   @apply flex flex-nowrap
   ml-[7px]
-  mr-[-75px];
-  transition: 0.3s;
+  mr-[-75px]
+  duration-300;
 }
 
 .ImportantActive {
@@ -68,7 +69,8 @@
 }
 
 .Checkbox {
-  @apply cursor-pointer text-[#616161];
+  @apply cursor-pointer text-[#616161]
+  w-[18px] md:w-[23px];
 }
 
 .CheckboxEmphasis,
