@@ -1,13 +1,12 @@
 import { useContext } from "react";
-import { TasksContext } from "../../context/tasksContext";
-
+import dayjs from "dayjs";
 import cx from "classnames";
-import styles from "./Task.module.css";
 
 import Icon from "../Icon/Icon";
 import EditTask from "../EditTask/EditTask";
+import { TasksContext } from "../../context/tasksContext";
 
-import dayjs from "dayjs";
+import styles from "./Task.module.css";
 
 const Task = ({ task }) => {
   const { tasks, setTasks, editTaskId, setEditTaskId } =

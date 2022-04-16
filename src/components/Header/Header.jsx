@@ -1,7 +1,7 @@
-import styles from "./Header.module.css";
-
 import SearchInput from "../SearchInput/SearchInput";
 import Icon from "../Icon/Icon";
+
+import styles from "./Header.module.css";
 
 const Header = ({
   setSelectedList,

@@ -1,10 +1,10 @@
-import styles from "./Tasks.module.css";
-
 import { useContext } from "react";
+
+import Task from "../Task/Task";
 import { TasksContext } from "../../context/tasksContext";
 import sortTasks from "../../utils/sortTasks";
 
-import Task from "../Task/Task";
+import styles from "./Tasks.module.css";
 
 const Tasks = ({ selectedList }) => {
   const { tasks } = useContext(TasksContext);

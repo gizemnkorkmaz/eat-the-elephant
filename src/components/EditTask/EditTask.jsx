@@ -1,10 +1,10 @@
 import { useContext, useRef, useState } from "react";
+
+import Datepicker from "../DatePicker/DatePicker";
+import Button from "../Button/Button";
 import { TasksContext } from "../../context/tasksContext";
 
 import styles from "./EditTask.module.css";
-
-import Button from "../Button/Button";
-import Datepicker from "../DatePicker/DatePicker";
 
 const EditTask = ({ task }) => {
   const [editedTask, setEditedTask] = useState(task);

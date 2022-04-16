@@ -1,9 +1,11 @@
-import styles from "./DatePicker.module.css";
 import "react-datepicker/dist/react-datepicker.css";
-import cx from "classnames";
 
 import DatePicker from "react-datepicker";
+import cx from "classnames";
+
 import Icon from "../Icon/Icon";
+
+import styles from "./DatePicker.module.css";
 
 const Datepicker = ({
   onChange,

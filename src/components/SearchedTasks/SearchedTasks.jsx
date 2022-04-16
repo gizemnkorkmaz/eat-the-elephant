@@ -1,9 +1,9 @@
-import styles from "./SearchedTasks.module.css";
-
 import { useContext } from "react";
-import { TasksContext } from "../../context/tasksContext";
 
 import Task from "../Task/Task";
+import { TasksContext } from "../../context/tasksContext";
+
+import styles from "./SearchedTasks.module.css";
 
 const SearchedTasks = ({ searchedTask }) => {
   const { tasks } = useContext(TasksContext);

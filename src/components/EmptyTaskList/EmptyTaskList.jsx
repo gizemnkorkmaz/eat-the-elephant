@@ -1,9 +1,9 @@
-import styles from "./EmptyTaskList.module.css";
-
 import { useContext } from "react";
-import { TasksContext } from "../../context/tasksContext";
 
 import Button from "../Button/Button";
+import { TasksContext } from "../../context/tasksContext";
+
+import styles from "./EmptyTaskList.module.css";
 
 const EmptyTaskList = () => {
   const { tasks, setTasks } = useContext(TasksContext);

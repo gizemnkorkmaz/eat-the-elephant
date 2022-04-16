@@ -1,11 +1,11 @@
 import { useContext, useRef, useState } from "react";
-import { TasksContext } from "../../context/tasksContext";
 import { nanoid } from "nanoid";
-
-import styles from "./TaskInput.module.css";
 
 import Datepicker from "../DatePicker/DatePicker";
 import Icon from "../Icon/Icon";
+import { TasksContext } from "../../context/tasksContext";
+
+import styles from "./TaskInput.module.css";
 
 const TaskInput = () => {
   const [task, setTask] = useState({ name: "" });
