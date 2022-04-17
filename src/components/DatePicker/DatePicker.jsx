@@ -38,7 +38,7 @@ const Datepicker = ({
         minDate={new Date()}
         dateFormat="d MMM"
         onChange={onChange}
-        onChangeRaw={(e) => e.preventDefault()}
+        readOnly={true}
         open={isOpen}
       >
         <div className={styles.ClearDate} onClick={clearDate}>
