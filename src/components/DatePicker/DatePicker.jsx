@@ -34,10 +34,11 @@ const Datepicker = ({
       />
       <DatePicker
         selected={task.date ? new Date(task.date) : ""}
-        onChange={onChange}
         className={styles.Calendar}
         minDate={new Date()}
         dateFormat="d MMM"
+        onChange={onChange}
+        onChangeRaw={(e) => e.preventDefault()}
         open={isOpen}
       >
         <div className={styles.ClearDate} onClick={clearDate}>
