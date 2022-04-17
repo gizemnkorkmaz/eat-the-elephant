@@ -3,7 +3,7 @@
   flex-col 
   min-h-fit
   lg:fixed
-  text-[#4d8581];
+  text-[#bf9000];
 }
 
 .TaskList {
@@ -13,24 +13,23 @@
   lg:text-sm
   text-xs
   opacity-80
-  hover:text-[#cc5500];
+  hover:text-[#f1c232];
 }
 
 .Icon {
   @apply cursor-pointer
   md:m-1
-  text-[#212121]
-  hover:text-[#cc5500]
-  md:hover:text-[#212121]
+  text-[#e7e8ed]
+  hover:text-[#f1c232]
+  md:hover:text-[#e7e8ed]
   w-[25px] py-1 md:py-0
   md:w-[20px];
 }
 
 .Active {
-  @apply text-[#cc5500]
-  bg-[#e7e8ed]
-  md:pr-10
-  opacity-95;
+  @apply md:pr-10
+  text-[#f1c232]
+  font-semibold;
 }
 
 .TaskLabel,
@@ -44,5 +43,5 @@
 
 .Overdue,
 .Important {
-  @apply text-[#d0342c];
+  @apply text-[#f02828];
 }

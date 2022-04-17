@@ -3,19 +3,19 @@
   max-w-xs
   py-1
   text-xs
-  text-[#4d8581]
-  hover:text-[#cc5500];
+  text-[#bf9000]
+  hover:text-[#f1c232];
 }
 
 .CalendarIcon {
   @apply ml-3 mt-8
   cursor-pointer
-  text-[#6d6d6d]
-  hover:text-[#383938];
+  text-[#aaaaaa]
+  hover:text-[#e7e7e7];
 }
 
 .DateSelected {
-  @apply text-[#383938];
+  @apply text-[#ededed];
 }
 
 .Calendar {
@@ -32,6 +32,5 @@
   @apply cursor-pointer
   text-center
   py-2
-  text-[#b8100a]
-  hover:text-[#cc5500];
+  text-[#b8100a];
 }

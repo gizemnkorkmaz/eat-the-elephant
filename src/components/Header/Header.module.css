@@ -2,8 +2,8 @@
   @apply flex justify-between
   sticky
   top-0 z-[100]
-  py-3 px-9
-  bg-[#e7e8ed];
+  py-4 px-[30px]
+  bg-[#1C1919];
 }
 
 .Navigation {
@@ -13,9 +13,11 @@
 .MenuLogo,
 .HomeLogo {
   @apply hidden md:block
-  mr-4;
+  mr-4
+  cursor-pointer
+  text-[#e7e8ed];
 }
 
 .ElephantLogo {
-  @apply lg:pr-20 lg:mr-4;
+  @apply text-[#e7e8ed];
 }

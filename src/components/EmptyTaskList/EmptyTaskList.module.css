@@ -1,19 +1,17 @@
 .EmptyTaskWrapper {
   @apply italic
-  text-[#006d77]
-  text-sm
-  p-5 m-10
-  md:text-base
+  text-[#616161]
+  text-xs
+  pt-10 mx-auto
+  sm:text-base
   text-center
-  bg-[#edecf2]
-  flex justify-center
-  shadow-lg;
+  flex justify-center;
 }
 
 .EmptyTaskMessage {
-  @apply text-[#006d77]
+  @apply text-[#f1c232]
   md:text-base
-  text-sm
+  text-xs
   py-5
   italic;
 }

@@ -1,6 +1,6 @@
 .TaskWrapper {
   @apply py-2 
-  border-b border-[#d4d4d4]
+  border-b border-[#484848]
   last:border-b-0
   flex justify-between items-center
   overflow-hidden;
@@ -11,9 +11,8 @@
 }
 
 .TaskName {
-  @apply text-[#3a5874]
-  text-sm
-  md:text-base
+  @apply text-[#d5d1c7]
+  text-xs md:text-base
   flex items-center
   ml-2 lg:mr-20;
 }
@@ -27,7 +26,7 @@
   visible
   pl-2 mb-0
   text-xs
-  text-[#4d8581];
+  text-[#aaaaaa];
 }
 
 .TaskActions {
@@ -38,8 +37,8 @@
 .EditButton,
 .ImportantTaskEmpty {
   @apply p-[3px]
-  text-[#616161]
-  hover:bg-[#e2e2e2]
+  text-[#e7e8ed]
+  hover:bg-[#616161]
   rounded-full
   cursor-pointer;
 }
@@ -69,12 +68,14 @@
 }
 
 .Checkbox {
-  @apply cursor-pointer text-[#616161]
-  w-[18px] md:w-[23px];
+  @apply cursor-pointer
+  text-[#e7e8ed]
+  hover:text-[#d5d1c7]
+  w-[15px] md:w-[23px];
 }
 
 .CheckboxEmphasis,
 .ImportantTask,
 .OverdueTask {
-  @apply text-[#d0342c];
+  @apply text-[#f02828];
 }

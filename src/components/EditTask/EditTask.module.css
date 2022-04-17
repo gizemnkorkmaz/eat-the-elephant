@@ -12,7 +12,8 @@
   bg-transparent
   border-b 
   border-[#d4d4d4]
-  text-[#3a5874]
+  text-[#e7e8ed]  
+  text-xs md:text-sm lg:text-base
   focus:outline-none;
 }
 

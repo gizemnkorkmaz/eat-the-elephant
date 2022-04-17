@@ -20,10 +20,10 @@ const Header = ({
     <div className={styles.HeaderWrapper}>
       <nav className={styles.Navigation}>
         <div className={styles.MenuLogo}>
-          <Icon icon="menu" size={23} onClick={toggleMenu} />
+          <Icon icon="menu" size={24} onClick={toggleMenu} />
         </div>
         <div className={styles.HomeLogo}>
-          <Icon icon="home" size={23} onClick={navigateHome} />
+          <Icon icon="home" size={24} onClick={navigateHome} />
         </div>
         <SearchInput
           setSelectedList={setSelectedList}
@@ -31,7 +31,7 @@ const Header = ({
         />
       </nav>
       <div className={styles.ElephantLogo}>
-        <Icon icon="elephant" size={20} />
+        <Icon icon="elephant" size={21} />
       </div>
     </div>
   );
