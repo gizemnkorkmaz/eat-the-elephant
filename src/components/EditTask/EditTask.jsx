@@ -19,10 +19,12 @@ const EditTask = ({ task }) => {
 
   const saveEdit = () => {
     if (editedTask.name.trim().length) {
-      setEditTaskId(null);
-      setTasks(
-        tasks.map((task) => (task.id === editTaskId ? editedTask : task))
+      const newTasks = tasks.map((task) =>
+        task.id === editTaskId ? editedTask : task
       );
+
+      setTasks(newTasks);
+      setEditTaskId(null);
     }
   };
 
