@@ -10,8 +10,7 @@
   @apply flex items-center;
 }
 
-.MenuLogo,
-.HomeLogo {
+.MenuLogo {
   @apply hidden md:block
   mr-4
   cursor-pointer

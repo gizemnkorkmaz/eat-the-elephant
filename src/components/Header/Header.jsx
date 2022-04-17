@@ -13,17 +13,11 @@ const Header = ({
     setIsMenuHidden(!isMenuHidden);
   };
 
-  const navigateHome = () => {
-    setSelectedList("Inbox");
-  };
   return (
     <div className={styles.HeaderWrapper}>
       <nav className={styles.Navigation}>
         <div className={styles.MenuLogo}>
           <Icon icon="menu" size={24} onClick={toggleMenu} />
-        </div>
-        <div className={styles.HomeLogo}>
-          <Icon icon="home" size={24} onClick={navigateHome} />
         </div>
         <SearchInput
           setSelectedList={setSelectedList}
