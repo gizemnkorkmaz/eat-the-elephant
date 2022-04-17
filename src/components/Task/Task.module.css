@@ -38,7 +38,7 @@
 .ImportantTaskEmpty {
   @apply p-[3px]
   text-[#e7e8ed]
-  hover:bg-[#616161]
+  hover:bg-[#3a3b3c]
   rounded-full
   cursor-pointer;
 }
