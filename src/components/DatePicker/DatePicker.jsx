@@ -1,9 +1,11 @@
-import styles from "./DatePicker.module.css";
 import "react-datepicker/dist/react-datepicker.css";
-import cx from "classnames";
 
 import DatePicker from "react-datepicker";
+import cx from "classnames";
+
 import Icon from "../Icon/Icon";
+
+import styles from "./DatePicker.module.css";
 
 const Datepicker = ({
   onChange,
@@ -32,10 +34,11 @@ const Datepicker = ({
       />
       <DatePicker
         selected={task.date ? new Date(task.date) : ""}
-        onChange={onChange}
         className={styles.Calendar}
         minDate={new Date()}
         dateFormat="d MMM"
+        onChange={onChange}
+        readOnly={true}
         open={isOpen}
       >
         <div className={styles.ClearDate} onClick={clearDate}>

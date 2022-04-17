@@ -1,13 +1,12 @@
 import { useContext } from "react";
-import { TasksContext } from "../../context/tasksContext";
-
+import dayjs from "dayjs";
 import cx from "classnames";
-import styles from "./Task.module.css";
 
 import Icon from "../Icon/Icon";
 import EditTask from "../EditTask/EditTask";
+import { TasksContext } from "../../context/tasksContext";
 
-import dayjs from "dayjs";
+import styles from "./Task.module.css";
 
 const Task = ({ task }) => {
   const { tasks, setTasks, editTaskId, setEditTaskId } =
@@ -17,11 +16,11 @@ const Task = ({ task }) => {
   const isOverdue = dayjs().isAfter(dayjs(task.date).add(1, "day"));
 
   const toggleIsDone = () => {
-    setTasks(
-      tasks.map((task) =>
-        task.id === currentTaskId ? { ...task, isDone: !task.isDone } : task
-      )
+    const newTasks = tasks.map((task) =>
+      task.id === currentTaskId ? { ...task, isDone: !task.isDone } : task
     );
+
+    setTasks(newTasks);
   };
 
   const activateEdit = () => {
@@ -29,21 +28,23 @@ const Task = ({ task }) => {
   };
 
   const toggleTaskImportance = () => {
-    setTasks(
-      tasks.map((task) =>
-        task.id === currentTaskId
-          ? { ...task, isImportant: !task.isImportant }
-          : task
-      )
+    const newTasks = tasks.map((task) =>
+      task.id === currentTaskId
+        ? { ...task, isImportant: !task.isImportant }
+        : task
     );
+
+    setTasks(newTasks);
   };
 
   const deleteTask = () => {
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this task?"
     );
+
     if (confirmDelete) {
-      setTasks(tasks.filter((task) => task.id !== currentTaskId));
+      const newTasks = tasks.filter((task) => task.id !== currentTaskId);
+      setTasks(newTasks);
     }
   };
 

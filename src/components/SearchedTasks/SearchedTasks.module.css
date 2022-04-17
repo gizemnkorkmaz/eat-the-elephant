@@ -1,14 +1,12 @@
 .Tasks {
-  @apply bg-[#edecf2]
-  flex flex-col 
-  my-5 p-5  
-  shadow-lg;
+  @apply flex flex-col 
+  my-5 p-5 xl:px-20;
 }
 
 .NoTaskMessage {
-  @apply text-[#006d77]
+  @apply text-[#aaaaaa]
   md:text-base
-  text-sm
+  text-xs
   m-auto
   py-5
   italic;

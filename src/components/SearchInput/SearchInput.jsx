@@ -1,6 +1,6 @@
-import styles from "./SearchInput.module.css";
-
 import Icon from "../Icon/Icon";
+
+import styles from "./SearchInput.module.css";
 
 const SearchInput = ({ setSelectedList, setSearchedTask }) => {
   const searchTask = ({ target }) => {

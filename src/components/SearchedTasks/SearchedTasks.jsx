@@ -1,9 +1,9 @@
-import styles from "./SearchedTasks.module.css";
-
 import { useContext } from "react";
-import { TasksContext } from "../../context/tasksContext";
 
 import Task from "../Task/Task";
+import { TasksContext } from "../../context/tasksContext";
+
+import styles from "./SearchedTasks.module.css";
 
 const SearchedTasks = ({ searchedTask }) => {
   const { tasks } = useContext(TasksContext);
@@ -16,7 +16,9 @@ const SearchedTasks = ({ searchedTask }) => {
       {searchResults.length ? (
         searchResults.map((task) => <Task key={task.id} task={task} />)
       ) : (
-        <div className={styles.NoTaskMessage}>No task found</div>
+        <div className={styles.NoTaskMessage}>
+          No matches for "{searchedTask}"
+        </div>
       )}
     </div>
   );

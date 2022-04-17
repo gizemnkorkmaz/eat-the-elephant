@@ -1,15 +1,17 @@
 .SearchWrapper {
-  @apply flex items-center;
+  @apply flex items-center
+  p-1;
 }
 
 .SearchIcon {
-  @apply mr-[-25px];
+  @apply mr-[-25px] pb-px
+  text-[#e7e8ed];
 }
 
 .SearchInput {
-  @apply text-sm
-  pl-7 
-  text-[#212121]  
+  @apply text-xs md:text-sm
+  pl-7 pb-px
+  text-[#e7e8ed]  
   bg-transparent
   placeholder:text-[#bbbbbb]
   border-b border-[#d4d4d4]

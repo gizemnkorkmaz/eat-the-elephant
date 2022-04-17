@@ -1,11 +1,11 @@
-import styles from "./TaskMenu.module.css";
+import { useContext } from "react";
 import cx from "classnames";
 
-import { useContext } from "react";
+import Icon from "../Icon/Icon";
 import { TasksContext } from "../../context/tasksContext";
 import sortTasks from "../../utils/sortTasks";
 
-import Icon from "../Icon/Icon";
+import styles from "./TaskMenu.module.css";
 
 const TaskMenu = ({ selectTaskList, selectedList }) => {
   const { tasks } = useContext(TasksContext);

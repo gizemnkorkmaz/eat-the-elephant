@@ -7,7 +7,7 @@
 }
 
 .TaskMenu {
-  @apply bg-[#edecf2]
+  @apply bg-[#212121]
   p-5 px-7 
   text-center
   shadow-sm
@@ -17,11 +17,11 @@
 }
 
 .ToggleTaskBoard {
-  @apply md:ml-[-250px];
+  @apply md:ml-[-250px] 2xl:ml-[-450px];
 }
 
 .TaskListArea {
-  @apply bg-[#e7e8ed]
+  @apply bg-[#1C1919]
   flex flex-col 
   m-auto
   p-2

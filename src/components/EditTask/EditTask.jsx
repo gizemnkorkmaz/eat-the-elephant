@@ -1,10 +1,10 @@
 import { useContext, useRef, useState } from "react";
+
+import Datepicker from "../DatePicker/DatePicker";
+import Button from "../Button/Button";
 import { TasksContext } from "../../context/tasksContext";
 
 import styles from "./EditTask.module.css";
-
-import Button from "../Button/Button";
-import Datepicker from "../DatePicker/DatePicker";
 
 const EditTask = ({ task }) => {
   const [editedTask, setEditedTask] = useState(task);
@@ -19,10 +19,12 @@ const EditTask = ({ task }) => {
 
   const saveEdit = () => {
     if (editedTask.name.trim().length) {
-      setEditTaskId(null);
-      setTasks(
-        tasks.map((task) => (task.id === editTaskId ? editedTask : task))
+      const newTasks = tasks.map((task) =>
+        task.id === editTaskId ? editedTask : task
       );
+
+      setTasks(newTasks);
+      setEditTaskId(null);
     }
   };
 
