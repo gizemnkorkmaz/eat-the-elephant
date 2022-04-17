@@ -16,7 +16,9 @@ const SearchedTasks = ({ searchedTask }) => {
       {searchResults.length ? (
         searchResults.map((task) => <Task key={task.id} task={task} />)
       ) : (
-        <div className={styles.NoTaskMessage}>No task found</div>
+        <div className={styles.NoTaskMessage}>
+          No matches for "{searchedTask}"
+        </div>
       )}
     </div>
   );
