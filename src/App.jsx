@@ -1,13 +1,14 @@
-import styles from "./App.module.css";
+import { useState } from "react";
 import cx from "classnames";
 
-import { useState } from "react";
 import { TasksProvider } from "./context/tasksContext";
-
 import Header from "./components/Header/Header";
 import TaskInput from "./components/TaskInput/TaskInput";
 import TaskMenu from "./components/TaskMenu/TaskMenu";
 import TaskBoard from "./components/TaskBoard/TaskBoard";
+import Footer from "./components/Footer/Footer";
+
+import styles from "./App.module.css";
 
 const App = () => {
   const [selectedList, setSelectedList] = useState("Inbox");
@@ -50,12 +51,15 @@ const App = () => {
             />
           </section>
           <section className={styles.TaskListArea}>
-            <TaskInput />
-            <TaskBoard
-              taskLists={taskLists}
-              selectedList={selectedList}
-              searchedTask={searchedTask}
-            />
+            <div>
+              <TaskInput />
+              <TaskBoard
+                taskLists={taskLists}
+                selectedList={selectedList}
+                searchedTask={searchedTask}
+              />
+            </div>
+            <Footer />
           </section>
         </TasksProvider>
       </div>

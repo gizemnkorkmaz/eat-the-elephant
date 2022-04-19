@@ -11,7 +11,6 @@
   p-5 px-7 
   text-center
   shadow-sm
-  min-h-screen
   w-1/12 md:w-3/12 lg:w-2/12
   duration-300;
 }
@@ -22,9 +21,9 @@
 
 .TaskListArea {
   @apply bg-[#1C1919]
-  flex flex-col 
+  flex flex-col justify-between
   m-auto
   p-2
-  min-h-screen
+  min-h-[94vh]
   w-9/12 md:w-8/12 lg:w-8/12;
 }
