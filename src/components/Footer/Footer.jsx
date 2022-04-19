@@ -7,7 +7,6 @@ const Footer = () => (
       href="https://github.com/gizemnkorkmaz/eat-the-elephant"
       target="_blank"
       rel="noreferrer"
-      className={styles.Link}
     >
       <Icon icon="github" size={29} className={styles.SocialIcon} />
     </a>
@@ -15,7 +14,6 @@ const Footer = () => (
       href="https://twitter.com/gizemnkorkmaz"
       target="_blank"
       rel="noreferrer"
-      className={styles.Link}
     >
       <Icon icon="twitter" size={29} className={styles.SocialIcon} />
     </a>
