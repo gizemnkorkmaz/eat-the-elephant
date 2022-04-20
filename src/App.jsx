@@ -35,8 +35,7 @@ const App = () => {
       <Header
         setSelectedList={setSelectedList}
         setSearchedTask={setSearchedTask}
-        isMenuHidden={isMenuHidden}
-        setIsMenuHidden={setIsMenuHidden}
+        toggleMenu={() => setIsMenuHidden(!isMenuHidden)}
       />
       <div className={styles.TaskBoard}>
         <TasksProvider>
