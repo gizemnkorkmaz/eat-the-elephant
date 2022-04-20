@@ -8,7 +8,9 @@ import styles from "./Tasks.module.css";
 
 const Tasks = ({ selectedList }) => {
   const { tasks } = useContext(TasksContext);
+
   const selectedTaskList = sortTasks(selectedList, tasks);
+
   const tasksHeader =
     selectedList === "nextSevenDays" ? "Next 7 Days" : selectedList;
 

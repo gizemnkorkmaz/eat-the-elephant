@@ -21,6 +21,7 @@ const Datepicker = ({
     inputRef.current.focus();
     setIsOpen(false);
   };
+
   return (
     <label className={styles.CalendarWrapper}>
       <Icon

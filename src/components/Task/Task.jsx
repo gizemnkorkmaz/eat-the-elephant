@@ -11,7 +11,9 @@ import styles from "./Task.module.css";
 const Task = ({ task }) => {
   const { tasks, setTasks, editTaskId, setEditTaskId } =
     useContext(TasksContext);
+
   const currentTaskId = task.id;
+
   const dueDate = dayjs(task.date).format("D MMM");
   const isOverdue = dayjs().isAfter(dayjs(task.date).add(1, "day"));
 
@@ -44,6 +46,7 @@ const Task = ({ task }) => {
 
     if (confirmDelete) {
       const newTasks = tasks.filter((task) => task.id !== currentTaskId);
+
       setTasks(newTasks);
     }
   };
