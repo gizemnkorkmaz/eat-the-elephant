@@ -11,19 +11,19 @@ import Footer from "./components/Footer/Footer";
 import styles from "./App.module.css";
 
 const App = () => {
-  const [selectedList, setSelectedList] = useState("Inbox");
+  const [selectedList, setSelectedList] = useState("inbox");
   const [searchedTask, setSearchedTask] = useState("");
   const [isMenuHidden, setIsMenuHidden] = useState(false);
 
   const taskLists = {
     noDate: "",
-    inbox: "Inbox",
-    overdue: "Overdue",
-    important: "Important",
-    today: "Today",
-    tomorrow: "Tomorrow",
-    nextSevenDays: "Next 7 Days",
-    upcoming: "Upcoming",
+    inbox: "inbox",
+    overdue: "overdue",
+    important: "important",
+    today: "today",
+    tomorrow: "tomorrow",
+    nextSevenDays: "nextSevenDays",
+    upcoming: "upcoming",
   };
 
   const selectTaskList = (selectedList) => {

@@ -10,26 +10,26 @@ dayjs.extend(isBetween);
 const sortTasks = (selectedList, tasks) => {
   const tasksByDate = tasks.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-  if (selectedList === "Today") {
+  if (selectedList === "today") {
     return tasks.filter((task) => task.date && dayjs(task.date).isToday());
-  } else if (selectedList === "Tomorrow") {
+  } else if (selectedList === "tomorrow") {
     return tasks.filter((task) => dayjs(task.date).isTomorrow());
-  } else if (selectedList === "Next 7 Days") {
+  } else if (selectedList === "nextSevenDays") {
     const startWeek = dayjs().add(1, "day");
     const endWeek = dayjs().add(7, "day");
 
     return tasksByDate.filter((task) =>
       dayjs(task.date).isBetween(startWeek, endWeek)
     );
-  } else if (selectedList === "Upcoming") {
+  } else if (selectedList === "upcoming") {
     return tasksByDate.filter((task) =>
       dayjs(task.date).isAfter(dayjs().add(7, "day"))
     );
-  } else if (selectedList === "Overdue") {
+  } else if (selectedList === "overdue") {
     return tasksByDate.filter(
       (task) => dayjs(task.date).isBefore(dayjs(), "day") && !task.isDone
     );
-  } else if (selectedList === "Important") {
+  } else if (selectedList === "important") {
     return tasksByDate.filter((task) => task.isImportant);
   } else if (!selectedList) {
     return tasksByDate.filter((task) => !task.date);
