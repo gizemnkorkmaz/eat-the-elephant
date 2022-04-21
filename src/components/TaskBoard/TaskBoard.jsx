@@ -3,8 +3,11 @@ import EmptyTaskList from "../EmptyTaskList/EmptyTaskList";
 import SearchedTasks from "../SearchedTasks/SearchedTasks";
 
 const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
-  const taskListsToShow = Object.keys(taskLists).filter(
-    (list) => list !== "inbox" && list !== "important" && list !== "search"
+  const taskListsToShow = Object.values(taskLists).filter(
+    (list) =>
+      list.value !== "inbox" &&
+      list.value !== "important" &&
+      list.value !== "search"
   );
 
   if (selectedList === "inbox") {
@@ -12,7 +15,12 @@ const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
       <>
         <EmptyTaskList />
         {taskListsToShow.map((listItem) => (
-          <Tasks key={listItem} selectedList={listItem} taskLists={taskLists} />
+          <Tasks
+            key={listItem.value}
+            selectedList={listItem.value}
+            taskLists={taskLists}
+            tasksHeader={listItem.label}
+          />
         ))}
       </>
     );

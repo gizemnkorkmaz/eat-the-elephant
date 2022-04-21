@@ -15,23 +15,23 @@ const App = () => {
   const [searchedTask, setSearchedTask] = useState("");
   const [isMenuHidden, setIsMenuHidden] = useState(false);
 
-  const taskLists = {
-    noDate: { value: "noDate", label: "" },
-    inbox: { value: "inbox", label: "Inbox", icon: "inbox" },
-    important: { value: "important", label: "Important", icon: "important" },
-    overdue: { value: "overdue", label: "Overdue", icon: "history" },
-    today: { value: "today", label: "Today", icon: "today" },
-    tomorrow: { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
-    nextSevenDays: {
+  const taskLists = [
+    { value: "noDate", label: "" },
+    { value: "inbox", label: "Inbox", icon: "inbox" },
+    { value: "important", label: "Important", icon: "important" },
+    { value: "overdue", label: "Overdue", icon: "history" },
+    { value: "today", label: "Today", icon: "today" },
+    { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
+    {
       value: "nextSevenDays",
       label: "Next 7 Days",
       icon: "star",
     },
-    upcoming: { value: "upcoming", label: "Upcoming", icon: "hourglass" },
-  };
+    { value: "upcoming", label: "Upcoming", icon: "hourglass" },
+  ];
 
-  const selectTaskList = (selectedList) => {
-    setSelectedList(taskLists[selectedList].value);
+  const selectTaskList = (list) => {
+    setSelectedList(list);
   };
 
   return (

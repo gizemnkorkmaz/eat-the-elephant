@@ -6,7 +6,7 @@ import sortTasks from "../../utils/sortTasks";
 
 import styles from "./Tasks.module.css";
 
-const Tasks = ({ selectedList, taskLists }) => {
+const Tasks = ({ selectedList, tasksHeader }) => {
   const { tasks } = useContext(TasksContext);
 
   const selectedTaskList = sortTasks(selectedList, tasks);
@@ -14,7 +14,7 @@ const Tasks = ({ selectedList, taskLists }) => {
   return (
     selectedTaskList.length > 0 && (
       <div className={styles.Tasks}>
-        <h2 className={styles.TasksHeader}>{taskLists[selectedList].label}</h2>
+        <h2 className={styles.TasksHeader}>{tasksHeader}</h2>
         {selectedTaskList.map((task) => (
           <Task key={task.id} task={task} />
         ))}
