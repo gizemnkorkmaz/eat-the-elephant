@@ -31,7 +31,7 @@ const sortTasks = (selectedList, tasks) => {
     );
   } else if (selectedList === "important") {
     return tasksByDate.filter((task) => task.isImportant);
-  } else if (!selectedList) {
+  } else if (selectedList === "noDate") {
     return tasksByDate.filter((task) => !task.date);
   } else {
     return tasks;
