@@ -1,11 +1,10 @@
-import "react-datepicker/dist/react-datepicker.css";
-
 import DatePicker from "react-datepicker";
 import cx from "classnames";
 
 import Icon from "../Icon/Icon";
 
 import styles from "./DatePicker.module.css";
+import "./react-datepicker.css";
 
 const Datepicker = ({
   onChange,
@@ -22,6 +21,7 @@ const Datepicker = ({
     inputRef.current.focus();
     setIsOpen(false);
   };
+
   return (
     <label className={styles.CalendarWrapper}>
       <Icon

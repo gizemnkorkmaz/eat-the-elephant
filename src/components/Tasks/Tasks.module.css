@@ -10,5 +10,6 @@
   italic
   font-semibold
   text-[#bf9000]
-  pb-5;
+  pb-5
+  capitalize;
 }

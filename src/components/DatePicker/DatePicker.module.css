@@ -20,6 +20,7 @@
 
 .Calendar {
   @apply text-center 
+  bg-[#000]
   w-[45px]
   my-1
   cursor-pointer
@@ -31,6 +32,8 @@
 .ClearDate {
   @apply cursor-pointer
   text-center
-  py-2
-  text-[#b8100a];
+  py-2 font-bold
+  bg-[#171717]
+  text-[#b53737]
+  hover:text-[#9e1a1a];
 }

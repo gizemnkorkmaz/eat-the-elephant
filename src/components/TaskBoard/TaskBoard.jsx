@@ -4,12 +4,11 @@ import SearchedTasks from "../SearchedTasks/SearchedTasks";
 
 const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
   const taskListsToShow = Object.values(taskLists).filter(
-    (list) => list !== "Inbox" && list !== "Important" && list !== "Search"
+    (list) => list !== "inbox" && list !== "important" && list !== "search"
   );
-  let currentList;
 
-  if (selectedList === "Inbox") {
-    currentList = (
+  if (selectedList === "inbox") {
+    return (
       <>
         <EmptyTaskList />
         {taskListsToShow.map((listItem) => (
@@ -17,12 +16,10 @@ const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
         ))}
       </>
     );
-  } else if (selectedList === "Search") {
-    currentList = <SearchedTasks searchedTask={searchedTask} />;
+  } else if (selectedList === "search") {
+    return <SearchedTasks searchedTask={searchedTask} />;
   } else {
-    currentList = <Tasks selectedList={selectedList} />;
+    return <Tasks selectedList={selectedList} />;
   }
-
-  return currentList;
 };
 export default TaskBoard;

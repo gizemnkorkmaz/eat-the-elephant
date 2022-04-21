@@ -23,10 +23,10 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
   return (
     <div className={styles.TaskMenu}>
       {taskLists.map(({ value, label, icon }) =>
-        sortTasks(label, tasks).length || label === "Inbox" ? (
+        sortTasks(value, tasks).length || value === "inbox" ? (
           <div
             className={cx(styles.TaskList, {
-              [styles.Active]: selectedList === label,
+              [styles.Active]: selectedList === value,
             })}
             key={value}
             onClick={() => selectTaskList(value)}
@@ -35,11 +35,11 @@ const TaskMenu = ({ selectTaskList, selectedList }) => {
             <span className={styles.TaskLabel}>{label}</span>
             <span
               className={cx(styles.TaskCount, {
-                [styles.Overdue]: label === "Overdue",
-                [styles.Important]: label === "Important",
+                [styles.Overdue]: value === "overdue",
+                [styles.Important]: value === "important",
               })}
             >
-              ({sortTasks(label, tasks).filter((task) => !task.isDone).length})
+              ({sortTasks(value, tasks).filter((task) => !task.isDone).length})
             </span>
           </div>
         ) : null

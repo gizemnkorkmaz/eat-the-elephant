@@ -4,13 +4,13 @@ import styles from "./SearchInput.module.css";
 
 const SearchInput = ({ setSelectedList, setSearchedTask }) => {
   const searchTask = ({ target }) => {
-    setSelectedList(target.value ? "Search" : "Inbox");
+    setSelectedList(target.value ? "search" : "inbox");
     setSearchedTask(target.value);
   };
 
   const activateSearch = ({ target }) => {
     if (target.value) {
-      setSelectedList("Search");
+      setSelectedList("search");
     }
   };
 

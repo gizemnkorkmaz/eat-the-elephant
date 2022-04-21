@@ -25,6 +25,7 @@ const TaskInput = () => {
           isImportant: false,
         },
       ]);
+
       setTask({ name: "" });
     }
   };
