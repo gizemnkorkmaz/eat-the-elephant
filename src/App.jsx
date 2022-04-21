@@ -30,10 +30,6 @@ const App = () => {
     { value: "upcoming", label: "Upcoming", icon: "hourglass" },
   ];
 
-  const selectTaskList = (list) => {
-    setSelectedList(list);
-  };
-
   return (
     <div className={styles.App}>
       <Header
@@ -48,11 +44,7 @@ const App = () => {
               [styles.ToggleTaskBoard]: isMenuHidden,
             })}
           >
-            <TaskMenu
-              taskLists={taskLists}
-              selectTaskList={selectTaskList}
-              selectedList={selectedList}
-            />
+            <TaskMenu taskLists={taskLists} setSelectedList={setSelectedList} />
           </section>
           <section className={styles.TaskListArea}>
             <div>

@@ -7,12 +7,16 @@ import sortTasks from "../../utils/sortTasks";
 
 import styles from "./TaskMenu.module.css";
 
-const TaskMenu = ({ taskLists, selectTaskList, selectedList }) => {
+const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
   const { tasks } = useContext(TasksContext);
 
   const menuList = Object.values(taskLists).filter(
     (list) => list.value !== "noDate"
   );
+
+  const selectTaskList = (list) => {
+    setSelectedList(list);
+  };
 
   return (
     <div className={styles.TaskMenu}>
