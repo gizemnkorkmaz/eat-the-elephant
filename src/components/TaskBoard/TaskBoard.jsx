@@ -10,6 +10,10 @@ const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
       list.value !== "search"
   );
 
+  const activeList = Object.values(taskLists).find(
+    ({ value }) => value === selectedList
+  );
+
   if (selectedList === "inbox") {
     return (
       <>
@@ -27,7 +31,7 @@ const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
   } else if (selectedList === "search") {
     return <SearchedTasks searchedTask={searchedTask} />;
   } else {
-    return <Tasks selectedList={selectedList} taskLists={taskLists} />;
+    return <Tasks selectedList={selectedList} tasksHeader={activeList.label} />;
   }
 };
 export default TaskBoard;

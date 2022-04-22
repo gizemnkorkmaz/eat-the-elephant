@@ -44,7 +44,11 @@ const App = () => {
               [styles.ToggleTaskBoard]: isMenuHidden,
             })}
           >
-            <TaskMenu taskLists={taskLists} setSelectedList={setSelectedList} />
+            <TaskMenu
+              taskLists={taskLists}
+              selectedList={selectedList}
+              setSelectedList={setSelectedList}
+            />
           </section>
           <section className={styles.TaskListArea}>
             <div>
