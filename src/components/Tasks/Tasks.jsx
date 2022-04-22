@@ -6,13 +6,10 @@ import sortTasks from "../../utils/sortTasks";
 
 import styles from "./Tasks.module.css";
 
-const Tasks = ({ selectedList }) => {
+const Tasks = ({ selectedList, tasksHeader }) => {
   const { tasks } = useContext(TasksContext);
 
   const selectedTaskList = sortTasks(selectedList, tasks);
-
-  const tasksHeader =
-    selectedList === "nextSevenDays" ? "Next 7 Days" : selectedList;
 
   return (
     selectedTaskList.length > 0 && (

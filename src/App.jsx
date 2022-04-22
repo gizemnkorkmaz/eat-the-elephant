@@ -15,20 +15,20 @@ const App = () => {
   const [searchedTask, setSearchedTask] = useState("");
   const [isMenuHidden, setIsMenuHidden] = useState(false);
 
-  const taskLists = {
-    noDate: "",
-    inbox: "inbox",
-    overdue: "overdue",
-    important: "important",
-    today: "today",
-    tomorrow: "tomorrow",
-    nextSevenDays: "nextSevenDays",
-    upcoming: "upcoming",
-  };
-
-  const selectTaskList = (selectedList) => {
-    setSelectedList(taskLists[selectedList]);
-  };
+  const taskLists = [
+    { value: "noDate", label: "" },
+    { value: "inbox", label: "Inbox", icon: "inbox" },
+    { value: "important", label: "Important", icon: "important" },
+    { value: "overdue", label: "Overdue", icon: "history" },
+    { value: "today", label: "Today", icon: "today" },
+    { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
+    {
+      value: "nextSevenDays",
+      label: "Next 7 Days",
+      icon: "star",
+    },
+    { value: "upcoming", label: "Upcoming", icon: "hourglass" },
+  ];
 
   return (
     <div className={styles.App}>
@@ -44,10 +44,7 @@ const App = () => {
               [styles.ToggleTaskBoard]: isMenuHidden,
             })}
           >
-            <TaskMenu
-              selectTaskList={selectTaskList}
-              selectedList={selectedList}
-            />
+            <TaskMenu taskLists={taskLists} setSelectedList={setSelectedList} />
           </section>
           <section className={styles.TaskListArea}>
             <div>

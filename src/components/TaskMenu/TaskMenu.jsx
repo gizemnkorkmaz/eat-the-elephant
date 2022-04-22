@@ -7,29 +7,23 @@ import sortTasks from "../../utils/sortTasks";
 
 import styles from "./TaskMenu.module.css";
 
-const TaskMenu = ({ selectTaskList, selectedList }) => {
+const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
   const { tasks } = useContext(TasksContext);
 
-  const taskLists = [
-    { value: "inbox", label: "Inbox", icon: "inbox" },
-    { value: "important", label: "Important", icon: "important" },
-    { value: "overdue", label: "Overdue", icon: "history" },
-    { value: "today", label: "Today", icon: "today" },
-    { value: "tomorrow", label: "Tomorrow", icon: "pushpin" },
-    { value: "nextSevenDays", label: "Next 7 Days", icon: "star" },
-    { value: "upcoming", label: "Upcoming", icon: "hourglass" },
-  ];
+  const menuList = Object.values(taskLists).filter(
+    (list) => list.value !== "noDate"
+  );
 
   return (
     <div className={styles.TaskMenu}>
-      {taskLists.map(({ value, label, icon }) =>
+      {menuList.map(({ value, label, icon }) =>
         sortTasks(value, tasks).length || value === "inbox" ? (
           <div
             className={cx(styles.TaskList, {
               [styles.Active]: selectedList === value,
             })}
             key={value}
-            onClick={() => selectTaskList(value)}
+            onClick={() => setSelectedList(value)}
           >
             <Icon icon={icon} className={styles.Icon} />
             <span className={styles.TaskLabel}>{label}</span>
