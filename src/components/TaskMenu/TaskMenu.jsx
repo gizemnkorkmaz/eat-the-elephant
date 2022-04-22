@@ -14,10 +14,6 @@ const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
     (list) => list.value !== "noDate"
   );
 
-  const selectTaskList = (list) => {
-    setSelectedList(list);
-  };
-
   return (
     <div className={styles.TaskMenu}>
       {menuList.map(({ value, label, icon }) =>
@@ -27,7 +23,7 @@ const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
               [styles.Active]: selectedList === value,
             })}
             key={value}
-            onClick={() => selectTaskList(value)}
+            onClick={() => setSelectedList(value)}
           >
             <Icon icon={icon} className={styles.Icon} />
             <span className={styles.TaskLabel}>{label}</span>
