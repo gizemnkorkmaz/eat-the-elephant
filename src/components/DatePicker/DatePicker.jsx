@@ -32,7 +32,7 @@ const Datepicker = ({
         className={cx(styles.CalendarIcon, {
           [styles.DateSelected]: task.date,
         })}
-        onClick={() => setIsOpen(true)}
+        onClick={() => setIsOpen(!isOpen)}
       />
       <DatePicker
         selected={task.date ? new Date(task.date) : ""}
@@ -42,6 +42,7 @@ const Datepicker = ({
         onChange={onChange}
         readOnly={true}
         open={isOpen}
+        onClickOutside={() => setIsOpen(false)}
       >
         <div className={styles.ClearDate} onClick={clearDate}>
           Clear Date
