@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import { TasksProvider } from "./context/tasksContext";
 import Header from "./components/Header/Header";
-import TaskInput from "./components/TaskInput/TaskInput";
 import Sidebar from "./components/Sidebar/Sidebar";
 import TaskBoard from "./components/TaskBoard/TaskBoard";
 import Footer from "./components/Footer/Footer";
@@ -30,34 +29,29 @@ const App = () => {
   ];
 
   return (
-    <div className={styles.App}>
-      <Header
-        setSelectedList={setSelectedList}
-        setSearchedTask={setSearchedTask}
-        toggleMenu={() => setIsMenuHidden(!isMenuHidden)}
-      />
-      <div className={styles.TaskBoard}>
-        <TasksProvider>
+    <TasksProvider>
+      <div className={styles.App}>
+        <Header
+          setSelectedList={setSelectedList}
+          setSearchedTask={setSearchedTask}
+          toggleMenu={() => setIsMenuHidden(!isMenuHidden)}
+        />
+        <div className={styles.TaskContent}>
           <Sidebar
             isMenuHidden={isMenuHidden}
             taskLists={taskLists}
             selectedList={selectedList}
             setSelectedList={setSelectedList}
           />
-          <section className={styles.TaskListArea}>
-            <div>
-              <TaskInput />
-              <TaskBoard
-                taskLists={taskLists}
-                selectedList={selectedList}
-                searchedTask={searchedTask}
-              />
-            </div>
-            <Footer />
-          </section>
-        </TasksProvider>
+          <TaskBoard
+            taskLists={taskLists}
+            selectedList={selectedList}
+            searchedTask={searchedTask}
+          />
+        </div>
+        <Footer />
       </div>
-    </div>
+    </TasksProvider>
   );
 };
 

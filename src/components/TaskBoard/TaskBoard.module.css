@@ -1,0 +1,8 @@
+.TaskListArea {
+  @apply bg-[#1C1919]
+    flex flex-col justify-between
+    m-auto
+    p-2
+    min-h-[94vh]
+    w-9/12 md:w-8/12 lg:w-8/12;
+}
