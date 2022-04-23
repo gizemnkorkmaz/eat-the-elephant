@@ -6,19 +6,6 @@
   @apply flex flex-row;
 }
 
-.TaskMenu {
-  @apply bg-[#212121]
-  p-5 px-7 
-  text-center
-  shadow-sm
-  w-1/12 md:w-3/12 lg:w-2/12
-  duration-300;
-}
-
-.ToggleTaskBoard {
-  @apply md:ml-[-250px] 2xl:ml-[-450px];
-}
-
 .TaskListArea {
   @apply bg-[#1C1919]
   flex flex-col justify-between
