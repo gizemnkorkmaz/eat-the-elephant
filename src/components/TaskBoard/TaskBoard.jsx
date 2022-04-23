@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import styles from "./TaskBoard.module.css";
 
 const TaskBoard = ({ taskLists, selectedList, searchedTask }) => (
-  <section className={styles.TaskBoard}>
+  <main className={styles.TaskBoard}>
     <div>
       <TaskInput />
       <TaskList
@@ -15,7 +15,7 @@ const TaskBoard = ({ taskLists, selectedList, searchedTask }) => (
       />
     </div>
     <Footer />
-  </section>
+  </main>
 );
 
 export default TaskBoard;
