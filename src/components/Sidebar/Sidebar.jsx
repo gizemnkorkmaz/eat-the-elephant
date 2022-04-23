@@ -10,7 +10,7 @@ const Sidebar = ({
   selectedList,
   setSelectedList,
 }) => (
-  <section
+  <aside
     className={cx(styles.Sidebar, {
       [styles.SidebarHidden]: isSidebarHidden,
     })}
@@ -20,7 +20,7 @@ const Sidebar = ({
       selectedList={selectedList}
       setSelectedList={setSelectedList}
     />
-  </section>
+  </aside>
 );
 
 export default Sidebar;
