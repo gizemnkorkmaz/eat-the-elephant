@@ -5,9 +5,9 @@ import Icon from "../Icon/Icon";
 import { TasksContext } from "../../context/tasksContext";
 import sortTasks from "../../utils/sortTasks";
 
-import styles from "./TaskMenu.module.css";
+import styles from "./TaskListMenu.module.css";
 
-const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
+const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
   const { tasks } = useContext(TasksContext);
 
   const menuList = Object.values(taskLists).filter(
@@ -42,4 +42,4 @@ const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
   );
 };
 
-export default TaskMenu;
+export default TaskListMenu;

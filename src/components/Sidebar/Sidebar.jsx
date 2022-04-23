@@ -1,6 +1,6 @@
 import cx from "classnames";
 
-import TaskMenu from "../TaskMenu/TaskMenu";
+import TaskListMenu from "../TaskListMenu/TaskListMenu";
 
 import styles from "./Sidebar.module.css";
 
@@ -15,7 +15,7 @@ const Sidebar = ({
       [styles.SidebarHidden]: isSidebarHidden,
     })}
   >
-    <TaskMenu
+    <TaskListMenu
       taskLists={taskLists}
       selectedList={selectedList}
       setSelectedList={setSelectedList}
