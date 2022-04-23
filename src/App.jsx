@@ -4,7 +4,6 @@ import { TasksProvider } from "./context/tasksContext";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import TaskBoard from "./components/TaskBoard/TaskBoard";
-import Footer from "./components/Footer/Footer";
 
 import styles from "./App.module.css";
 
@@ -49,7 +48,6 @@ const App = () => {
             searchedTask={searchedTask}
           />
         </div>
-        <Footer />
       </div>
     </TasksProvider>
   );

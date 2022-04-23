@@ -1,5 +1,6 @@
 import TaskInput from "../TaskInput/TaskInput";
 import TaskList from "../TaskList/TaskList";
+import Footer from "../Footer/Footer";
 
 import styles from "./TaskBoard.module.css";
 
@@ -13,6 +14,7 @@ const TaskBoard = ({ taskLists, selectedList, searchedTask }) => (
         searchedTask={searchedTask}
       />
     </div>
+    <Footer />
   </section>
 );
 
