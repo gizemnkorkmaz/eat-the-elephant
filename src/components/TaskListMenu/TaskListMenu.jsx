@@ -15,7 +15,7 @@ const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
   );
 
   return (
-    <div className={styles.TaskMenu}>
+    <nav className={styles.TaskMenu}>
       {menuList.map(({ value, label, icon }) =>
         sortTasks(value, tasks).length || value === "inbox" ? (
           <div
@@ -38,7 +38,7 @@ const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
           </div>
         ) : null
       )}
-    </div>
+    </nav>
   );
 };
 
