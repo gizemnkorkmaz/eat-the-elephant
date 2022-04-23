@@ -32,7 +32,7 @@ const Datepicker = ({
         className={cx(styles.CalendarIcon, {
           [styles.DateSelected]: task.date,
         })}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(true)}
       />
       <DatePicker
         selected={task.date ? new Date(task.date) : ""}
