@@ -26,8 +26,8 @@ const sortTasks = (selectedList, tasks) => {
       dayjs(task.date).isAfter(dayjs().add(7, "day"))
     );
   } else if (selectedList === "overdue") {
-    return tasksByDate.filter(
-      (task) => dayjs(task.date).isBefore(dayjs(), "day") && !task.isDone
+    return tasksByDate.filter((task) =>
+      dayjs(task.date).isBefore(dayjs(), "day")
     );
   } else if (selectedList === "important") {
     return tasksByDate.filter((task) => task.isImportant);

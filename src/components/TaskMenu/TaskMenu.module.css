@@ -18,7 +18,7 @@
 
 .Icon {
   @apply cursor-pointer
-  md:m-1
+  md:my-1
   text-[#e7e8ed]
   hover:text-[#f1c232]
   md:hover:text-[#e7e8ed]
@@ -27,8 +27,7 @@
 }
 
 .Active {
-  @apply md:pr-10
-  text-[#f1c232]
+  @apply text-[#f1c232]
   font-semibold;
 }
 

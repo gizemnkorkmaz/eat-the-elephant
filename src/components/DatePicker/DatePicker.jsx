@@ -42,6 +42,7 @@ const Datepicker = ({
         onChange={onChange}
         readOnly={true}
         open={isOpen}
+        onClickOutside={() => setIsOpen(false)}
       >
         <div className={styles.ClearDate} onClick={clearDate}>
           Clear Date
