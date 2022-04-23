@@ -1,4 +1,4 @@
-.TaskListArea {
+.TaskBoard {
   @apply bg-[#1C1919]
     flex flex-col justify-between
     m-auto

@@ -11,7 +11,7 @@ import styles from "./App.module.css";
 const App = () => {
   const [selectedList, setSelectedList] = useState("inbox");
   const [searchedTask, setSearchedTask] = useState("");
-  const [isMenuHidden, setIsMenuHidden] = useState(false);
+  const [isSidebarHidden, setIsSidebarHidden] = useState(false);
 
   const taskLists = [
     { value: "noDate", label: "" },
@@ -34,11 +34,11 @@ const App = () => {
         <Header
           setSelectedList={setSelectedList}
           setSearchedTask={setSearchedTask}
-          toggleMenu={() => setIsMenuHidden(!isMenuHidden)}
+          toggleSidebar={() => setIsSidebarHidden(!isSidebarHidden)}
         />
         <div className={styles.TaskContent}>
           <Sidebar
-            isMenuHidden={isMenuHidden}
+            isSidebarHidden={isSidebarHidden}
             taskLists={taskLists}
             selectedList={selectedList}
             setSelectedList={setSelectedList}

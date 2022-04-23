@@ -5,14 +5,14 @@ import TaskMenu from "../TaskMenu/TaskMenu";
 import styles from "./Sidebar.module.css";
 
 const Sidebar = ({
-  isMenuHidden,
+  isSidebarHidden,
   taskLists,
   selectedList,
   setSelectedList,
 }) => (
   <section
-    className={cx(styles.TaskMenu, {
-      [styles.ToggleTaskBoard]: isMenuHidden,
+    className={cx(styles.Sidebar, {
+      [styles.SidebarHidden]: isSidebarHidden,
     })}
   >
     <TaskMenu

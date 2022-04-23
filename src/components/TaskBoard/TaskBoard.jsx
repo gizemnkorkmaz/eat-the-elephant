@@ -4,7 +4,7 @@ import TaskList from "../TaskList/TaskList";
 import styles from "./TaskBoard.module.css";
 
 const TaskBoard = ({ taskLists, selectedList, searchedTask }) => (
-  <section className={styles.TaskListArea}>
+  <section className={styles.TaskBoard}>
     <div>
       <TaskInput />
       <TaskList

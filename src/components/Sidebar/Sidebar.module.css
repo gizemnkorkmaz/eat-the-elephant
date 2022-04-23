@@ -1,4 +1,4 @@
-.TaskMenu {
+.Sidebar {
   @apply bg-[#212121]
     p-5 px-7 
     text-center
@@ -7,6 +7,6 @@
     duration-300;
 }
 
-.ToggleTaskBoard {
+.SidebarHidden {
   @apply md:ml-[-250px] 2xl:ml-[-450px];
 }
