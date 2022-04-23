@@ -4,7 +4,7 @@ import Icon from "../Icon/Icon";
 import styles from "./Header.module.css";
 
 const Header = ({ setSelectedList, setSearchedTask, toggleSidebar }) => (
-  <div className={styles.HeaderWrapper}>
+  <header className={styles.HeaderWrapper}>
     <nav className={styles.Navigation}>
       <div className={styles.MenuLogo}>
         <Icon icon="menu" size={24} onClick={toggleSidebar} />
@@ -17,7 +17,7 @@ const Header = ({ setSelectedList, setSearchedTask, toggleSidebar }) => (
     <div className={styles.ElephantLogo}>
       <Icon icon="elephant" size={21} />
     </div>
-  </div>
+  </header>
 );
 
 export default Header;
