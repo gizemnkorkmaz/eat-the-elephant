@@ -5,9 +5,9 @@ import Icon from "../Icon/Icon";
 import { TasksContext } from "../../context/tasksContext";
 import sortTasks from "../../utils/sortTasks";
 
-import styles from "./TaskMenu.module.css";
+import styles from "./TaskListMenu.module.css";
 
-const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
+const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
   const { tasks } = useContext(TasksContext);
 
   const menuList = Object.values(taskLists).filter(
@@ -15,7 +15,7 @@ const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
   );
 
   return (
-    <div className={styles.TaskMenu}>
+    <nav className={styles.TaskMenu}>
       {menuList.map(({ value, label, icon }) =>
         sortTasks(value, tasks).length || value === "inbox" ? (
           <div
@@ -38,8 +38,8 @@ const TaskMenu = ({ taskLists, selectedList, setSelectedList }) => {
           </div>
         ) : null
       )}
-    </div>
+    </nav>
   );
 };
 
-export default TaskMenu;
+export default TaskListMenu;

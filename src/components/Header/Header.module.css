@@ -1,4 +1,4 @@
-.HeaderWrapper {
+.Header {
   @apply flex justify-between
   sticky
   top-0 z-[100]
@@ -7,7 +7,7 @@
   border-b border-[#2a2725];
 }
 
-.Navigation {
+.Menu {
   @apply flex items-center;
 }
 

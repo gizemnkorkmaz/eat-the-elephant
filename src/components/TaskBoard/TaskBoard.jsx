@@ -1,37 +1,21 @@
-import Tasks from "../Tasks/Tasks";
-import EmptyTaskList from "../EmptyTaskList/EmptyTaskList";
-import SearchedTasks from "../SearchedTasks/SearchedTasks";
+import TaskInput from "../TaskInput/TaskInput";
+import TaskList from "../TaskList/TaskList";
+import Footer from "../Footer/Footer";
 
-const TaskBoard = ({ taskLists, selectedList, searchedTask }) => {
-  const taskListsToShow = Object.values(taskLists).filter(
-    (list) =>
-      list.value !== "inbox" &&
-      list.value !== "important" &&
-      list.value !== "search"
-  );
+import styles from "./TaskBoard.module.css";
 
-  const activeList = Object.values(taskLists).find(
-    ({ value }) => value === selectedList
-  );
+const TaskBoard = ({ taskLists, selectedList, searchedTask }) => (
+  <main className={styles.TaskBoard}>
+    <div>
+      <TaskInput />
+      <TaskList
+        taskLists={taskLists}
+        selectedList={selectedList}
+        searchedTask={searchedTask}
+      />
+    </div>
+    <Footer />
+  </main>
+);
 
-  if (selectedList === "inbox") {
-    return (
-      <>
-        <EmptyTaskList />
-        {taskListsToShow.map((listItem) => (
-          <Tasks
-            key={listItem.value}
-            selectedList={listItem.value}
-            taskLists={taskLists}
-            tasksHeader={listItem.label}
-          />
-        ))}
-      </>
-    );
-  } else if (selectedList === "search") {
-    return <SearchedTasks searchedTask={searchedTask} />;
-  } else {
-    return <Tasks selectedList={selectedList} tasksHeader={activeList.label} />;
-  }
-};
 export default TaskBoard;

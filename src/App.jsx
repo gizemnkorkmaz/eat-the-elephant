@@ -1,19 +1,16 @@
 import { useState } from "react";
-import cx from "classnames";
 
 import { TasksProvider } from "./context/tasksContext";
 import Header from "./components/Header/Header";
-import TaskInput from "./components/TaskInput/TaskInput";
-import TaskMenu from "./components/TaskMenu/TaskMenu";
+import Sidebar from "./components/Sidebar/Sidebar";
 import TaskBoard from "./components/TaskBoard/TaskBoard";
-import Footer from "./components/Footer/Footer";
 
 import styles from "./App.module.css";
 
 const App = () => {
   const [selectedList, setSelectedList] = useState("inbox");
   const [searchedTask, setSearchedTask] = useState("");
-  const [isMenuHidden, setIsMenuHidden] = useState(false);
+  const [isSidebarHidden, setIsSidebarHidden] = useState(false);
 
   const taskLists = [
     { value: "noDate", label: "" },
@@ -31,39 +28,28 @@ const App = () => {
   ];
 
   return (
-    <div className={styles.App}>
-      <Header
-        setSelectedList={setSelectedList}
-        setSearchedTask={setSearchedTask}
-        toggleMenu={() => setIsMenuHidden(!isMenuHidden)}
-      />
-      <div className={styles.TaskBoard}>
-        <TasksProvider>
-          <section
-            className={cx(styles.TaskMenu, {
-              [styles.ToggleTaskBoard]: isMenuHidden,
-            })}
-          >
-            <TaskMenu
-              taskLists={taskLists}
-              selectedList={selectedList}
-              setSelectedList={setSelectedList}
-            />
-          </section>
-          <section className={styles.TaskListArea}>
-            <div>
-              <TaskInput />
-              <TaskBoard
-                taskLists={taskLists}
-                selectedList={selectedList}
-                searchedTask={searchedTask}
-              />
-            </div>
-            <Footer />
-          </section>
-        </TasksProvider>
+    <TasksProvider>
+      <div className={styles.App}>
+        <Header
+          setSelectedList={setSelectedList}
+          setSearchedTask={setSearchedTask}
+          toggleSidebar={() => setIsSidebarHidden(!isSidebarHidden)}
+        />
+        <div className={styles.TaskContent}>
+          <Sidebar
+            isSidebarHidden={isSidebarHidden}
+            taskLists={taskLists}
+            selectedList={selectedList}
+            setSelectedList={setSelectedList}
+          />
+          <TaskBoard
+            taskLists={taskLists}
+            selectedList={selectedList}
+            searchedTask={searchedTask}
+          />
+        </div>
       </div>
-    </div>
+    </TasksProvider>
   );
 };
 

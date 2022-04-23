@@ -3,21 +3,21 @@ import Icon from "../Icon/Icon";
 
 import styles from "./Header.module.css";
 
-const Header = ({ setSelectedList, setSearchedTask, toggleMenu }) => (
-  <div className={styles.HeaderWrapper}>
-    <nav className={styles.Navigation}>
+const Header = ({ setSelectedList, setSearchedTask, toggleSidebar }) => (
+  <header className={styles.Header}>
+    <div className={styles.Menu}>
       <div className={styles.MenuLogo}>
-        <Icon icon="menu" size={24} onClick={toggleMenu} />
+        <Icon icon="menu" size={24} onClick={toggleSidebar} />
       </div>
       <SearchInput
         setSelectedList={setSelectedList}
         setSearchedTask={setSearchedTask}
       />
-    </nav>
+    </div>
     <div className={styles.ElephantLogo}>
       <Icon icon="elephant" size={21} />
     </div>
-  </div>
+  </header>
 );
 
 export default Header;
