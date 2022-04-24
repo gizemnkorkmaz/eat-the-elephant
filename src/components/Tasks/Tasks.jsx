@@ -2,20 +2,20 @@ import { useContext } from "react";
 
 import Task from "../Task/Task";
 import { TasksContext } from "../../context/tasksContext";
-import sortTasks from "../../utils/sortTasks";
+import getTaskGroup from "../../utils/getTaskGroup";
 
 import styles from "./Tasks.module.css";
 
-const Tasks = ({ selectedList, tasksHeader }) => {
+const Tasks = ({ tasksHeader, selectedList }) => {
   const { tasks } = useContext(TasksContext);
 
-  const selectedTaskList = sortTasks(selectedList, tasks);
+  const taskList = getTaskGroup(tasks)[selectedList];
 
   return (
-    selectedTaskList.length > 0 && (
+    taskList.length > 0 && (
       <div className={styles.Tasks}>
         <h2 className={styles.TasksHeader}>{tasksHeader}</h2>
-        {selectedTaskList.map((task) => (
+        {taskList.map((task) => (
           <Task key={task.id} task={task} />
         ))}
       </div>

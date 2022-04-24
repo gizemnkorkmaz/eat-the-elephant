@@ -3,41 +3,48 @@ import cx from "classnames";
 
 import Icon from "../Icon/Icon";
 import { TasksContext } from "../../context/tasksContext";
-import sortTasks from "../../utils/sortTasks";
+import getTaskGroup from "../../utils/getTaskGroup";
 
 import styles from "./TaskListMenu.module.css";
 
 const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
   const { tasks } = useContext(TasksContext);
 
-  const menuList = Object.values(taskLists).filter(
-    (list) => list.value !== "noDate"
+  const taskGroup = getTaskGroup(tasks);
+
+  const totalTaskCount = (value) => taskGroup[value]?.length;
+
+  const completedTaskCount = (value) =>
+    taskGroup[value]?.filter((task) => task.isDone).length;
+
+  const listsToShown = Object.values(taskLists).filter(
+    (list) =>
+      (totalTaskCount(list.value) && list.value !== "noDate") ||
+      list.value === "inbox"
   );
 
   return (
-    <nav className={styles.TaskMenu}>
-      {menuList.map(({ value, label, icon }) =>
-        sortTasks(value, tasks).length || value === "inbox" ? (
-          <div
-            className={cx(styles.TaskList, {
-              [styles.Active]: selectedList === value,
+    <nav className={styles.TaskListsMenu}>
+      {listsToShown.map(({ value, label, icon }) => (
+        <div
+          className={cx(styles.TaskList, {
+            [styles.Selected]: selectedList === value,
+          })}
+          key={value}
+          onClick={() => setSelectedList(value)}
+        >
+          <Icon icon={icon} className={styles.Icon} />
+          <span className={styles.TaskLabel}>{label}</span>
+          <span
+            className={cx(styles.TaskCompletion, {
+              [styles.Overdue]: value === "overdue",
+              [styles.Important]: value === "important",
             })}
-            key={value}
-            onClick={() => setSelectedList(value)}
           >
-            <Icon icon={icon} className={styles.Icon} />
-            <span className={styles.TaskLabel}>{label}</span>
-            <span
-              className={cx(styles.TaskCount, {
-                [styles.Overdue]: value === "overdue",
-                [styles.Important]: value === "important",
-              })}
-            >
-              ({sortTasks(value, tasks).filter((task) => !task.isDone).length})
-            </span>
-          </div>
-        ) : null
-      )}
+            ({completedTaskCount(value)}/{totalTaskCount(value)})
+          </span>
+        </div>
+      ))}
     </nav>
   );
 };
