@@ -7,9 +7,9 @@ import { TasksContext } from "../../context/tasksContext";
 import styles from "./TaskListMenu.module.css";
 
 const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
-  const { tasks, getTasksGroup } = useContext(TasksContext);
+  const { tasks, getTaskGroup } = useContext(TasksContext);
 
-  const taskGroup = getTasksGroup(tasks);
+  const taskGroup = getTaskGroup(tasks);
 
   const totalTaskCount = (value) => taskGroup[value]?.length;
 
