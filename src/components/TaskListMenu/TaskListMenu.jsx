@@ -22,28 +22,30 @@ const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
       list.value === "inbox"
   );
 
-  const activeLists = listsToShown.map(({ value, label, icon }) => (
-    <div
-      className={cx(styles.TaskList, {
-        [styles.Selected]: selectedList === value,
-      })}
-      key={value}
-      onClick={() => setSelectedList(value)}
-    >
-      <Icon icon={icon} className={styles.Icon} />
-      <span className={styles.TaskLabel}>{label}</span>
-      <span
-        className={cx(styles.TaskCompletion, {
-          [styles.Overdue]: value === "overdue",
-          [styles.Important]: value === "important",
-        })}
-      >
-        ({completedTaskCount(value)}/{totalTaskCount(value)})
-      </span>
-    </div>
-  ));
-
-  return <nav className={styles.TaskListsMenu}>{activeLists}</nav>;
+  return (
+    <nav className={styles.TaskListsMenu}>
+      {listsToShown.map(({ value, label, icon }) => (
+        <div
+          className={cx(styles.TaskList, {
+            [styles.Selected]: selectedList === value,
+          })}
+          key={value}
+          onClick={() => setSelectedList(value)}
+        >
+          <Icon icon={icon} className={styles.Icon} />
+          <span className={styles.TaskLabel}>{label}</span>
+          <span
+            className={cx(styles.TaskCompletion, {
+              [styles.Overdue]: value === "overdue",
+              [styles.Important]: value === "important",
+            })}
+          >
+            ({completedTaskCount(value)}/{totalTaskCount(value)})
+          </span>
+        </div>
+      ))}
+    </nav>
+  );
 };
 
 export default TaskListMenu;
