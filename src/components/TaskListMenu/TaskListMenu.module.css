@@ -1,4 +1,4 @@
-.TaskMenu {
+.TaskListsMenu {
   @apply flex justify-around items-center md:items-start
   flex-col 
   min-h-fit
@@ -26,17 +26,17 @@
   md:w-[20px];
 }
 
-.Active {
+.Selected {
   @apply text-[#f1c232]
   font-semibold;
 }
 
 .TaskLabel,
-.TaskCount {
+.TaskCompletion {
   @apply hidden md:block;
 }
 
-.TaskCount {
+.TaskCompletion {
   @apply p-px;
 }
 

@@ -3,43 +3,47 @@ import cx from "classnames";
 
 import Icon from "../Icon/Icon";
 import { TasksContext } from "../../context/tasksContext";
-import sortTasks from "../../utils/sortTasks";
 
 import styles from "./TaskListMenu.module.css";
 
 const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
-  const { tasks } = useContext(TasksContext);
+  const { tasks, getTasksGroup } = useContext(TasksContext);
 
-  const menuList = Object.values(taskLists).filter(
+  const taskGroup = getTasksGroup(tasks);
+
+  const totalTaskCount = (value) => taskGroup[value]?.length;
+
+  const completedTaskCount = (value) =>
+    taskGroup[value]?.filter((task) => task.isDone).length;
+
+  const listsToShown = Object.values(taskLists).filter(
     (list) => list.value !== "noDate"
   );
 
-  return (
-    <nav className={styles.TaskMenu}>
-      {menuList.map(({ value, label, icon }) =>
-        sortTasks(value, tasks).length || value === "inbox" ? (
-          <div
-            className={cx(styles.TaskList, {
-              [styles.Active]: selectedList === value,
-            })}
-            key={value}
-            onClick={() => setSelectedList(value)}
-          >
-            <Icon icon={icon} className={styles.Icon} />
-            <span className={styles.TaskLabel}>{label}</span>
-            <span
-              className={cx(styles.TaskCount, {
-                [styles.Overdue]: value === "overdue",
-                [styles.Important]: value === "important",
-              })}
-            >
-              ({sortTasks(value, tasks).filter((task) => !task.isDone).length})
-            </span>
-          </div>
-        ) : null
-      )}
-    </nav>
+  const activeLists = listsToShown.map(({ value, label, icon }) =>
+    totalTaskCount(value) || value === "inbox" ? (
+      <div
+        className={cx(styles.TaskList, {
+          [styles.Selected]: selectedList === value,
+        })}
+        key={value}
+        onClick={() => setSelectedList(value)}
+      >
+        <Icon icon={icon} className={styles.Icon} />
+        <span className={styles.TaskLabel}>{label}</span>
+        <span
+          className={cx(styles.TaskCompletion, {
+            [styles.Overdue]: value === "overdue",
+            [styles.Important]: value === "important",
+          })}
+        >
+          ({completedTaskCount(value)}/{totalTaskCount(value)})
+        </span>
+      </div>
+    ) : null
   );
+
+  return <nav className={styles.TaskListsMenu}>{activeLists}</nav>;
 };
 
 export default TaskListMenu;
