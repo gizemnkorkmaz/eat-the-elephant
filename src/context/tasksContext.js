@@ -1,8 +1,6 @@
 import { useState, createContext } from "react";
 import Lookie from "lookie";
 
-import getTaskGroup from "../utils/getTaskGroup";
-
 const TasksContext = createContext();
 
 const TasksProvider = ({ children }) => {
@@ -21,7 +19,6 @@ const TasksProvider = ({ children }) => {
         setTasks,
         editTaskId,
         setEditTaskId,
-        getTaskGroup,
       }}
     >
       {children}

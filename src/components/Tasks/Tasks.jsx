@@ -2,11 +2,12 @@ import { useContext } from "react";
 
 import Task from "../Task/Task";
 import { TasksContext } from "../../context/tasksContext";
+import getTaskGroup from "../../utils/getTaskGroup";
 
 import styles from "./Tasks.module.css";
 
 const Tasks = ({ tasksHeader, selectedList }) => {
-  const { tasks, getTaskGroup } = useContext(TasksContext);
+  const { tasks } = useContext(TasksContext);
 
   const taskList = getTaskGroup(tasks)[selectedList];
 

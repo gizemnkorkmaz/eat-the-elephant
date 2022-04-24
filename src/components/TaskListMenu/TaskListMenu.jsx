@@ -3,11 +3,12 @@ import cx from "classnames";
 
 import Icon from "../Icon/Icon";
 import { TasksContext } from "../../context/tasksContext";
+import getTaskGroup from "../../utils/getTaskGroup";
 
 import styles from "./TaskListMenu.module.css";
 
 const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
-  const { tasks, getTaskGroup } = useContext(TasksContext);
+  const { tasks } = useContext(TasksContext);
 
   const taskGroup = getTaskGroup(tasks);
 
