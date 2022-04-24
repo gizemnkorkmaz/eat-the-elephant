@@ -17,31 +17,31 @@ const TaskListMenu = ({ taskLists, selectedList, setSelectedList }) => {
     taskGroup[value]?.filter((task) => task.isDone).length;
 
   const listsToShown = Object.values(taskLists).filter(
-    (list) => list.value !== "noDate"
+    (list) =>
+      (totalTaskCount(list.value) && list.value !== "noDate") ||
+      list.value === "inbox"
   );
 
-  const activeLists = listsToShown.map(({ value, label, icon }) =>
-    totalTaskCount(value) || value === "inbox" ? (
-      <div
-        className={cx(styles.TaskList, {
-          [styles.Selected]: selectedList === value,
+  const activeLists = listsToShown.map(({ value, label, icon }) => (
+    <div
+      className={cx(styles.TaskList, {
+        [styles.Selected]: selectedList === value,
+      })}
+      key={value}
+      onClick={() => setSelectedList(value)}
+    >
+      <Icon icon={icon} className={styles.Icon} />
+      <span className={styles.TaskLabel}>{label}</span>
+      <span
+        className={cx(styles.TaskCompletion, {
+          [styles.Overdue]: value === "overdue",
+          [styles.Important]: value === "important",
         })}
-        key={value}
-        onClick={() => setSelectedList(value)}
       >
-        <Icon icon={icon} className={styles.Icon} />
-        <span className={styles.TaskLabel}>{label}</span>
-        <span
-          className={cx(styles.TaskCompletion, {
-            [styles.Overdue]: value === "overdue",
-            [styles.Important]: value === "important",
-          })}
-        >
-          ({completedTaskCount(value)}/{totalTaskCount(value)})
-        </span>
-      </div>
-    ) : null
-  );
+        ({completedTaskCount(value)}/{totalTaskCount(value)})
+      </span>
+    </div>
+  ));
 
   return <nav className={styles.TaskListsMenu}>{activeLists}</nav>;
 };
