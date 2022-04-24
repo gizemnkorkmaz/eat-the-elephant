@@ -23,6 +23,7 @@ const TasksProvider = ({ children }) => {
       nextSevenDays: sortTasks("nextSevenDays", tasks),
       upcoming: sortTasks("upcoming", tasks),
       noDate: sortTasks("noDate", tasks),
+      important: sortTasks("important", tasks),
     };
   };
 
