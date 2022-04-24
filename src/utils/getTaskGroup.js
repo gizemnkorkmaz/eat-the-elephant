@@ -39,8 +39,6 @@ const getTaskGroup = (tasks) => {
       taskGroup.today.push(task);
     } else if (taskDate.isTomorrow()) {
       taskGroup.tomorrow.push(task);
-    } else if (taskDate.isTomorrow()) {
-      taskGroup.tomorrow.push(task);
     } else if (taskDate.isBetween(today.add(1, "day"), today.add(7, "day"))) {
       taskGroup.nextSevenDays.push(task);
     } else if (taskDate.isBefore(today, "day")) {
