@@ -8,7 +8,9 @@ dayjs.extend(isTomorrow);
 dayjs.extend(isBetween);
 
 const getTaskGroup = (tasks) => {
-  const tasksByDate = tasks.sort((a, b) => new Date(a.date) - new Date(b.date));
+  const tasksByDate = [...tasks].sort(
+    (a, b) => new Date(a.date) - new Date(b.date)
+  );
 
   const taskGroup = {
     inbox: [],
