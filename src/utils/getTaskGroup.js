@@ -27,21 +27,23 @@ const getTaskGroup = (tasks) => {
     if (task.isImportant) {
       taskGroup.important.push(task);
     }
+
+    const today = dayjs();
+    const taskDate = dayjs(task.date);
+
     if (!task.date) {
       taskGroup.noDate.push(task);
-    } else if (dayjs(task.date).isToday()) {
+    } else if (taskDate.isToday()) {
       taskGroup.today.push(task);
-    } else if (dayjs(task.date).isTomorrow()) {
+    } else if (taskDate.isTomorrow()) {
       taskGroup.tomorrow.push(task);
-    } else if (dayjs(task.date).isTomorrow()) {
+    } else if (taskDate.isTomorrow()) {
       taskGroup.tomorrow.push(task);
-    } else if (
-      dayjs(task.date).isBetween(dayjs().add(1, "day"), dayjs().add(7, "day"))
-    ) {
+    } else if (taskDate.isBetween(today.add(1, "day"), today.add(7, "day"))) {
       taskGroup.nextSevenDays.push(task);
-    } else if (dayjs(task.date).isBefore(dayjs(), "day")) {
+    } else if (taskDate.isBefore(today, "day")) {
       taskGroup.overdue.push(task);
-    } else if (dayjs(task.date).isAfter(dayjs().add(7, "day"))) {
+    } else if (taskDate.isAfter(today.add(7, "day"))) {
       taskGroup.upcoming.push(task);
     }
   });
