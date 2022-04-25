@@ -28,5 +28,5 @@
   cursor-pointer
   hover:bg-[#3a3b3c]
   rounded-full
-  p-1;
+  p-[5px];
 }
