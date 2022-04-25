@@ -25,5 +25,8 @@
   @apply text-[#ededed]
   hover:text-[#e7e8ed]
   mt-[3px]
-  cursor-pointer;
+  cursor-pointer
+  hover:bg-[#3a3b3c]
+  rounded-full
+  p-1;
 }

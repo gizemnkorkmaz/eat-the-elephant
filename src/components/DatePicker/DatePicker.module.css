@@ -8,8 +8,10 @@
 }
 
 .CalendarIcon {
-  @apply ml-3 mt-8
+  @apply ml-2 mt-8 p-1
   cursor-pointer
+  hover:bg-[#3a3b3c]
+  rounded-full
   text-[#aaaaaa]
   hover:text-[#e7e7e7];
 }

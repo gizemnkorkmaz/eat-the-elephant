@@ -6,7 +6,7 @@ import styles from "./Header.module.css";
 const Header = ({ setSelectedList, setSearchedTask, toggleSidebar }) => (
   <header className={styles.Header}>
     <div className={styles.Menu}>
-      <div className={styles.MenuLogo}>
+      <div className={styles.MenuIcon}>
         <Icon icon="menu" size={24} onClick={toggleSidebar} />
       </div>
       <SearchInput

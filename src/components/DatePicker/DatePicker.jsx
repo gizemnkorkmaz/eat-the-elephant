@@ -28,7 +28,7 @@ const Datepicker = ({
     <label className={styles.CalendarWrapper}>
       <Icon
         icon="calendar"
-        size={25}
+        size={34}
         className={cx(styles.CalendarIcon, {
           [styles.DateSelected]: task.date,
         })}
