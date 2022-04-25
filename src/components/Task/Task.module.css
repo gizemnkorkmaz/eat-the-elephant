@@ -70,8 +70,10 @@
 .Checkbox {
   @apply cursor-pointer
   text-[#e7e8ed]
-  hover:text-[#d5d1c7]
-  w-[15px] md:w-[23px];
+  hover:bg-[#3a3b3c]
+  rounded-full
+  p-[4px]
+  w-[26px] md:w-[30px];
 }
 
 .CheckboxEmphasis,
