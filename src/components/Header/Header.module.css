@@ -11,9 +11,12 @@
   @apply flex items-center;
 }
 
-.MenuLogo {
+.MenuIcon {
   @apply hidden md:block
-  mr-4
+  mr-3
+  p-1
+  hover:bg-[#3a3b3c]
+  rounded-full
   cursor-pointer
   text-[#e7e8ed];
 }

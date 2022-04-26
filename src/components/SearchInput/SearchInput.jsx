@@ -2,17 +2,20 @@ import Icon from "../Icon/Icon";
 
 import styles from "./SearchInput.module.css";
 
-const SearchInput = ({ setSelectedList, setSearchedTask }) => {
+const SearchInput = ({
+  selectedList,
+  setSelectedList,
+  searchedTask,
+  setSearchedTask,
+}) => {
   const searchTask = ({ target }) => {
     setSelectedList(target.value ? "search" : "inbox");
     setSearchedTask(target.value);
   };
 
-  const activateSearch = ({ target }) => {
-    if (target.value) {
-      setSelectedList("search");
-    }
-  };
+  if (selectedList !== "search") {
+    setSearchedTask("");
+  }
 
   return (
     <div className={styles.SearchWrapper}>
@@ -21,8 +24,8 @@ const SearchInput = ({ setSelectedList, setSearchedTask }) => {
         type="search"
         name="searchTasks"
         placeholder="Search"
+        value={searchedTask}
         className={styles.SearchInput}
-        onClick={activateSearch}
         onChange={searchTask}
       />
     </div>

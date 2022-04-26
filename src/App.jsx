@@ -31,7 +31,9 @@ const App = () => {
     <TasksProvider>
       <div className={styles.App}>
         <Header
+          selectedList={selectedList}
           setSelectedList={setSelectedList}
+          searchedTask={searchedTask}
           setSearchedTask={setSearchedTask}
           toggleSidebar={() => setIsSidebarHidden(!isSidebarHidden)}
         />

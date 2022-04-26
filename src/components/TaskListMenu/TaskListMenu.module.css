@@ -18,7 +18,7 @@
 
 .Icon {
   @apply cursor-pointer
-  md:my-1
+  md:m-1
   text-[#e7e8ed]
   hover:text-[#f1c232]
   md:hover:text-[#e7e8ed]
