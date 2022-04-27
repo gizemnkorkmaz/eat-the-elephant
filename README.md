@@ -1,6 +1,7 @@
 # Eat the Elephant
 
 _"When eating an elephant, take one bite at a time.”_
+
 Eat the Elephant is a mobile-friendly task manager application that helps people organize their work or personal life by grouping tasks according to their assigned dates or priorities. You can add todo-tasks with or without scheduled due dates, edit them as you need, search through or mark them as important.
 
 - [Demo](#demo)
@@ -10,6 +11,10 @@ Eat the Elephant is a mobile-friendly task manager application that helps people
 - [Built with](#built-with)
 
 ## Demo
+
+
+https://user-images.githubusercontent.com/66412137/165598302-55b85940-9f1a-4b3b-9514-9a782f78e289.mov
+
 
 ## Installation
 
